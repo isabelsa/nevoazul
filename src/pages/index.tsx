@@ -1,4 +1,5 @@
 import React from 'react'
+import Hero from '../components/Hero/Hero'
 
 import SEO from '@/components/SEO/SEO'
 
@@ -9,6 +10,7 @@ const IndexPage = () => {
         title={'Conversas em prol da humanidade'}
         keywords={[`gatsby`, `application`, `react`]}
       />
+      <Hero />
     </>
   )
 }

@@ -8,14 +8,6 @@ export const Text = styled.p`
 `
 
 export const Display = styled.h1`
-  font-size: 3.75rem;
-  line-height: 4.25rem;
-`
-
-export const Highlight = styled.span`
-  color: yellow;
-`
-
-export const Superscript = styled.p`
-  vertical-align: super;
+  font-size: 3rem;
+  line-height: 3.75rem;
 `
