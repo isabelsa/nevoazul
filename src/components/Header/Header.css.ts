@@ -4,12 +4,13 @@ import { Link as GatsbyLink } from 'gatsby'
 const Wrapper = styled.div`
   margin-bottom: 1.45rem;
   transition: background-color 0.2s ease;
+  position: sticky;
 `
 
 const Content = styled.div`
   margin: 0 auto;
-  max-width: 1175px;
-  padding: 1.45rem 1.0875rem;
+  max-width: 1440px;
+  padding: 0rem;
 `
 
 const Link = styled(GatsbyLink)`
