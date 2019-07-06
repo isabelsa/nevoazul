@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import * as UI from '../UI/index'
 import hero from '../../assets/images/hero.png'
 
 export const Hero = styled.div`
@@ -16,4 +17,12 @@ export const Hero = styled.div`
 `
 export const Content = styled.div`
   max-width: 30rem;
+`
+
+export const Display = styled(UI.Display)`
+  margin-bottom: 1rem;
+`
+
+export const Text = styled(UI.Text)`
+  margin-bottom: 2rem;
 `

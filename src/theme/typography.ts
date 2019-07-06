@@ -1,23 +1,23 @@
 import { css } from 'styled-components'
 
-import FoundersGroteskRegular from './fonts/FoundersGroteskRegular.otf'
-import FoundersGroteskMedium from './fonts/FoundersGroteskMedium.otf'
+import CopernicusBook from './fonts/CopernicusBook.otf'
+import WhyteBook from './fonts/WhyteBook.otf'
 
 const typography = css`
   @font-face {
     font-display: auto;
-    font-family: 'Founders Grotesk';
+    font-family: 'Copernicus';
     font-weight: 400;
     font-style: normal;
-    src: url(${FoundersGroteskRegular}) format('otf');
+    src: url(${CopernicusBook}) format('otf');
   }
 
   @font-face {
     font-display: auto;
-    font-family: 'Founders Grotesk';
+    font-family: 'Whyte';
     font-weight: 600;
-    font-style: medium;
-    src: url(${FoundersGroteskMedium}) format('otf');
+    font-style: normal;
+    src: url(${WhyteBook}) format('otf');
   }
 `
 
