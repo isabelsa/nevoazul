@@ -7,6 +7,22 @@ export default {
     },
     background: '#FFFFFF',
     foreground: '#000000',
+    beige: {
+      default: '#DBCEBC',
+    },
+    blue: {
+      default: '#B3C9C6',
+    },
+    brown: {
+      default: '#6B665B',
+      dark: '#4C463A',
+    },
+    green: {
+      default: '#8D9678',
+    },
+    red: {
+      default: '#DC7D67',
+    },
   },
   media,
   transitions: {

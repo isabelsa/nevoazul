@@ -2,7 +2,7 @@
   "name": "nevoazul",
   "description": "Conversas em prol da humanidade.",
   "version": "0.1.0",
-  "author": "{{= appAuthor }}",
+  "author": "Isabel Sá",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop -H 0.0.0.0",
