@@ -5,7 +5,7 @@ export default css`
   ${typography}
 
   body {
-    font-family: 'Whyte', sans-serif;
+    font-family: 'Untitled Sans', sans-serif;
     color: ${({ theme }) => theme.colors.foreground};
     background-color: ${({ theme }) => theme.colors.background};
   }
@@ -18,7 +18,7 @@ export default css`
   input,
   button,
   select {
-    font-family: 'Whyte', sans-serif;
+    font-family: 'Untitled Sans', sans-serif;
     font-size: 16px;
     font-weight: 400;
   }
