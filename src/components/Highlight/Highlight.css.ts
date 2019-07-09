@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 
 export const HighlightPicture = styled.div`
   background-color: ${({ theme }) => theme.colors.blue.default};
-  width: 52%;
+  width: 55%;
   height: 40rem;
 
   position: relative;
@@ -16,7 +16,7 @@ export const HighlightPicture = styled.div`
 
 export const HighlightContent = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
-  width: 48%;
+  width: 45%;
 
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ export const Picture = styled.div`
   height: 36rem;
 
   position: absolute;
-  left: 19%;
+  left: 18%;
   bottom: -1.5rem;
 `
 
