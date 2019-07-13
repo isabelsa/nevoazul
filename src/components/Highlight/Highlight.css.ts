@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export const HighlightPicture = styled.div`
@@ -13,18 +17,12 @@ export const HighlightPicture = styled.div`
   height: 40rem;
 
   position: relative;
-`
 
-export const HighlightContent = styled.div`
-  background-color: ${({ theme }) => theme.colors.white};
-  width: 45%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  justify-content: center;
-  text-align: center;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 6rem;
+    padding: 2rem;
+  }
 `
 
 export const Picture = styled.div`
@@ -37,6 +35,27 @@ export const Picture = styled.div`
   position: absolute;
   left: 18%;
   bottom: -1.5rem;
+
+  @media only screen and (max-width: 768px) {
+    width: calc(100% - 2rem);
+    left: 1rem;
+  }
+`
+
+export const HighlightContent = styled.div`
+  background-color: ${({ theme }) => theme.colors.white};
+  width: 45%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+  text-align: center;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 export const Holder = styled.div`
