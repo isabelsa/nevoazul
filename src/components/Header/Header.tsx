@@ -1,21 +1,23 @@
 import React from 'react'
 
 import Logo from '@/components/Logo/Logo'
-import { Wrapper, Content, Link } from './Header.css'
+import * as S from './Header.css'
 
 const Header = ({ siteTitle }: { siteTitle: string }) => (
-  <Wrapper>
-    <Content>
-      <Link to="/">
+  <S.Wrapper>
+    <S.Content>
+      <S.Link to="/">
         <Logo />
+      </S.Link>
+      <S.NavLinks>
         <p>Numeros</p>
         <p>Telegrama</p>
         <p>Revender</p>
         <p>Sobre nos</p>
         <p>0</p>
-      </Link>
-    </Content>
-  </Wrapper>
+      </S.NavLinks>
+    </S.Content>
+  </S.Wrapper>
 )
 
 Header.defaultProps = {

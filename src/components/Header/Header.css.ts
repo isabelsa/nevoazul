@@ -1,21 +1,30 @@
 import styled from '../../theme'
 import { Link as GatsbyLink } from 'gatsby'
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   margin-bottom: 1.45rem;
   transition: background-color 0.2s ease;
   position: sticky;
+  z-index: 99;
 `
 
-const Content = styled.div`
+export const Content = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   margin: 0 auto;
   max-width: 1440px;
   padding: 0rem;
 `
 
-const Link = styled(GatsbyLink)`
+export const Link = styled(GatsbyLink)`
   color: black;
   text-decoration: none;
 `
 
-export { Wrapper, Content, Link }
+export const NavLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`

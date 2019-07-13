@@ -1,13 +1,13 @@
 import * as React from 'react'
-import { ArrowDown } from '../UI/index'
-
 import * as S from './Hero.css'
 
 const Hero = () => {
   return (
     <S.Hero>
       <S.Content>
-        <S.Display>Conversas em prol da humanidade</S.Display>
+        <S.Display>
+          Conversas <i>em prol</i> da humanidade
+        </S.Display>
         <S.Text>
           A nova edição da Nevoazul está a chegar. Através de entrevistas em
           profundidade e artigos de reflexão, queremos questionar a relação que
@@ -15,7 +15,14 @@ const Hero = () => {
           conhecimento.
         </S.Text>
       </S.Content>
-      <ArrowDown />
+
+      <S.CTA>
+        <S.Holder>
+          <S.RoundShape />
+          <S.CTAText>Próxima edição</S.CTAText>
+        </S.Holder>
+      </S.CTA>
+      <S.ArrowDown />
     </S.Hero>
   )
 }
