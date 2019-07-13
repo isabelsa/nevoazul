@@ -1,9 +1,10 @@
 import React from 'react'
 import Hero from '../components/Hero/Hero'
 import Highlight from '../components/Highlight/Highlight'
+import Articles from '@/components/Articles/Articles'
+import NewsletterPlug from '@/components/NewsletterPlug/NewsletterPlug'
 
 import SEO from '@/components/SEO/SEO'
-import Articles from '@/components/Articles/Articles'
 
 const IndexPage = () => {
   return (
@@ -15,6 +16,7 @@ const IndexPage = () => {
       <Hero />
       <Highlight />
       <Articles />
+      <NewsletterPlug />
     </>
   )
 }
