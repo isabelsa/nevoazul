@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import * as UI from '../../UI/index'
 
 export const ArticleImage = styled.div`
   width: 17.15rem;
@@ -10,11 +11,49 @@ export const ArticleImage = styled.div`
   margin-bottom: 1.5rem;
 `
 
+export const TitleHolder = styled.div`
+  display: inline-block;
+  position: relative;
+  margin-top: 0.25rem;
+  margin-bottom: 0.8rem;
+`
+
+export const TitleLink = styled(UI.Title)`
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    height: 1px;
+    width: 0;
+    background-color: ${({ theme }) => theme.colors.blue.default};
+    position: absolute;
+    bottom: -2px;
+    left: 0px;
+
+    transition: ${({ theme }) => theme.transitions.cubic()};
+  }
+`
+
 export const Holder = styled.div`
   width: 100%;
   max-width: 16rem;
+  cursor: pointer;
 
   &:last-child {
     margin-right: none;
+  }
+
+  &:hover {
+    ${ArticleImage} {
+      -webkit-box-shadow: 10px 4px 44px -9px rgba(0, 0, 0, 0.27);
+      -moz-box-shadow: 10px 4px 44px -9px rgba(0, 0, 0, 0.27);
+      box-shadow: 10px 4px 44px -9px rgba(0, 0, 0, 0.27);
+    }
+
+    ${TitleLink} {
+      &::before {
+        width: 100%;
+      }
+    }
   }
 `

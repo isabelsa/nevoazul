@@ -8,7 +8,9 @@ const ArticleSmall = () => {
     <S.Holder>
       <S.ArticleImage />
       <Detail>Placeholder</Detail>
-      <Title>Placeholder</Title>
+      <S.TitleHolder>
+        <S.TitleLink>Placeholder</S.TitleLink>
+      </S.TitleHolder>
       <Text>
         The Thin Line é um projeto de fotografia documental, da autoria do
         Colectivo Photo. A proposta é olhar, refletir e iniciar um diálogo sobre
