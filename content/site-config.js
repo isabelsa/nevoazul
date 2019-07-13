@@ -18,5 +18,5 @@ module.exports = {
   themeColor: '#000',
   backgroundColor: '#fff',
   pathPrefix: null,
-  logo: path.resolve(__dirname, '../src/assets/images/icon.png'),
+  logo: path.resolve(__dirname, '../src/assets/images/favicon.ico'),
 }
