@@ -10,6 +10,11 @@ export const Detail = styled.p`
   text-transform: uppercase;
 `
 
+export const TextSmall = styled.p`
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+`
+
 export const Text = styled.p`
   font-size: 1.05rem;
   line-height: 1.625rem;

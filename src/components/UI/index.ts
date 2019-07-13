@@ -4,6 +4,7 @@ export {
   Display,
   DisplayItalic,
   Text,
+  TextSmall,
   Title,
 } from '../UI/Typography/Typography'
 export { default as NavLink } from '../UI/Links/NavLink/NavLink'

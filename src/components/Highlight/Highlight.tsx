@@ -12,13 +12,13 @@ const Highlight = () => {
       <S.HighlightContent>
         <S.Holder>
           <Detail>Placeholder</Detail>
-          <Title>Placeholder</Title>
-          <Text>
+          <S.Title>Placeholder</S.Title>
+          <S.Text>
             A nova edição da Nevoazul está a chegar. Através de entrevistas em
             profundidade e artigos de reflexão, queremos questionar a relação
             que temos com os meios e perceber como podemos transformar
             informação em conhecimento.
-          </Text>
+          </S.Text>
           <NavLink>Placeholder</NavLink>
         </S.Holder>
       </S.HighlightContent>

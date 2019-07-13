@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import * as UI from '../UI/index'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -40,4 +41,12 @@ export const Picture = styled.div`
 
 export const Holder = styled.div`
   max-width: 70%;
+`
+
+export const Title = styled(UI.Title)`
+  margin-bottom: 0.5rem;
+`
+
+export const Text = styled(UI.Text)`
+  margin-bottom: 1rem;
 `
