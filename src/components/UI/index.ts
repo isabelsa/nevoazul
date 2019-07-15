@@ -1,4 +1,5 @@
 export { default as ArrowDown } from '../UI/Icons/ArrowDown'
+export { default as Close } from '../UI/Icons/Close'
 export {
   Detail,
   Display,

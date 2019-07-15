@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from '@/theme'
 import Banner from '@/components/Banner/Banner'
 import Header from '@/components/Header/Header'
+import Footer from '@/components/Footer/Footer'
 
 import { Content } from './layout.css'
 
@@ -19,10 +20,8 @@ const Layout = ({ children }: ILayoutProps) => {
         <ThemeProvider>
           <Banner />
           <Header siteTitle={data.site.siteMetadata.title} />
-          <Content>
-            {children}
-            <footer></footer>
-          </Content>
+          <Content>{children}</Content>
+          <Footer />
         </ThemeProvider>
       )}
     />
