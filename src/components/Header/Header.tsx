@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Logo from '@/components/Logo/Logo'
-import { TextSmall } from '../UI/index'
+import { Cart, HeaderLink, TextSmall } from '../UI/index'
 import * as S from './Header.css'
 
 const Header = ({ siteTitle }: { siteTitle: string }) => (
@@ -11,11 +11,11 @@ const Header = ({ siteTitle }: { siteTitle: string }) => (
         <Logo />
       </S.Link>
       <S.NavLinks>
-        <TextSmall>Numeros</TextSmall>
-        <TextSmall>Telegrama</TextSmall>
-        <TextSmall>Revender</TextSmall>
-        <TextSmall>Sobre nos</TextSmall>
-        <TextSmall>0</TextSmall>
+        <HeaderLink>Numeros</HeaderLink>
+        <HeaderLink>Telegrama</HeaderLink>
+        <HeaderLink>Revender</HeaderLink>
+        <HeaderLink>Sobre nos</HeaderLink>
+        <Cart />
       </S.NavLinks>
     </S.Content>
   </S.Wrapper>

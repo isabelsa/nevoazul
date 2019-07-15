@@ -2,9 +2,11 @@ import styled from '../../theme'
 import { Link as GatsbyLink } from 'gatsby'
 
 export const Wrapper = styled.div`
-  margin-bottom: 1.45rem;
-  transition: background-color 0.2s ease;
-  position: sticky;
+  position: fixed;
+
+  margin-bottom: 2rem;
+  padding: 1.5rem 10%;
+  width: 100%;
   z-index: 99;
 `
 
@@ -13,9 +15,9 @@ export const Content = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
+
+  width: 100%;
   max-width: 1440px;
-  padding: 0rem;
 `
 
 export const Link = styled(GatsbyLink)`
@@ -27,4 +29,8 @@ export const NavLinks = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  div:not(:last-child) {
+    margin-right: 1rem;
+  }
 `

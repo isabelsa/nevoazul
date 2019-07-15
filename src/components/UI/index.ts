@@ -1,4 +1,5 @@
 export { default as ArrowDown } from '../UI/Icons/ArrowDown'
+export { default as Cart } from '../UI/Icons/Cart'
 export { default as Close } from '../UI/Icons/Close'
 export {
   Detail,
@@ -8,5 +9,6 @@ export {
   TextSmall,
   Title,
 } from '../UI/Typography/Typography'
+export { default as HeaderLink } from '../UI/Links/HeaderLink/HeaderLink'
 export { default as NavLink } from '../UI/Links/NavLink/NavLink'
 export { default as TitleLink } from '../UI/Links/TitleLink/TitleLink'
