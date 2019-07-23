@@ -54,3 +54,16 @@ export const CTAText = styled(UI.Text)`
 `
 
 export const RoundShape = styled(roundShape)``
+
+export const Anchor = styled(UI.AnchorLink)`
+  position: absolute;
+  bottom: 16%;
+  left: 10%;
+
+  transition: ${({ theme }) => theme.transitions.ease()};
+
+  &:hover {
+    cursor: pointer;
+    bottom: 15%;
+  }
+`

@@ -1,6 +1,5 @@
 import * as React from 'react'
 import * as S from './Hero.css'
-import { AnchorLink } from '../UI/index'
 
 const Hero = () => {
   return (
@@ -23,9 +22,9 @@ const Hero = () => {
           <S.CTAText>Próxima edição</S.CTAText>
         </S.Holder>
       </S.CTA>
-      <AnchorLink to="#highlight">
+      <S.Anchor to="#highlight">
         <S.ArrowDown />
-      </AnchorLink>
+      </S.Anchor>
     </S.Hero>
   )
 }
