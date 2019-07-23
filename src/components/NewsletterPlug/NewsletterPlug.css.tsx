@@ -7,7 +7,7 @@ export const NewsletterPlug = styled.div`
   flex-direction: row;
   justify-content: center;
 
-  padding: 0% 10%;
+  padding: 0% 10% 6% 10%;
 `
 export const Subscribe = styled.div`
   display: flex;

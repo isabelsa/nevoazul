@@ -9,6 +9,7 @@ export {
   TextSmall,
   Title,
 } from '../UI/Typography/Typography'
+export { default as ArrowLink } from '../UI/Links/ArrowLink/ArrowLink'
 export { default as AnchorLink } from '../UI/Links/AnchorLink/AnchorLink.css'
 export { default as HeaderLink } from '../UI/Links/HeaderLink/HeaderLink'
 export { default as NavLink } from '../UI/Links/NavLink/NavLink'

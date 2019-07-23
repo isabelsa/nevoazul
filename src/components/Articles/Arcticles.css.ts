@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Holder = styled.div`
-  padding: 10% 10%;
+  padding: 10% 10% 0% 10%;
 `
 
 export const Flex = styled.div`

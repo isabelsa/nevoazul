@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from '../UI/index'
+import { ArrowLink } from '../UI/index'
 
 import * as S from './NewsletterPlug.css'
 
@@ -8,7 +8,7 @@ const NewsletterPlug = () => {
     <S.NewsletterPlug>
       <S.Subscribe>
         <S.Title>Subscreve a newsletter</S.Title>
-        <NavLink>Ler mais</NavLink>
+        <ArrowLink>Ler mais</ArrowLink>
       </S.Subscribe>
       <S.Text>
         Uma newsletter mensal de poucas linhas sobre como a tecnologia, a
