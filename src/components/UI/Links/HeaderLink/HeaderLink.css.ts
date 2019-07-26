@@ -7,6 +7,7 @@ export const Holder = styled.div`
 
 export const HeaderLink = styled.p`
   cursor: pointer;
+  font-size: 0.935rem;
 
   &::before {
     content: '';

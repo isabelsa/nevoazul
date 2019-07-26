@@ -18,7 +18,7 @@ const Layout = ({ children }: ILayoutProps) => {
       query={layoutQuery}
       render={data => (
         <ThemeProvider>
-          <Banner />
+          {/* <Banner /> */}
           <Header siteTitle={data.site.siteMetadata.title} />
           <Content>{children}</Content>
           <Footer />
