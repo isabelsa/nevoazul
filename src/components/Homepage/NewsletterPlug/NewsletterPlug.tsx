@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowLink } from '../UI/index'
+import { ArrowLink } from '../../UI/index'
 
 import * as S from './NewsletterPlug.css'
 

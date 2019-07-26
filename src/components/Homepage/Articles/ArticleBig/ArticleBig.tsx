@@ -1,9 +1,9 @@
 import React from 'react'
-import { Detail, NavLink, Text, Title } from '../../UI/index'
+import { Detail, Text, Title } from '../../../UI/index'
 
-import * as S from './ArticleSmall.css'
+import * as S from './ArticleBig.css'
 
-const ArticleSmall = () => {
+const ArticleBig = () => {
   return (
     <S.Holder>
       <S.ArticleImage />
@@ -20,4 +20,4 @@ const ArticleSmall = () => {
   )
 }
 
-export default ArticleSmall
+export default ArticleBig

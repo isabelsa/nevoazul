@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import * as UI from '../../UI/index'
+import * as UI from '../../../UI/index'
 
 export const ArticleImage = styled.div`
   width: 17.15rem;

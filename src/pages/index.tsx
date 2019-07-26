@@ -1,8 +1,8 @@
 import React from 'react'
-import Hero from '@/components/Hero/Hero'
-import Highlight from '@/components/Highlight/Highlight'
-import Articles from '@/components/Articles/Articles'
-import NewsletterPlug from '@/components/NewsletterPlug/NewsletterPlug'
+import Hero from '@/components/Homepage/Hero/Hero'
+import Highlight from '@/components/Homepage/Highlight/Highlight'
+import Articles from '@/components/Homepage/Articles/Articles'
+import NewsletterPlug from '@/components/Homepage/NewsletterPlug/NewsletterPlug'
 
 import SEO from '@/components/SEO/SEO'
 

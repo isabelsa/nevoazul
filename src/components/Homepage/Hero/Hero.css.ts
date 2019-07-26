@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import * as UI from '../UI/index'
-import hero from '../../assets/images/hero.png'
-import roundShape from '../../assets/images/roundShapeCTA.svg'
+import * as UI from '../../UI/index'
+import hero from '../../../assets/images/hero.png'
+import roundShape from '../../../assets/images/roundShapeCTA.svg'
 
 export const Hero = styled.div`
   align-items: flex-start;

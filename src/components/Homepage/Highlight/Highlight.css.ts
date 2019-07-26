@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import * as UI from '../UI/index'
+import * as UI from '../../UI/index'
 
 export const Wrapper = styled.div`
   display: flex;
