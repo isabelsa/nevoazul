@@ -8,7 +8,7 @@ export const Hero = styled.div`
   display: flex;
   flex-direction: column;
 
-  height: 40rem;
+  position: relative;
 
   padding: 14rem 10% 10% 10%;
 `

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Gallery from '../Gallery/Gallery'
 
 import * as S from './Hero.css'
 
@@ -27,6 +28,7 @@ const Hero = () => {
           estamos no papel de produtores, como no de consumidores.
         </S.Text>
       </S.Flex>
+      <Gallery />
     </S.Hero>
   )
 }
