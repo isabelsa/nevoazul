@@ -6,9 +6,9 @@ export const Holder = styled.div`
   flex-direction: row;
   justify-content: center;
 
-  padding: 0% 10%;
+  padding: 3rem 10%;
 `
 
 export const Footer = styled.div`
-  background-color: ${({ theme }) => theme.colors.beige.default};
+  background-color: ${({ theme }) => theme.colors.greyscale.light};
 `

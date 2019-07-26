@@ -28,6 +28,7 @@ export const Display = styled(UI.Display)`
 
 export const Text = styled(UI.Text)`
   margin-bottom: 2rem;
+  max-width: 28rem;
 `
 
 export const ArrowDown = styled(UI.ArrowDown)``
@@ -57,13 +58,13 @@ export const RoundShape = styled(roundShape)``
 
 export const Anchor = styled(UI.AnchorLink)`
   position: absolute;
-  bottom: 16%;
+  bottom: 8%;
   left: 10%;
 
   transition: ${({ theme }) => theme.transitions.ease()};
 
   &:hover {
     cursor: pointer;
-    bottom: 15%;
+    bottom: 7%;
   }
 `

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Logo from '@/components/Logo/Logo'
+
 import * as S from './Footer.css'
 
 const Footer = () => {
@@ -7,7 +9,7 @@ const Footer = () => {
     <S.Footer>
       <S.Holder>
         <div>
-          <p>nevoa</p>
+          <Logo />
           <p>
             Nunca na historia tivemos acesso a tantos conteudos, agora depende
             de nos usa-los em prol de um futuro melhor.

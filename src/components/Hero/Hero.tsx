@@ -6,7 +6,7 @@ const Hero = () => {
     <S.Hero>
       <S.Content>
         <S.Display>
-          Conversas <i>em prol</i> da humanidade
+          Conversas <i>em prol</i> da humanidade.
         </S.Display>
         <S.Text>
           A nova edição da Nevoazul está a chegar. Através de entrevistas em

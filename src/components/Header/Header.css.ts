@@ -33,4 +33,8 @@ export const NavLinks = styled.div`
   div:not(:last-child) {
     margin-right: 1rem;
   }
+
+  svg {
+    margin-left: 6rem;
+  }
 `

@@ -20,6 +20,9 @@ export default {
     green: {
       default: '#8D9678',
     },
+    greyscale: {
+      light: '#EBEDEF',
+    },
     red: {
       default: '#DC7D67',
     },
