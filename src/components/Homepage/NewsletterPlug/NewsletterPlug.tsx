@@ -3,20 +3,31 @@ import { ArrowLink } from '../../UI/index'
 
 import * as S from './NewsletterPlug.css'
 
+import { graphql, useStaticQuery } from 'gatsby'
+
 const NewsletterPlug = () => {
+  const { homepageYaml } = useStaticQuery(query)
   return (
     <S.NewsletterPlug>
       <S.Subscribe>
-        <S.Title>Subscreve a newsletter</S.Title>
-        <ArrowLink>Ler mais</ArrowLink>
+        <S.Title>{homepageYaml.newsletter.title}</S.Title>
+        <ArrowLink>{homepageYaml.newsletter.readmore}</ArrowLink>
       </S.Subscribe>
-      <S.Text>
-        Uma newsletter mensal de poucas linhas sobre como a tecnologia, a
-        cultura e o design nos podem tornar mais humanos numa era cada vez mais
-        digital.
-      </S.Text>
+      <S.Text>{homepageYaml.newsletter.description}</S.Text>
     </S.NewsletterPlug>
   )
 }
 
 export default NewsletterPlug
+
+export const query = graphql`
+  {
+    homepageYaml {
+      newsletter {
+        title
+        description
+        readmore
+      }
+    }
+  }
+`
