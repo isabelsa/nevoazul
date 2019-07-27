@@ -11,6 +11,10 @@ export const ArticleImage = styled.div`
   margin-bottom: 1.5rem;
 `
 
+export const Detail = styled(UI.Detail)`
+  margin-bottom: 0.25rem;
+`
+
 export const TitleHolder = styled.div`
   display: inline-block;
   position: relative;
@@ -27,10 +31,10 @@ export const TitleLink = styled(UI.Title)`
     width: 0;
     background-color: ${({ theme }) => theme.colors.blue.default};
     position: absolute;
-    bottom: -2px;
+    bottom: 6px;
     left: 0px;
 
-    transition: ${({ theme }) => theme.transitions.cubic()};
+    transition: all ${({ theme }) => theme.transitions.ease()};
   }
 `
 
@@ -52,7 +56,7 @@ export const Holder = styled.div`
 
     ${TitleLink} {
       &::before {
-        width: 100%;
+        text-decoration: underline;
       }
     }
   }

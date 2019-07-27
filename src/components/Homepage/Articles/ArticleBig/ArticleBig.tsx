@@ -7,9 +7,9 @@ const ArticleBig = () => {
   return (
     <S.Holder>
       <S.ArticleImage />
-      <Detail>Placeholder</Detail>
+      <S.Detail>Placeholder</S.Detail>
       <S.TitleHolder>
-        <S.TitleLink>Placeholder</S.TitleLink>
+        <S.TitleLink>A framework for performing</S.TitleLink>
       </S.TitleHolder>
       <Text>
         The Thin Line é um projeto de fotografia documental, da autoria do

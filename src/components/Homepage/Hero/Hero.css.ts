@@ -14,16 +14,14 @@ export const Hero = styled.div`
   justify-content: center;
   position: relative;
 
-  height: 40rem;
-
-  padding: 10% 10%;
+  padding: 14rem 10% 10% 10%;
 `
 export const Content = styled.div`
   max-width: 30rem;
 `
 
 export const Display = styled(UI.Display)`
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 `
 
 export const Text = styled(UI.Text)`
