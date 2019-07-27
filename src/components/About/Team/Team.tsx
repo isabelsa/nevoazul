@@ -1,38 +1,57 @@
 import * as React from 'react'
 
+import { Title, Text } from '../../UI/index'
+
+import { graphql, useStaticQuery } from 'gatsby'
+
 const Team = () => {
+  const { aboutYaml } = useStaticQuery(query)
+
   return (
     <div>
-      <p>A equipa</p>
-
-      <p>Inês Catarina Pinto</p>
-      <p>
-        Editora na Nevoazul, coordenadora do Manifesto, apologista de novos
-        futuros.
-      </p>
-
-      <p>Isabel Sá</p>
-      <p>
-        Designer na Nevoazul, designer e developer na Significa, apologista de
-        novos futuros.
-      </p>
-
-      <p>Miguel Barbot</p>
-      <p>
-        Editor de fotografia da Nevoazul, consultor no Ofício, apologista de uma
-        melhor mobilidade.
-      </p>
-
-      <p>Pedro Oliveira</p>
-      <p>Designer na Nevoazul, arquitecto itinerante, apologista de (...).</p>
-
-      <p>Pedro Codeço</p>
-      <p>
-        Editor de ilustração na Nevoazul, ilustrador por si mesmo, apologista de
-        (…).
-      </p>
+      <Title>{aboutYaml.team.title}</Title>
+      <Text>{aboutYaml.team.ines.name}</Text>
+      <Text>{aboutYaml.team.ines.description}</Text>
+      <Text>{aboutYaml.team.isabel.name}</Text>
+      <Text>{aboutYaml.team.isabel.description}</Text>
+      <Text>{aboutYaml.team.miguel.name}</Text>
+      <Text>{aboutYaml.team.miguel.description}</Text>
+      <Text>{aboutYaml.team.pedrocodeco.name}</Text>
+      <Text>{aboutYaml.team.pedrocodeco.description}</Text>
+      <Text> {aboutYaml.team.pedrooliveira.name}</Text>
+      <Text>{aboutYaml.team.pedrooliveira.description}</Text>
     </div>
   )
 }
 
 export default Team
+
+export const query = graphql`
+  {
+    aboutYaml {
+      team {
+        title
+        ines {
+          name
+          description
+        }
+        isabel {
+          name
+          description
+        }
+        miguel {
+          name
+          description
+        }
+        pedrocodeco {
+          name
+          description
+        }
+        pedrooliveira {
+          name
+          description
+        }
+      }
+    }
+  }
+`

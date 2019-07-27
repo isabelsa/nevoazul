@@ -16,3 +16,21 @@ conversation:
     third: Podes acompanhar o nosso processo de trabalho e ficar a conhecer, em primeira mão, como criamos a Nevoazul.
     fourth: Vais ser o primeiro a receber as novas edições da Nevoazul.
     fifth: Irás encontrar postais da Nevoazul, na tua caixa de correio, com memorandos para conversas melhores.
+
+team:
+  title: A equipa
+  ines:
+    name: Inês Santos Silva
+    description: Editora na Nevoazul, coordenadora do Manifesto, apologista de novos futuros.
+  isabel:
+    name: Isabel Sá
+    description: Editora na Nevoazul, coordenadora do Manifesto, apologista de novos futuros.
+  miguel:
+    name: Muigel Barbot
+    description: Editor de fotografia da Nevoazul, consultor no Ofício, apologista de uma melhor mobilidade.
+  pedrocodeco:
+    name: Pedro Codeço
+    description: Editor de ilustração na Nevoazul, ilustrador por si mesmo, apologista de (…).
+  pedrooliveira:
+    name: Pedro Oliveira
+    description: Designer na Nevoazul, arquitecto itinerante, apologista de (...).

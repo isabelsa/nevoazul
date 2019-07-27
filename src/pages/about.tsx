@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Hero from '@/components/About/Hero/Hero'
 import Conversation from '@/components/About/Conversation/Conversation'
+import Team from '@/components/About/Team/Team'
 
 import { graphql, useStaticQuery } from 'gatsby'
 
@@ -17,6 +18,7 @@ const About = () => {
       />
       <Hero />
       <Conversation />
+      <Team />
     </>
   )
 }

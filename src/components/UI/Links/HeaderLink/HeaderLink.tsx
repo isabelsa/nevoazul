@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import * as S from './HeaderLink.css'
 
-const NavLink = ({ children }) => {
+const NavLink = ({ children, to }) => {
   return (
     <S.Holder>
-      <S.HeaderLink>{children}</S.HeaderLink>
+      <Link to={to}>
+        <S.HeaderLink>{children}</S.HeaderLink>
+      </Link>
     </S.Holder>
   )
 }
