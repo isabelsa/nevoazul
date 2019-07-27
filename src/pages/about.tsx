@@ -1,17 +1,35 @@
 import * as React from 'react'
 import Hero from '@/components/About/Hero/Hero'
-import Why from '@/components/About/Why/Why'
+import Conversation from '@/components/About/Conversation/Conversation'
+
+import { graphql, useStaticQuery } from 'gatsby'
 
 import SEO from '@/components/SEO/SEO'
 
 const About = () => {
+  const { aboutYaml } = useStaticQuery(query)
   return (
     <>
-      <SEO title={'Sobre'} keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title={aboutYaml.seo.title}
+        description={aboutYaml.seo.description}
+        keywords={[`gatsby`, `application`, `react`]}
+      />
       <Hero />
-      <Why />
+      <Conversation />
     </>
   )
 }
 
 export default About
+
+export const query = graphql`
+  {
+    aboutYaml {
+      seo {
+        title
+        description
+      }
+    }
+  }
+`
