@@ -1,15 +1,15 @@
 import React from 'react'
-import { Detail, NavLink, Text, Title } from '../../UI/index'
+import { Detail, Text, Title } from '../../../UI/index'
 
-import * as S from './ArticleSmall.css'
+import * as S from './ArticleBig.css'
 
-const ArticleSmall = () => {
+const ArticleBig = () => {
   return (
     <S.Holder>
       <S.ArticleImage />
-      <Detail>Placeholder</Detail>
+      <S.Detail>Placeholder</S.Detail>
       <S.TitleHolder>
-        <S.TitleLink>Placeholder</S.TitleLink>
+        <S.TitleLink>A framework for performing</S.TitleLink>
       </S.TitleHolder>
       <Text>
         The Thin Line é um projeto de fotografia documental, da autoria do
@@ -20,4 +20,4 @@ const ArticleSmall = () => {
   )
 }
 
-export default ArticleSmall
+export default ArticleBig

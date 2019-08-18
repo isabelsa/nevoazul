@@ -1,7 +1,7 @@
 import React from 'react'
 
-import ArticleBig from '../Articles/ArticleBig/ArticleBig'
-import ArcticleSmall from '../Articles/ArticleSmall/ArticleSmall'
+import ArticleBig from './ArticleBig/ArticleBig'
+import ArcticleSmall from './ArticleSmall/ArticleSmall'
 
 import * as S from './Arcticles.css'
 

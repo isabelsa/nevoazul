@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  title: 'Nevoazul',
+  title: 'Nevoazul |',
   shortName: 'Nevoazul',
   description: 'Conversas em prol da humanidade',
   author: 'Isabel Sá',

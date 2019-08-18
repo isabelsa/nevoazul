@@ -1,0 +1,36 @@
+seo:
+  title: Sobre a nevoazul
+  description: Para ser adicionada.
+
+main:
+  firstdescription: Numa era conhecida pelas potencialidades da comunicação, a pressão para estarmos atentos ao que se passa no mundo leva-nos, muitas vezes, a consumir conteúdos em quantidade e não em profundidade. Entretanto, somos tambem responsáveis por aquilo que partilhamos, produzimos e criamos. Porque numa sociedade movida a informação, tão depressa estamos no papel de produtores, como no de consumidores.
+  seconddescription: Com a Nevoazul, queremos questionar a relação que temos com os meios e perceber como podemos transformar a informacao em conhecimento. O nosso propósito e mostrar que a forma como comunicamos pode acrescentar valor a forma como trabalhamos. Através de entrevistas em profundidade e artigos de reflexão, vamos perceber como pessoas de diferentes áreas usam estas ferramentas para difundir uma mensagem significativa que representa os seus valores. Nunca na história tivemos acesso a tantos conteudos, agora depende de nós usá-los em prol de um futuro melhor.
+
+conversation:
+  title: Por conversas melhores
+  description: Queremos ajudar-te a compreenderes, e a usares de forma mais significativa, os meios de comunicacao que tens ao teu alcance. Ao tornares-te patrono da Nevoazul, teras acesso prioritario a revista e a conteudos exclusivos que pretendem questionar como a comunicacao pode ser usada em prol da humanidade.
+  joinconversation: Junta-te à conversa
+  perks:
+    first: Iras receber uma newsletter especial com dicas sobre livros, vídeos e outras ferramentas de comunicacaoo que te podem ajudar a melhorar o teu trabalho e aproveitares melhor as horas de lazer.
+    second: Vais poder ver fotografias e vídeos dos bastidores das nossas entrevistas.
+    third: Podes acompanhar o nosso processo de trabalho e ficar a conhecer, em primeira mão, como criamos a Nevoazul.
+    fourth: Vais ser o primeiro a receber as novas edições da Nevoazul.
+    fifth: Irás encontrar postais da Nevoazul, na tua caixa de correio, com memorandos para conversas melhores.
+
+team:
+  title: A equipa
+  ines:
+    name: Inês Santos Silva
+    description: Editora na Nevoazul, coordenadora do Manifesto, apologista de novos futuros.
+  isabel:
+    name: Isabel Sá
+    description: Editora na Nevoazul, coordenadora do Manifesto, apologista de novos futuros.
+  miguel:
+    name: Muigel Barbot
+    description: Editor de fotografia da Nevoazul, consultor no Ofício, apologista de uma melhor mobilidade.
+  pedrocodeco:
+    name: Pedro Codeço
+    description: Editor de ilustração na Nevoazul, ilustrador por si mesmo, apologista de (…).
+  pedrooliveira:
+    name: Pedro Oliveira
+    description: Designer na Nevoazul, arquitecto itinerante, apologista de (...).

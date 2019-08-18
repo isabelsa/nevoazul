@@ -1,5 +1,5 @@
 import React from 'react'
-import { Detail, NavLink, Text, Title } from '../UI/index'
+import { Detail, NavLink } from '../../UI/index'
 
 import * as S from './Highlight.css'
 

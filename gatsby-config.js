@@ -11,8 +11,15 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-yaml`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-webpack-size`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./content/`,
+      },
+    },
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
