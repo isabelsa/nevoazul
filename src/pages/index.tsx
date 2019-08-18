@@ -7,7 +7,6 @@ import NewsletterPlug from '@/components/Homepage/NewsletterPlug/NewsletterPlug'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import SEO from '@/components/SEO/SEO'
-import { connect } from 'net'
 
 const IndexPage = () => {
   const { homepageYaml } = useStaticQuery(query)

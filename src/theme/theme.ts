@@ -9,6 +9,7 @@ export default {
     foreground: '#000000',
     beige: {
       default: '#DBCEBC',
+      light: '#EFEBE6',
     },
     blue: {
       default: '#B3C9C6',

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Detail, Text, Title } from '../../../UI/index'
+import { Text } from '../../../UI/index'
 
 import * as S from './ArticleBig.css'
 

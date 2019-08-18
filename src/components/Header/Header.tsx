@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Logo from '@/components/Logo/Logo'
-import { Cart, HeaderLink, TextSmall } from '../UI/index'
+import { Cart, HeaderLink } from '../UI/index'
 import * as S from './Header.css'
 
 import { graphql, useStaticQuery } from 'gatsby'

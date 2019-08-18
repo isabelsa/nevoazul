@@ -2,67 +2,76 @@ import styled from 'styled-components'
 
 import * as UI from '../../UI/index'
 import hero from '../../../assets/images/hero.png'
-import roundShape from '../../../assets/images/roundShapeCTA.svg'
 
 export const Hero = styled.div`
+  display: flex;
+  flex-direction: row;
   align-items: flex-start;
-  background-color: ${({ theme }) => theme.colors.beige.default};
+  justify-content: center;
+
+  height: 44rem;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+`
+export const HeroImage = styled.div`
   background-image: url(${hero});
+  background-position: center center;
   background-size: cover;
+
+  width: 50%;
+  height: 100%;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+
+    height: 30rem;
+  }
+`
+
+export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  position: relative;
+  background-color: ${({ theme }) => theme.colors.beige.light};
 
-  padding: 14rem 10% 10% 10%;
-`
-export const Content = styled.div`
-  max-width: 30rem;
+  padding: 3rem;
+
+  width: 50%;
+  height: 100%;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 3rem;
+  }
 `
 
-export const Display = styled(UI.Display)`
+export const ContentHolder = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.colors.beige.light};
+
+  width: 100%;
+  height: 100%;
+`
+
+export const HeroCategory = styled(UI.Detail)`
+  margin-bottom: 0.5rem;
+`
+
+export const HeroTitle = styled(UI.Display)`
+  text-align: center;
   margin-bottom: 0.75rem;
 `
 
-export const Text = styled(UI.Text)`
-  margin-bottom: 2rem;
-  max-width: 28rem;
-`
-
-export const ArrowDown = styled(UI.ArrowDown)``
-
-export const CTA = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-`
-
-export const Holder = styled.div`
-  position: relative;
-`
-
-export const CTAText = styled(UI.Text)`
-  position: absolute;
-  bottom: 6rem;
-  right: 5rem;
+export const HeroDescription = styled(UI.Text)`
   text-align: center;
-
-  max-width: 3.25rem;
-
-  color: ${({ theme }) => theme.colors.background};
-`
-
-export const RoundShape = styled(roundShape)``
-
-export const Anchor = styled(UI.AnchorLink)`
-  position: absolute;
-  bottom: 8%;
-  left: 10%;
-
-  transition: ${({ theme }) => theme.transitions.ease()};
-
-  &:hover {
-    cursor: pointer;
-    bottom: 7%;
-  }
+  max-width: 25rem;
+  margin-bottom: 1.5rem;
 `

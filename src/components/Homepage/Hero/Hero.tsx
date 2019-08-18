@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as S from './Hero.css'
 
+import { NavLink } from '../../UI/index'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const Hero = () => {
@@ -8,22 +9,15 @@ const Hero = () => {
 
   return (
     <S.Hero>
-      <S.Content>
-        <S.Display>
-          Conversas <i>em prol</i> da humanidade.
-        </S.Display>
-        <S.Text>{homepageYaml.hero.description}</S.Text>
-      </S.Content>
-
-      <S.CTA>
-        <S.Holder>
-          <S.RoundShape />
-          <S.CTAText>{homepageYaml.hero.cta}</S.CTAText>
-        </S.Holder>
-      </S.CTA>
-      <S.Anchor to="#highlight">
-        <S.ArrowDown />
-      </S.Anchor>
+      <S.HeroImage />
+      <S.HeroContent>
+        <S.ContentHolder>
+          <S.HeroCategory>Categoria</S.HeroCategory>
+          <S.HeroTitle>{homepageYaml.hero.title}</S.HeroTitle>
+          <S.HeroDescription>{homepageYaml.hero.description}</S.HeroDescription>
+          <NavLink>Ler mais</NavLink>
+        </S.ContentHolder>
+      </S.HeroContent>
     </S.Hero>
   )
 }

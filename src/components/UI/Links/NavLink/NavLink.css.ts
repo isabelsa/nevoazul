@@ -12,7 +12,7 @@ export const NavLink = styled.p`
     content: '';
     height: 1px;
     width: 100%;
-    background-color: ${({ theme }) => theme.colors.blue.default};
+    background-color: ${({ theme }) => theme.colors.foreground};
     position: absolute;
     bottom: -2px;
     left: 0px;

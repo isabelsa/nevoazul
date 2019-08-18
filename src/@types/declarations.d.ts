@@ -10,3 +10,5 @@
 declare module '*.eot'
 declare module '*.woff'
 declare module '*.woff2'
+declare module '*.jpg'
+declare module '*.png'
