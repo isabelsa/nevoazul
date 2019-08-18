@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '@/components/Homepage/Hero/Hero'
+import MagazinePlug from '@/components/Homepage/MagazinePlug/MagazinePlug'
 import Highlight from '@/components/Homepage/Highlight/Highlight'
 import Articles from '@/components/Homepage/Articles/Articles'
 import NewsletterPlug from '@/components/Homepage/NewsletterPlug/NewsletterPlug'
@@ -19,6 +20,7 @@ const IndexPage = () => {
         keywords={[`nevoazul`, `revista`, `minimalismo`]}
       />
       <Hero />
+      <MagazinePlug />
       <Highlight />
       <Articles />
       <NewsletterPlug />
