@@ -3,8 +3,9 @@ import styled, { css } from 'styled-components'
 export const base = css``
 
 export const Detail = styled.p`
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   line-height: 1.2rem;
+  letter-spacing: 0.01rem;
 
   text-transform: uppercase;
 `

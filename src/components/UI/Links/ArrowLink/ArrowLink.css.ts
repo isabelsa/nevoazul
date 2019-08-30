@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ArrowRight from '../../Icons/ArrowRight'
 
 export const Arrow = styled(ArrowRight)`
-  margin-left: 0.6rem;
+  margin-left: 0.4rem;
 
   transition: ${({ theme }) => theme.transitions.cubic()};
 `
@@ -14,7 +14,7 @@ export const Holder = styled.div`
 
   &:hover {
     ${Arrow} {
-      margin-left: 1rem;
+      margin-left: 0.75rem;
     }
   }
 `

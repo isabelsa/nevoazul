@@ -51,18 +51,19 @@ export const HeroContent = styled.div`
 `
 
 export const ContentHolder = styled.div`
+  cursor: pointer;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.beige.light};
 
   width: 100%;
   height: 100%;
 `
 
 export const HeroCategory = styled(UI.Detail)`
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 `
 
 export const HeroTitle = styled(UI.Display)`

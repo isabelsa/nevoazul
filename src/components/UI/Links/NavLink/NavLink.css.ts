@@ -14,7 +14,7 @@ export const NavLink = styled.p`
     width: 100%;
     background-color: ${({ theme }) => theme.colors.foreground};
     position: absolute;
-    bottom: -2px;
+    bottom: -3px;
     left: 0px;
 
     transition: ${({ theme }) => theme.transitions.cubic()};

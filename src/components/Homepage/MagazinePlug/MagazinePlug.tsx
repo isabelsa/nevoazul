@@ -1,10 +1,14 @@
-import React from 'react'
+import * as React from 'react'
 
 import { ArrowLink } from '../../UI/index'
 
 import * as S from './MagazinePlug.css'
 
 const MagazineOrderNext = () => {
+  const [isHovered, setHovered] = React.useState(false)
+
+  console.log(isHovered)
+
   return (
     <S.MagazinePlug>
       <S.Content>
@@ -16,9 +20,13 @@ const MagazineOrderNext = () => {
           temos com os meios e perceber como podemos transformar informação em
           conhecimento.
         </S.ContentTextMobile>
-        <S.AsteriskShape />
-
-        <ArrowLink>Reserva já</ArrowLink>
+        <div
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
+          <S.AsteriskShape isHovered={isHovered} />
+          <ArrowLink>Reserva já</ArrowLink>
+        </div>
       </S.Content>
 
       <S.ContentDescription>

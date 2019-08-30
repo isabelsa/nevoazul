@@ -27,6 +27,10 @@ export const Banner = styled.div`
     `}
 `
 
+export const BannerHolder = styled.div`
+  background-color: ${({ theme }) => theme.colors.brown.default};
+`
+
 export const Close = styled(UI.Close)`
   position: absolute;
   right: 1rem;

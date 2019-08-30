@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   position: fixed;
 
   margin-bottom: 2rem;
-  padding: 2rem 10%;
+  padding: 1.5rem 10%;
   width: 100%;
   z-index: 99;
 `
@@ -31,7 +31,7 @@ export const NavLinks = styled.div`
   align-items: center;
 
   div:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 
   svg {
