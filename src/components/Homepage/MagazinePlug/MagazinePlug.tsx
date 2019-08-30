@@ -13,7 +13,9 @@ const MagazineOrderNext = () => {
     <S.MagazinePlug>
       <S.Content>
         <S.ContentHighlight>No próximo número</S.ContentHighlight>
-        <S.ContentTitle> Conversas em prol da humanidade.</S.ContentTitle>
+        <S.ContentTitle>
+          Conversas <i>em prol</i> da humanidade.
+        </S.ContentTitle>
         <S.ContentTextMobile>
           A nova edição da Nevoazul está a chegar. Através de entrevistas em
           profundidade e artigos de reflexão, queremos questionar a relação que
@@ -25,7 +27,7 @@ const MagazineOrderNext = () => {
           onMouseLeave={() => setHovered(false)}
         >
           <S.AsteriskShape isHovered={isHovered} />
-          <ArrowLink>Reserva já</ArrowLink>
+          <ArrowLink>Reservar revista</ArrowLink>
         </div>
       </S.Content>
 

@@ -41,5 +41,5 @@ export const DisplayItalic = styled.h1`
 export const Title = styled.p`
   font-family: 'Copernicus';
   font-size: 2.25rem;
-  line-height: 2.65rem;
+  line-height: 2.85rem;
 `

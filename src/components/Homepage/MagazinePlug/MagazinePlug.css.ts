@@ -7,7 +7,7 @@ import * as UI from '../../UI/index'
 
 export const MagazinePlug = styled.div`
   display: grid;
-  grid-template-columns: 4fr 4fr 3fr;
+  grid-template-columns: 4fr 3fr 3fr;
   grid-gap: 2rem;
 
   padding-left: 10%;
@@ -30,6 +30,7 @@ export const ContentHighlight = styled(UI.Detail)`
 `
 
 export const ContentTitle = styled(UI.Title)`
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
 
   @media only screen and (max-width: 1100px) {
