@@ -18,29 +18,31 @@ const Header = () => {
   return (
     <React.Fragment>
       <S.Wrapper>
-        <S.Content>
-          <S.NavLinks>
-            <HeaderLink to={ROUTES.magazine}>
-              {navigationYaml.topbar.magazine}
-            </HeaderLink>
-            <HeaderLink to={ROUTES.blog}>
-              {navigationYaml.topbar.articles}
-            </HeaderLink>
-          </S.NavLinks>
+        <S.NavLinks>
+          <HeaderLink to={ROUTES.magazine}>
+            {navigationYaml.topbar.magazine}
+          </HeaderLink>
+          <HeaderLink to={ROUTES.blog}>
+            {navigationYaml.topbar.articles}
+          </HeaderLink>
+        </S.NavLinks>
+
+        <S.ContentLogo>
           <S.Link to="/">
             <Logo />
           </S.Link>
-          <S.NavLinks>
-            <HeaderLink to={ROUTES.resellers}>
-              {navigationYaml.topbar.resellers}
-            </HeaderLink>
-            <HeaderLink to={ROUTES.about}>
-              {' '}
-              {navigationYaml.topbar.about}
-            </HeaderLink>
-            <Cart onClick={() => setIsModalOpen(!isModalOpen)} />
-          </S.NavLinks>
-        </S.Content>
+        </S.ContentLogo>
+
+        <S.NavLinks style={{ justifyContent: 'flex-end' }}>
+          <HeaderLink to={ROUTES.resellers}>
+            {navigationYaml.topbar.resellers}
+          </HeaderLink>
+          <HeaderLink to={ROUTES.about}>
+            {' '}
+            {navigationYaml.topbar.about}
+          </HeaderLink>
+          <Cart onClick={() => setIsModalOpen(!isModalOpen)} />
+        </S.NavLinks>
       </S.Wrapper>
 
       <Modal

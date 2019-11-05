@@ -13,7 +13,10 @@ const IndexPage = () => {
 
   return (
     <>
-      <SEO keywords={[`nevoazul`, `revista`, `minimalismo`]} />
+      <SEO
+        title="Conversas em prol da humanidade"
+        keywords={[`nevoazul`, `revista`, `minimalismo`]}
+      />
       <Hero />
       <Modal
         isOpen={isModalOpen}
