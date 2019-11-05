@@ -3,6 +3,9 @@ import { css } from 'styled-components'
 import CopernicusBookEot from './fonts/Copernicus-Book.eot'
 import CopernicusBookWoff from './fonts/Copernicus-Book.woff'
 import CopernicusBookWoff2 from './fonts/Copernicus-Book.woff2'
+import CopernicusBookItalicEot from './fonts/Copernicus-BookItalic.eot'
+import CopernicusBookItalicWoff from './fonts/Copernicus-BookItalic.woff'
+import CopernicusBookItalicWoff2 from './fonts/Copernicus-BookItalic.woff2'
 
 import UntitledSansEot from './fonts/UntitledSansWeb-Regular.eot'
 import UntitledSansWoff from './fonts/UntitledSansWeb-Regular.woff'
@@ -17,6 +20,16 @@ const typography = css`
     src: url(${CopernicusBookEot}) format('eot'),
       url(${CopernicusBookWoff}) format('woff'),
       url(${CopernicusBookWoff2}) format('woff2');
+  }
+
+  @font-face {
+    font-display: auto;
+    font-family: 'Copernicus';
+    font-weight: 400;
+    font-style: italic;
+    src: url(${CopernicusBookItalicEot}) format('eot'),
+      url(${CopernicusBookItalicWoff}) format('woff'),
+      url(${CopernicusBookItalicWoff2}) format('woff2');
   }
 
   @font-face {

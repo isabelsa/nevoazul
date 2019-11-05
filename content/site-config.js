@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  title: 'Nevoazul',
+  title: 'Nevoazul |',
   shortName: 'Nevoazul',
   description: 'Conversas em prol da humanidade',
   author: 'Isabel Sá',
@@ -18,5 +18,5 @@ module.exports = {
   themeColor: '#000',
   backgroundColor: '#fff',
   pathPrefix: null,
-  logo: path.resolve(__dirname, '../src/assets/images/icon.png'),
+  logo: path.resolve(__dirname, '../src/assets/images/favicon.png'),
 }
