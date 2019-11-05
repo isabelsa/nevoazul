@@ -65,7 +65,7 @@ export const query = graphql`
     navigationYaml {
       topbar {
         magazine
-        newsletter
+        articles
         resellers
         about
       }
