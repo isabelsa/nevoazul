@@ -1,42 +1,31 @@
 import React from 'react'
-import Hero from '@/components/Homepage/Hero/Hero'
-import MagazinePlug from '@/components/Homepage/MagazinePlug/MagazinePlug'
-import Highlight from '@/components/Homepage/Highlight/Highlight'
-import Articles from '@/components/Homepage/Articles/Articles'
-import NewsletterPlug from '@/components/Homepage/NewsletterPlug/NewsletterPlug'
 
-import { graphql, useStaticQuery } from 'gatsby'
+import Hero from '@/components/Homepage/Hero/Hero'
 
 import SEO from '@/components/SEO/SEO'
+import { Detail, Modal, Input, Title } from '../components/UI/index'
 
 const IndexPage = () => {
-  const { homepageYaml } = useStaticQuery(query)
+  const [isModalOpen, setIsModalOpen] = React.useState(false)
+  React.useEffect(() => {
+    setIsModalOpen(true)
+  }, [])
 
   return (
     <>
-      <SEO
-        title={homepageYaml.seo.title}
-        description={homepageYaml.seo.description}
-        keywords={[`nevoazul`, `revista`, `minimalismo`]}
-      />
+      <SEO keywords={[`nevoazul`, `revista`, `minimalismo`]} />
       <Hero />
-      <MagazinePlug />
-      <Highlight />
-      <Articles />
-      <NewsletterPlug />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={modal => setIsModalOpen(!modal)}
+        position="bottom"
+      >
+        <Detail>No próximo número</Detail>
+        <Title>Junta-te à conversa.</Title>
+        <Input placeholder="Subscreve" label="subscreve" />
+      </Modal>
     </>
   )
 }
 
 export default IndexPage
-
-export const query = graphql`
-  {
-    homepageYaml {
-      seo {
-        title
-        description
-      }
-    }
-  }
-`

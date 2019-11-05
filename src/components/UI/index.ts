@@ -9,8 +9,11 @@ export {
   TextSmall,
   Title,
 } from '../UI/Typography/Typography'
+export { Button } from '../UI/Button/Button.css'
 export { default as ArrowLink } from '../UI/Links/ArrowLink/ArrowLink'
 export { default as AnchorLink } from '../UI/Links/AnchorLink/AnchorLink.css'
 export { default as HeaderLink } from '../UI/Links/HeaderLink/HeaderLink'
 export { default as NavLink } from '../UI/Links/NavLink/NavLink'
 export { default as TitleLink } from '../UI/Links/TitleLink/TitleLink'
+export { default as Modal } from '../UI/Modal/Modal'
+export { default as Input } from '../UI/Input/Input'

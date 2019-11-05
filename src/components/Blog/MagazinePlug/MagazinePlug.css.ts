@@ -11,7 +11,7 @@ export const MagazinePlug = styled.div`
   grid-gap: 2rem;
 
   padding-left: 10%;
-  padding-top: 7rem;
+  padding-top: 4rem;
   padding-bottom: 3rem;
 
   @media only screen and (max-width: 1100px) {

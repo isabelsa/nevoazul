@@ -1,35 +1,56 @@
 import React from 'react'
 
 import Logo from '@/components/Logo/Logo'
-import { Cart, HeaderLink } from '../UI/index'
+import { default as CartComponent } from '@/components/Cart/Cart'
+import { Cart, HeaderLink, Modal } from '../UI'
+
+import { ROUTES } from '../../constants/routes'
+
 import * as S from './Header.css'
 
 import { graphql, useStaticQuery } from 'gatsby'
 
 const Header = () => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false)
+
   const { navigationYaml } = useStaticQuery(query)
 
   return (
-    <S.Wrapper>
-      <S.Content>
-        <S.Link to="/">
-          <Logo />
-        </S.Link>
-        <S.NavLinks>
-          <HeaderLink to="/magazine">
-            {navigationYaml.topbar.magazine}
-          </HeaderLink>
-          <HeaderLink to="/newsletter">
-            {navigationYaml.topbar.newsletter}
-          </HeaderLink>
-          <HeaderLink to="/resellers">
-            {navigationYaml.topbar.resellers}
-          </HeaderLink>
-          <HeaderLink to="/about"> {navigationYaml.topbar.about}</HeaderLink>
-          <Cart />
-        </S.NavLinks>
-      </S.Content>
-    </S.Wrapper>
+    <React.Fragment>
+      <S.Wrapper>
+        <S.Content>
+          <S.NavLinks>
+            <HeaderLink to={ROUTES.magazine}>
+              {navigationYaml.topbar.magazine}
+            </HeaderLink>
+            <HeaderLink to={ROUTES.blog}>
+              {navigationYaml.topbar.articles}
+            </HeaderLink>
+          </S.NavLinks>
+          <S.Link to="/">
+            <Logo />
+          </S.Link>
+          <S.NavLinks>
+            <HeaderLink to={ROUTES.resellers}>
+              {navigationYaml.topbar.resellers}
+            </HeaderLink>
+            <HeaderLink to={ROUTES.about}>
+              {' '}
+              {navigationYaml.topbar.about}
+            </HeaderLink>
+            <Cart onClick={() => setIsModalOpen(!isModalOpen)} />
+          </S.NavLinks>
+        </S.Content>
+      </S.Wrapper>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(!isModalOpen)}
+        position="top"
+      >
+        <CartComponent />
+      </Modal>
+    </React.Fragment>
   )
 }
 

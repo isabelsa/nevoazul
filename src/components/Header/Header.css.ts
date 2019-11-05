@@ -31,7 +31,7 @@ export const NavLinks = styled.div`
   align-items: center;
 
   div:not(:last-child) {
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 
   svg {
