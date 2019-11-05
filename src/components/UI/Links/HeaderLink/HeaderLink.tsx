@@ -1,14 +1,18 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import * as S from './HeaderLink.css'
 
-const NavLink = ({ children, to }) => {
+type NavLinkProps = {
+  children: React.ReactNode
+  to: string
+}
+
+const NavLink: React.FC<NavLinkProps> = ({ children, to, ...props }) => {
   return (
     <S.Holder>
-      <Link to={to}>
-        <S.HeaderLink>{children}</S.HeaderLink>
-      </Link>
+      <S.HeaderLink to={to} activeClassName="active" {...props}>
+        {children}
+      </S.HeaderLink>
     </S.Holder>
   )
 }
