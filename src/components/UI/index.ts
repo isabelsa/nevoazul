@@ -1,4 +1,5 @@
 export { default as ArrowDown } from '../UI/Icons/ArrowDown'
+export { default as ArrowRight } from '../UI/Icons/ArrowRight'
 export { default as Cart } from '../UI/Icons/Cart'
 export { default as Close } from '../UI/Icons/Close'
 export {
