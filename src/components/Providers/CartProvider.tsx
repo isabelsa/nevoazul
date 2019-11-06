@@ -5,28 +5,16 @@
 
 import * as React from 'react'
 
-type ID = string
-type Quantity = number
+type Cart = Array<{}>
 
-type Item = {
-  id: ID
-  quantity: Quantity
+type CartContextType = {
+  loading: boolean
+  cart: Cart
+  addItem: () => void
+  removeItem: () => void
+  updateCart: () => void
+  resetCart: () => void
 }
-
-type Cart = {
-  [key: ID]: Quantity
-}
-
-type CartContextType =
-  | {
-      loading: boolean
-      cart: Cart
-      addItem: (item: Item) => void
-      removeItem: (id: ID) => void
-      updateCart: (cart: Cart) => void
-      resetCart: () => void
-    }
-  | {}
 
 type CartProviderProps = {
   children: React.ReactNode
@@ -53,23 +41,14 @@ const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [cart, setCart] = React.useState<Cart>({})
   useCartPersistance(cart, setCart)
 
-  const addItem = (item: Item) => {
-    const newCart = {
-      ...cart,
-      [item.id]: (cart[item.id] || 0) + item.quantity,
-    }
+  const addItem = () => {}
 
-    setCart(newCart)
+  const removeItem = () => {
+    setCart({})
   }
 
-  const removeItem = (id: ID) => {
-    const { [id]: _, ...newCart } = cart
-
-    setCart(newCart)
-  }
-
-  const updateCart = (newCart: Cart) => {
-    setCart(newCart)
+  const updateCart = () => {
+    setCart({})
   }
 
   const resetCart = () => {

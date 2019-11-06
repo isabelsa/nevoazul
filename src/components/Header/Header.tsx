@@ -14,10 +14,8 @@ import { graphql, useStaticQuery } from 'gatsby'
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false)
 
-  const { cart } = React.useContext(CartContext)
+  // const { cart } = React.useContext(CartContext)
   const { navigationYaml } = useStaticQuery(query)
-
-  console.log(cart)
 
   return (
     <React.Fragment>
