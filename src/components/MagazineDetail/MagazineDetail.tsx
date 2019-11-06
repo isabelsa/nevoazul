@@ -27,7 +27,7 @@ const MagazineDetail = () => {
         <S.Next onClick={() => paginate(1)}>
           <ArrowRight />
         </S.Next>
-        <S.Prev onClick={() => paginate(-1)}>{'‣'}</S.Prev>
+        {/* <S.Prev onClick={() => paginate(-1)}>{'‣'}</S.Prev> */}
       </S.DetailInformation>
     </S.MagazineDetail>
   )

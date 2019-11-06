@@ -11,6 +11,11 @@ export const MagazineDetail = styled.div`
 `
 
 export const DetailGallery = styled.div`
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+
   position: relative;
 
   display: flex;
@@ -66,5 +71,5 @@ export const Prev = styled.div`
 export const Next = styled.div`
   ${baseControls}
 
-  left: 60px;
+  left: 20px;
 `

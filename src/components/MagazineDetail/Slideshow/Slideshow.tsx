@@ -23,7 +23,7 @@ const variants = {
   exit: (direction: number) => ({
     zIndex: 0,
     x: direction < 0 ? 1000 : -1000,
-    opacity: 0,
+    opacity: 0.5,
   }),
 }
 
@@ -32,7 +32,7 @@ export const Slideshow = ({ paginate, page, direction, setPage }) => {
 
   return (
     <>
-      <AnimatePresence initial={false} custom={direction}>
+      <AnimatePresence custom={direction}>
         <S.Image
           as={motion.img}
           key={page}
