@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import ArrowRight from '../../Icons/ArrowRight'
+import { Link } from 'gatsby'
 
 export const Arrow = styled(ArrowRight)`
   margin-left: 0.4rem;
@@ -8,7 +9,7 @@ export const Arrow = styled(ArrowRight)`
   transition: ${({ theme }) => theme.transitions.cubic()};
 `
 
-export const Holder = styled.div`
+export const Holder = styled(Link)`
   display: inline-flex;
   flex-direction: row;
 

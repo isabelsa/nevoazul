@@ -8,14 +8,14 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Banner = () => {
-  const [showBanner, setBanner] = React.useState(true)
+  const [isBannerOpen, setBanner] = React.useState(true)
   const { navigationYaml } = useStaticQuery(query)
 
   return (
     <AnimatePresence>
       <S.BannerHolder>
         <S.Banner
-          show={showBanner}
+          isBannerOpen={isBannerOpen}
           key="banner"
           as={motion.div}
           initial={{ opacity: 0.75, y: -1 }}
@@ -23,7 +23,7 @@ const Banner = () => {
           exit={{ opacity: 0 }}
         >
           <TextSmall>{navigationYaml.banner.title}</TextSmall>
-          <S.Close onClick={() => setBanner(!showBanner)} />
+          <S.Close onClick={() => setBanner(!isBannerOpen)} />
         </S.Banner>
       </S.BannerHolder>
     </AnimatePresence>

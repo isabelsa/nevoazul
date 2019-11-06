@@ -63,7 +63,7 @@ export const ContentHolder = styled.div`
 `
 
 export const HeroCategory = styled(UI.Detail)`
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 `
 
 export const HeroTitle = styled(UI.Display)`

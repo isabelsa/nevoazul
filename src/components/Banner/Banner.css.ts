@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 import * as UI from '../UI/index'
 
-export const Banner = styled.div`
+export const Banner = styled.div<{ isBannerOpen: boolean }>`
   background-color: ${({ theme }) => theme.colors.brown.default};
   color: ${({ theme }) => theme.colors.background};
   position: relative;
@@ -21,7 +21,7 @@ export const Banner = styled.div`
   }
 
   ${p =>
-    !p.show &&
+    !p.isBannerOpen &&
     css`
       display: none;
     `}
