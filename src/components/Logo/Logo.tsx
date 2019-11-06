@@ -10,11 +10,11 @@ const Logo = () => {
     >
       <text
         fill="#2C2D2E"
-        fill-rule="evenodd"
-        font-family="UntitledSans-Medium, Untitled Sans"
-        font-size="24"
-        font-weight="400"
-        letter-spacing="-.584"
+        fillRule="evenodd"
+        fontFamily="UntitledSans-Medium, Untitled Sans"
+        fontSize="24"
+        fontWeight="400"
+        letterSpacing="-.584"
         transform="translate(-511 -7)"
       >
         <tspan x="510" y="24">

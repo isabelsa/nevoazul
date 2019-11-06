@@ -5,6 +5,7 @@ import { default as CartComponent } from '@/components/Cart/Cart'
 import { Cart, HeaderLink, Modal } from '../UI'
 
 import { ROUTES } from '../../constants/routes'
+import { CartContext } from '../Providers/CartProvider'
 
 import * as S from './Header.css'
 
@@ -13,7 +14,10 @@ import { graphql, useStaticQuery } from 'gatsby'
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false)
 
+  const { cart } = React.useContext(CartContext)
   const { navigationYaml } = useStaticQuery(query)
+
+  console.log(cart)
 
   return (
     <React.Fragment>
