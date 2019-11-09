@@ -2,13 +2,10 @@ import * as React from 'react'
 import * as S from './Hero.css'
 
 import { NavLink } from '../../UI/index'
-import { graphql, useStaticQuery } from 'gatsby'
 
 import { motion } from 'framer-motion'
 
 const Hero = () => {
-  const { blogYaml } = useStaticQuery(query)
-
   const animationVariants = {
     visible: {
       opacity: 1,
@@ -45,7 +42,11 @@ const Hero = () => {
           <S.HeroTitle>
             The Art of Waiting <i>A. Lange & Söhne</i>
           </S.HeroTitle>
-          <S.HeroDescription>{blogYaml.hero.description}</S.HeroDescription>
+          <S.HeroDescription>
+            The Thin Line é um projeto de fotografia documental, da autoria do
+            Colectivo Photo. A proposta é olhar, refletir e iniciar um diálogo
+            sobre as fronteiras e o que elas representam.
+          </S.HeroDescription>
           <NavLink>Ler mais</NavLink>
         </S.ContentHolder>
       </S.HeroContent>
@@ -54,15 +55,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-export const query = graphql`
-  {
-    blogYaml {
-      hero {
-        title
-        description
-        cta
-      }
-    }
-  }
-`
