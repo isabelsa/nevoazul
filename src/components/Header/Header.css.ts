@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   max-width: 1440px;
 
   margin-bottom: 2rem;
-  padding: 1.5rem 10%;
+  padding: 2.2rem 10% 1.5rem 10%;
 
   z-index: 99;
 `

@@ -29,3 +29,8 @@ export const Flex = styled.div`
   flex-direction: row;
   max-width: 48rem;
 `
+
+export const Column = styled.div`
+  width: 100%;
+  max-width: 376px;
+`

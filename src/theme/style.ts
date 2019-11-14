@@ -8,6 +8,8 @@ export default css`
     font-family: 'Untitled Sans', sans-serif;
     color: ${({ theme }) => theme.colors.foreground};
     background-color: ${({ theme }) => theme.colors.background};
+    width: 100%;
+    height: 100%;
   }
 
   h1 {

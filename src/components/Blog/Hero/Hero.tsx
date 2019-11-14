@@ -3,7 +3,9 @@ import * as S from './Hero.css'
 
 import { NavLink } from '../../UI/index'
 
-import { motion } from 'framer-motion'
+import { motion, useViewportScroll, useTransform } from 'framer-motion'
+
+import hero from '../../../assets/images/playtime.png'
 
 const Hero = () => {
   const animationVariants = {
@@ -23,31 +25,26 @@ const Hero = () => {
     hidden: { opacity: 0 },
   }
 
+  const { scrollYProgress } = useViewportScroll()
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.7])
+
   return (
-    <S.Hero
-      as={motion.div}
-      initial="hidden"
-      animate="visible"
-      variants={backgroundVariants}
-    >
-      <S.HeroImage />
+    <S.Hero as={motion.div} initial="hidden" animate="visible" variants={backgroundVariants}>
+      <S.HeroHolder>
+        <S.HeroImage as={motion.div} src={hero} style={{ scale }} />
+      </S.HeroHolder>
       <S.HeroContent>
-        <S.ContentHolder
-          as={motion.div}
-          initial="hidden"
-          animate="visible"
-          variants={animationVariants}
-        >
-          <S.HeroCategory>Categoria</S.HeroCategory>
+        <S.ContentHolder as={motion.div} initial="hidden" animate="visible" variants={animationVariants}>
+          <S.HeroCategory>Artigo, Trabalho</S.HeroCategory>
           <S.HeroTitle>
-            The Art of Waiting <i>A. Lange & Söhne</i>
+            Peculiaridades <i>da vida moderna</i>: Com Jacques Tati.
           </S.HeroTitle>
           <S.HeroDescription>
-            The Thin Line é um projeto de fotografia documental, da autoria do
-            Colectivo Photo. A proposta é olhar, refletir e iniciar um diálogo
-            sobre as fronteiras e o que elas representam.
+            A distância até à realização dos nossos sonhos e ambições tecnológicas é imensa. Deslumbrados por esta
+            fantasia de um mundo melhor, pelas utopias de Frank Lloyd Wright e dos seus carros voadores.
           </S.HeroDescription>
-          <NavLink>Ler mais</NavLink>
+          <NavLink to="/blog/daniel-santos">Ler mais</NavLink>
         </S.ContentHolder>
       </S.HeroContent>
     </S.Hero>

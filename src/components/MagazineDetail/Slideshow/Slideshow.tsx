@@ -27,6 +27,11 @@ const variants = {
   }),
 }
 
+const swipeConfidenceThreshold = 10000
+const swipePower = (offset: number, velocity: number) => {
+  return Math.abs(offset) * velocity
+}
+
 export const Slideshow = ({ paginate, page, direction, setPage }) => {
   const imageIndex = wrap(0, images.length, page)
 
@@ -62,9 +67,4 @@ export const Slideshow = ({ paginate, page, direction, setPage }) => {
       </AnimatePresence>
     </>
   )
-}
-
-const swipeConfidenceThreshold = 10000
-const swipePower = (offset: number, velocity: number) => {
-  return Math.abs(offset) * velocity
 }
