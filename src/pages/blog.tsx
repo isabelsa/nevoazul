@@ -9,7 +9,11 @@ import SEO from '@/components/SEO/SEO'
 const IndexPage = () => {
   return (
     <>
-      <SEO title="Blog" description="A blog" keywords={[`nevoazul`, `revista`, `minimalismo`]} />
+      <SEO
+        title="Blog"
+        description="A blog"
+        keywords={[`nevoazul`, `revista`, `minimalismo`]}
+      />
       <Hero />
       <MagazinePlug />
       <Articles />

@@ -4,7 +4,6 @@ import * as UI from '../../UI/index'
 
 export const Hero = styled.div`
   align-items: flex-start;
-  background-color: ${({ theme }) => theme.colors.background};
   display: flex;
   flex-direction: column;
 
@@ -15,7 +14,7 @@ export const Hero = styled.div`
 
 export const Title = styled(UI.Title)`
   margin-bottom: 2rem;
-  max-width: 32rem;
+  max-width: 34rem;
 `
 
 export const Text = styled(UI.Text)`

@@ -10,6 +10,7 @@ export default {
     beige: {
       default: '#DBCEBC',
       light: '#EFEBE6',
+      lighter: '#FFFBF3',
     },
     blue: {
       default: '#B3C9C6',

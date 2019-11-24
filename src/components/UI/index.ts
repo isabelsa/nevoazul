@@ -1,7 +1,10 @@
+export { default as Arrow } from '../UI/Icons/Arrow'
 export { default as ArrowDown } from '../UI/Icons/ArrowDown'
 export { default as ArrowRight } from '../UI/Icons/ArrowRight'
+export { default as Hamburger } from '../UI/Icons/Hamburger'
 export { default as Cart } from '../UI/Icons/Cart'
 export { default as Close } from '../UI/Icons/Close'
+
 export {
   Detail,
   Display,
