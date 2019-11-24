@@ -9,10 +9,10 @@ const ArrowDown = ({ ...props }) => {
       height="24"
       viewBox="0 0 24 24"
     >
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <path
           stroke="#000"
-          stroke-linecap="square"
+          strokeLinecap="square"
           d="M4.42003325,12.2231759 L19.5799667,12.2231759"
           transform="rotate(90 12 12.223)"
         />

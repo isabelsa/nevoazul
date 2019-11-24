@@ -8,8 +8,6 @@ import { ROUTES } from '../../../constants/routes'
 const MagazineOrderNext = () => {
   const [isHovered, setHovered] = React.useState(false)
 
-  console.log(isHovered)
-
   return (
     <S.MagazinePlug>
       <S.Content>

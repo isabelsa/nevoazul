@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import { motion, AnimatePresence } from 'framer-motion'
+
 import * as S from './Modal.css'
 
 type ModalProps = {
@@ -21,8 +23,27 @@ const Modal: React.FC<ModalProps> = ({
     return ReactDOM.createPortal(
       <React.Fragment>
         <S.Content isOpen={isOpen} position={position}>
-          <S.Modal {...props}>{children}</S.Modal>
-          <S.Wrapper onClick={onClose} />
+          <AnimatePresence>
+            {isOpen && (
+              <S.Modal
+                {...props}
+                as={motion.div}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                {children}
+              </S.Modal>
+            )}
+
+            <S.Wrapper
+              as={motion.div}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={onClose}
+            />
+          </AnimatePresence>
         </S.Content>
       </React.Fragment>,
       document.body

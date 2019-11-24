@@ -37,7 +37,7 @@ export const NavLinks = styled.div`
   min-width: -webkit-min-content;
 
   div:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
   }
 
   svg {

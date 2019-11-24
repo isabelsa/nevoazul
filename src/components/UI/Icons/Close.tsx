@@ -11,7 +11,7 @@ const Close = ({ ...props }) => {
     >
       <g
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         stroke="#E3E1EC"
         transform="translate(.5 .5)"
       >

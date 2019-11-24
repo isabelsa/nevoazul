@@ -1,4 +1,5 @@
 import React from 'react'
+import { CartContext } from '../Providers/CartProvider'
 import { Button, Text, Title, Detail } from '../UI'
 
 import * as S from './Cart.css'
@@ -11,6 +12,19 @@ type CartItemProps = {
   }
 }
 
+const cartItems = [
+  {
+    title: 'Nevoazul #2',
+    price: 'Nevoazul #2',
+    image: 'cena',
+  },
+  {
+    title: 'Nevoazul #1',
+    price: 'Nevoazul #2',
+    image: 'cena',
+  },
+]
+
 export const CartItem: React.FC<CartItemProps> = ({ item }) => {
   return (
     <div>
@@ -22,18 +36,13 @@ export const CartItem: React.FC<CartItemProps> = ({ item }) => {
 }
 
 const Cart = () => {
-  const cartItems = [
-    {
-      title: 'Nevoazul #2',
-      price: 'Nevoazul #2',
-      image: 'cena',
-    },
-    {
-      title: 'Nevoazul #1',
-      price: 'Nevoazul #2',
-      image: 'cena',
-    },
-  ]
+  const cena = React.useContext(CartContext)
+
+  console.log('CART ->', cena)
+
+  const handleCartUpdate = () => {
+    return null
+  }
 
   return (
     <S.Cart>
@@ -42,6 +51,10 @@ const Cart = () => {
       {cartItems.map(item => {
         return <CartItem item={item} />
       })}
+      <div>
+        <button onClick={() => handleCartUpdate()}>-</button>
+        <button onClick={() => handleCartUpdate()}>+</button>
+      </div>
       <S.CartTotal>
         <Text>Total</Text>
         <Text>Value</Text>

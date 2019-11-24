@@ -65,7 +65,7 @@ export const ContentImage = styled.div`
   background: url(${magazine});
 `
 
-export const AsteriskShape = styled(Asterisk)`
+export const AsteriskShape = styled(Asterisk)<{ isHovered: boolean }>`
   position: absolute;
   top: 30%;
   left: -4rem;

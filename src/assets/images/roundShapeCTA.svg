@@ -7,7 +7,7 @@
       <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.320199275   0 0 0 0 0.320199275   0 0 0 0 0.320199275  0 0 0 0.44255354 0"/>
     </filter>
   </defs>
-  <g fill="none" fill-rule="evenodd" transform="rotate(75 1013.397 -432.519)">
+  <g fill="none" fillRule="evenodd" transform="rotate(75 1013.397 -432.519)">
     <use fill="#000" filter="url(#roundshapecta-a)" xlink:href="#roundshapecta-b"/>
     <use fill="#8D9678" xlink:href="#roundshapecta-b"/>
   </g>
