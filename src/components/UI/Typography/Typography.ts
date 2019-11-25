@@ -17,7 +17,7 @@ export const TextSmall = styled.p`
 
 export const Text = styled.p`
   font-size: 1.05rem;
-  line-height: 1.625rem;
+  line-height: 25px;
 `
 
 export const Display = styled.h1`

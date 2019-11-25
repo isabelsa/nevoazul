@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import * as UI from '../../UI/index'
-import hero from '../../../assets/images/hero.png'
+import hero from '../../../assets/images/test.jpg'
 
 export const Hero = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const Hero = styled.div`
   align-items: flex-start;
   justify-content: center;
 
-  height: 43rem;
+  height: 100vh;
 
   @media only screen and (max-width: 768px) {
     display: flex;
@@ -17,17 +17,29 @@ export const Hero = styled.div`
     height: 100%;
   }
 `
-export const HeroImage = styled.div`
+
+export const HeroHolder = styled.div<{}>`
+  width: 50%;
+  height: 100%;
+
+  overflow: hidden;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    height: 30rem;
+  }
+`
+
+export const HeroImage = styled.div<{}>`
   background-image: url(${hero});
   background-position: center center;
   background-size: cover;
 
-  width: 50%;
+  width: 100%;
   height: 100%;
 
   @media only screen and (max-width: 768px) {
     width: 100%;
-
     height: 30rem;
   }
 `
@@ -37,7 +49,8 @@ export const HeroContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.beige.light};
+  background-color: #f7f3f1;
+  position: relative;
 
   padding: 3rem;
 
@@ -60,19 +73,31 @@ export const ContentHolder = styled.div`
 
   width: 100%;
   height: 100%;
+
+  margin-top: 3rem;
 `
 
-export const HeroCategory = styled(UI.Detail)`
-  margin-bottom: 0.75rem;
+export const HeroCategory = styled(UI.Text)`
+  margin-bottom: 1rem;
+  font-family: 'Copernicus';
 `
 
 export const HeroTitle = styled(UI.Display)`
   text-align: center;
   margin-bottom: 0.75rem;
+  line-height: 1.2;
+
+  width: 100%;
+  max-width: 30rem;
 `
 
 export const HeroDescription = styled(UI.Text)`
   text-align: center;
-  max-width: 25rem;
+  max-width: 28rem;
   margin-bottom: 1.5rem;
+`
+
+export const Arrow = styled(UI.Arrow)`
+  position: absolute;
+  bottom: 0;
 `
