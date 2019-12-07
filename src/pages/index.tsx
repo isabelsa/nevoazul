@@ -13,16 +13,10 @@ const IndexPage = () => {
 
   return (
     <>
-      <SEO
-        title="Conversas em prol da humanidade"
-        keywords={[`nevoazul`, `revista`, `minimalismo`]}
-      />
+      <SEO title="Conversas em prol da humanidade" keywords={[`nevoazul`, `revista`, `minimalismo`]} />
       <Hero />
-      <Modal
-        isOpen={isModalOpen}
-        onClose={modal => setIsModalOpen(!modal)}
-        position="bottom"
-      >
+      <div style={{ height: '2000px', backgroundColor: 'red' }} />
+      <Modal isOpen={isModalOpen} onClose={modal => setIsModalOpen(!modal)} position="bottom">
         <Detail>No próximo número</Detail>
         <Title>Junta-te à conversa.</Title>
         <Input placeholder="Subscreve" label="subscreve" />

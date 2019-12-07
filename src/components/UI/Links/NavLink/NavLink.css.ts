@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 
 export const Holder = styled.div`
   display: inline-block;
   position: relative;
 `
 
-export const NavLink = styled.p`
+export const NavLink = styled(Link)`
   cursor: pointer;
 
   &::before {

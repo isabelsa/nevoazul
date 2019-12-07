@@ -11,11 +11,11 @@ const ArrowRight = ({ ...props }) => {
     >
       <g
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         stroke="currentColor"
         transform="translate(4 7)"
       >
-        <path stroke-linecap="square" d="M0,5 L15,5" />
+        <path strokeLinecap="square" d="M0,5 L15,5" />
         <polyline
           points="8.5 7.5 13.5 2.5 18.5 7.5"
           transform="rotate(90 13.5 5)"

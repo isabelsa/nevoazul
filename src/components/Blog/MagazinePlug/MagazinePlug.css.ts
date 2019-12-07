@@ -1,22 +1,17 @@
 import styled from 'styled-components'
 
 import Asterisk from '../../UI/Assets/Asterisk'
-import magazine from '../../../assets/images/magazine.jpg'
+import magazine from '../../../assets/images/magazine-preview.png'
 
 import * as UI from '../../UI/index'
 
 export const MagazinePlug = styled.div`
-  display: grid;
-  grid-template-columns: 4fr 3fr 3fr;
-  grid-gap: 2rem;
+  position: relative;
+  display: flex;
 
   padding-left: 10%;
   padding-top: 4rem;
   padding-bottom: 3rem;
-
-  @media only screen and (max-width: 1100px) {
-    grid-template-columns: 5fr 2fr 2fr;
-  }
 `
 
 export const Content = styled.div`
@@ -38,7 +33,13 @@ export const ContentTitle = styled(UI.Title)`
   }
 `
 
-export const ContentDescription = styled.div``
+export const ContentDescription = styled.div`
+  width: 100%;
+  max-width: 23rem;
+
+  margin-left: 16px;
+  padding-top: 30px;
+`
 
 export const ContentText = styled(UI.Text)`
   margin-bottom: 2rem;
@@ -60,12 +61,22 @@ export const ContentTextMobile = styled(UI.Text)`
 `
 
 export const ContentImage = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+
   width: 400px;
-  height: 300px;
-  background: url(${magazine});
+  height: 400px;
+  background-image: url(${magazine});
+  background-size: cover;
+  background-position: left center;
+
+  @media only screen and (max-width: 768px) {
+    position: relative;
+  }
 `
 
-export const AsteriskShape = styled(Asterisk)`
+export const AsteriskShape = styled(Asterisk)<{ isHovered: boolean }>`
   position: absolute;
   top: 30%;
   left: -4rem;

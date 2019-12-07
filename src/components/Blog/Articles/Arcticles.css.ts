@@ -5,9 +5,6 @@ export const Holder = styled.div`
 `
 
 export const Flex = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 `

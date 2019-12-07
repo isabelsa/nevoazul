@@ -2,13 +2,12 @@ import * as React from 'react'
 import * as S from './Hero.css'
 
 import { NavLink } from '../../UI/index'
-import { graphql, useStaticQuery } from 'gatsby'
 
 import { motion } from 'framer-motion'
 
-const Hero = () => {
-  const { blogYaml } = useStaticQuery(query)
+import hero from '../../../assets/images/playtime.png'
 
+const Hero = () => {
   const animationVariants = {
     visible: {
       opacity: 1,
@@ -17,7 +16,6 @@ const Hero = () => {
     },
     hidden: { opacity: 0, y: -10 },
   }
-
   const backgroundVariants = {
     visible: {
       opacity: 1,
@@ -33,7 +31,9 @@ const Hero = () => {
       animate="visible"
       variants={backgroundVariants}
     >
-      <S.HeroImage />
+      <S.HeroHolder>
+        <S.HeroImage as={motion.div} src={hero} />
+      </S.HeroHolder>
       <S.HeroContent>
         <S.ContentHolder
           as={motion.div}
@@ -41,28 +41,22 @@ const Hero = () => {
           animate="visible"
           variants={animationVariants}
         >
-          <S.HeroCategory>Categoria</S.HeroCategory>
+          <S.HeroCategory>Design</S.HeroCategory>
           <S.HeroTitle>
-            The Art of Waiting <i>A. Lange & Söhne</i>
+            Peculiaridades <i>da vida moderna</i>: Com <i>Jacques Tati</i>.
           </S.HeroTitle>
-          <S.HeroDescription>{blogYaml.hero.description}</S.HeroDescription>
-          <NavLink>Ler mais</NavLink>
+          <S.HeroDescription>
+            A distância até à realização dos nossos sonhos e ambições
+            tecnológicas é imensa. Deslumbrados por esta fantasia de um mundo
+            melhor, pelas utopias de Frank Lloyd Wright e dos seus carros
+            voadores.
+          </S.HeroDescription>
+          <NavLink to="/blog/daniel-santos">Ler mais</NavLink>
         </S.ContentHolder>
+        <S.Arrow />
       </S.HeroContent>
     </S.Hero>
   )
 }
 
 export default Hero
-
-export const query = graphql`
-  {
-    blogYaml {
-      hero {
-        title
-        description
-        cta
-      }
-    }
-  }
-`

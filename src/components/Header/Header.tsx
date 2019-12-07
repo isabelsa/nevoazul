@@ -1,39 +1,41 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import { motion } from 'framer-motion'
 
 import Logo from '@/components/Logo/Logo'
 import { default as CartComponent } from '@/components/Cart/Cart'
-import { Cart, HeaderLink, Modal } from '../UI'
+import { Cart, HeaderLink, Modal, Hamburger } from '../UI'
 
 import { ROUTES } from '../../constants/routes'
 
 import * as S from './Header.css'
 
-import { graphql, useStaticQuery } from 'gatsby'
-
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false)
+  const [isMobileOpen, setIsMobileOpen] = React.useState(false)
 
   const { navigationYaml } = useStaticQuery(query)
 
+  console.log(isMobileOpen)
   return (
     <React.Fragment>
-      <S.Wrapper>
-        <S.NavLinks>
+      <S.Wrapper as={motion.div}>
+        <S.DesktopNavLinks>
           <HeaderLink to={ROUTES.magazine}>
             {navigationYaml.topbar.magazine}
           </HeaderLink>
           <HeaderLink to={ROUTES.blog}>
             {navigationYaml.topbar.articles}
           </HeaderLink>
-        </S.NavLinks>
+        </S.DesktopNavLinks>
 
         <S.ContentLogo>
-          <S.Link to="/">
+          <S.Link to="/" onClick={() => setIsMobileOpen(false)}>
             <Logo />
           </S.Link>
         </S.ContentLogo>
 
-        <S.NavLinks style={{ justifyContent: 'flex-end' }}>
+        <S.DesktopNavLinks style={{ justifyContent: 'flex-end' }}>
           <HeaderLink to={ROUTES.resellers}>
             {navigationYaml.topbar.resellers}
           </HeaderLink>
@@ -42,8 +44,43 @@ const Header = () => {
             {navigationYaml.topbar.about}
           </HeaderLink>
           <Cart onClick={() => setIsModalOpen(!isModalOpen)} />
-        </S.NavLinks>
+        </S.DesktopNavLinks>
+
+        <S.Hamburger
+          onClick={() => setIsMobileOpen(!isMobileOpen)}
+          style={{ cursor: 'pointer' }}
+        >
+          <Hamburger />
+        </S.Hamburger>
       </S.Wrapper>
+
+      <div>
+        {isMobileOpen && (
+          <S.MobileNavLinks>
+            <HeaderLink
+              to={ROUTES.magazine}
+              onClick={() => setIsMobileOpen(false)}
+            >
+              {navigationYaml.topbar.magazine}
+            </HeaderLink>
+            <HeaderLink to={ROUTES.blog} onClick={() => setIsMobileOpen(false)}>
+              {navigationYaml.topbar.articles}
+            </HeaderLink>
+            <HeaderLink
+              to={ROUTES.resellers}
+              onClick={() => setIsMobileOpen(false)}
+            >
+              {navigationYaml.topbar.resellers}
+            </HeaderLink>
+            <HeaderLink
+              to={ROUTES.about}
+              onClick={() => setIsMobileOpen(false)}
+            >
+              {navigationYaml.topbar.about}
+            </HeaderLink>
+          </S.MobileNavLinks>
+        )}
+      </div>
 
       <Modal
         isOpen={isModalOpen}
