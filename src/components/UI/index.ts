@@ -9,9 +9,12 @@ export {
   Detail,
   Display,
   DisplayItalic,
+  Label,
   Text,
+  TextSerif,
   TextSmall,
   Title,
+  Subtitle,
 } from '../UI/Typography/Typography'
 export { Button } from '../UI/Button/Button.css'
 export { default as ArrowLink } from '../UI/Links/ArrowLink/ArrowLink'

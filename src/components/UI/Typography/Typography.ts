@@ -2,6 +2,14 @@ import styled, { css } from 'styled-components'
 
 export const base = css``
 
+export const Label = styled.p`
+  font-family: 'Copernicus';
+  font-size: 1.06rem;
+  line-height: 1.5rem;
+
+  color: #5a5a5c;
+`
+
 export const Detail = styled.p`
   font-size: 0.8rem;
   line-height: 1.2rem;
@@ -16,8 +24,20 @@ export const TextSmall = styled.p`
 `
 
 export const Text = styled.p`
-  font-size: 1.05rem;
-  line-height: 25px;
+  font-size: 1.125rem;
+  line-height: 1.65rem;
+`
+
+export const TextSerif = styled.p`
+  font-family: 'Copernicus';
+  font-size: 1.125rem;
+  line-height: 1.65rem;
+`
+
+export const Subtitle = styled.p`
+  font-family: 'Copernicus';
+  font-size: 1.5rem;
+  line-height: 2.125rem;
 `
 
 export const Display = styled.h1`
