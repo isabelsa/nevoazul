@@ -53,14 +53,15 @@ const Header = () => {
           <HeaderLink to={ROUTES.about}>
             {' '}
             {navigationYaml.topbar.about}
-          </HeaderLink>
-          <Cart onClick={() => setIsModalOpen(!isModalOpen)} /> */}
+        </HeaderLink>*/}
+          <a href="https://nevoazul.bigcartel.com">
+            <Cart />
+          </a>
         </S.DesktopNavLinks>
-        <S.Hamburger
-          onClick={() => setIsMobileOpen(!isMobileOpen)}
-          style={{ cursor: 'pointer' }}
-        >
-          <Hamburger />
+        <S.Hamburger>
+          <a href="https://nevoazul.bigcartel.com">
+            <Cart />
+          </a>
         </S.Hamburger>
       </S.Wrapper>
 

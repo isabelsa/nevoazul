@@ -2,83 +2,58 @@ import React from 'react'
 import { Text, TextSerif, Label } from '../../UI'
 import * as S from './Articles.css'
 
-const Articles = () => {
+type ArticlesHighlited = {
+  article_author: string
+  article_description: string
+  article_title: string
+}
+
+type ArticleSmall = {
+  article_author: string
+  article_page: string
+  article_title: string
+}
+
+type ArticlesProps = {
+  content: {
+    articles_section_title: string
+    article_highlighted: ArticlesHighlited[]
+    article_small: ArticleSmall[]
+  }
+}
+
+const Articles: React.FC<ArticlesProps> = ({ content }) => {
   return (
     <S.Articles>
-      <S.Display>Neste número</S.Display>
-
+      <S.Display>{content.articles_section_title}</S.Display>
       <S.Holder>
-        <S.Article>
-          <Label>Rodolfo Oliveira</Label>
-          <S.Subtitle>
-            À conversa com Inês Santos Silva: O futuro tem futuro?
-          </S.Subtitle>
-          <Text>
-            A Nevoazul explora a relação que temos com os meios de comunicação e
-            a tecnologia. Fundada em 2016, a revista explora como, numa
-            sociedade movida a informação, tão depressa estamos no papel de
-            produtores, como no de consumidores.
-          </Text>
-        </S.Article>
-
-        <S.Article>
-          <Label>Rodolfo Oliveira</Label>
-          <S.Subtitle>
-            À conversa com Inês Santos Silva: O futuro tem futuro?
-          </S.Subtitle>
-          <Text>
-            A Nevoazul explora a relação que temos com os meios de comunicação e
-            a tecnologia. Fundada em 2016, a revista explora como, numa
-            sociedade movida a informação, tão depressa estamos no papel de
-            produtores, como no de consumidores.
-          </Text>
-        </S.Article>
+        {content.article_highlighted.slice(0, 2).map(art => {
+          return (
+            <S.Article>
+              <Label>{art.article_author}</Label>
+              <S.Subtitle>{art.article_title}</S.Subtitle>
+              <Text>{art.article_description}</Text>
+            </S.Article>
+          )
+        })}
       </S.Holder>
 
       <S.Article>
-        <Label>Rodolfo Oliveira</Label>
-        <S.Subtitle>
-          À conversa com Inês Santos Silva: O futuro tem futuro?
-        </S.Subtitle>
-        <Text>
-          A Nevoazul explora a relação que temos com os meios de comunicação e a
-          tecnologia. Fundada em 2016, a revista explora como, numa sociedade
-          movida a informação, tão depressa estamos no papel de produtores, como
-          no de consumidores.
-        </Text>
+        <Label>{content.article_highlighted[2].article_author}</Label>
+        <S.Subtitle>{content.article_highlighted[2].article_title}</S.Subtitle>
+        <Text>{content.article_highlighted[2].article_description}</Text>
       </S.Article>
 
       <S.ArticlesGrid>
-        <S.ArticleGrid>
-          <TextSerif>12</TextSerif>
-          <S.TextSerif>Entre o meio e a mensage: A Escrita</S.TextSerif>
-          <Label>Inês Catarina Pinto</Label>
-        </S.ArticleGrid>
-        <S.ArticleGrid>
-          <TextSerif>12</TextSerif>
-          <S.TextSerif>Entre o meio e a mensage: A Escrita</S.TextSerif>
-          <Label>Inês Catarina Pinto</Label>
-        </S.ArticleGrid>
-        <S.ArticleGrid>
-          <TextSerif>12</TextSerif>
-          <S.TextSerif>Entre o meio e a mensage: A Escrita</S.TextSerif>
-          <Label>Inês Catarina Pinto</Label>
-        </S.ArticleGrid>
-        <S.ArticleGrid>
-          <TextSerif>12</TextSerif>
-          <S.TextSerif>Entre o meio e a mensage: A Escrita</S.TextSerif>
-          <Label>Inês Catarina Pinto</Label>
-        </S.ArticleGrid>
-        <S.ArticleGrid>
-          <TextSerif>12</TextSerif>
-          <S.TextSerif>Entre o meio e a mensage: A Escrita</S.TextSerif>
-          <Label>Inês Catarina Pinto</Label>
-        </S.ArticleGrid>
-        <S.ArticleGrid>
-          <TextSerif>12</TextSerif>
-          <S.TextSerif>Entre o meio e a mensage: A Escrita</S.TextSerif>
-          <Label>Inês Catarina Pinto</Label>
-        </S.ArticleGrid>
+        {content.article_small.map(article => {
+          return (
+            <S.ArticleGrid key={article.article_title}>
+              <TextSerif>{article.article_page}</TextSerif>
+              <S.TextSerif>{article.article_title}</S.TextSerif>
+              <Label>{article.article_author}</Label>
+            </S.ArticleGrid>
+          )
+        })}
       </S.ArticlesGrid>
     </S.Articles>
   )

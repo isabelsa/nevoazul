@@ -1,18 +1,22 @@
 import React from 'react'
-import { Label, Title, Text } from '../UI'
+import { Label, Text } from '../UI'
 import * as S from './Newsletter.css'
 
-const Newsletter = () => {
+type NewsletterProps = {
+  content: {
+    newsletter_description: string
+    newsletter_kicker: string
+    newsletter_title: string
+  }
+}
+
+const Newsletter: React.FC<NewsletterProps> = ({ content }) => {
   return (
     <S.Newsletter>
       <S.NewseletterContent>
-        <Label>Subscreve à newsletter</Label>
-        <S.Title>A Internet num Telegrama</S.Title>
-        <Text>
-          Uma newsletter mensal de poucas linhas sobre como a tecnologia, a
-          cultura e o design nos podem tornar mais humanos numa era cada vez
-          mais digital.{' '}
-        </Text>
+        <Label>{content.newsletter_kicker}</Label>
+        <S.Title>{content.newsletter_title}</S.Title>
+        <Text>{content.newsletter_description}</Text>
       </S.NewseletterContent>
     </S.Newsletter>
   )

@@ -3,7 +3,14 @@ import { motion, useViewportScroll, useTransform } from 'framer-motion'
 
 import * as S from './Hero.css'
 
-const Hero = () => {
+type HeroProps = {
+  content: {
+    hero_description: string
+    hero_title: string
+  }
+}
+
+const Hero: React.FC<HeroProps> = ({ content }) => {
   const topMagazine = React.useRef(null)
   const rightMagazine = React.useRef(null)
   const bottomMagazine = React.useRef(null)
@@ -75,11 +82,7 @@ const Hero = () => {
         <S.HeroTitle>
           Nº3: Conversas <i>em prol</i> da humanidade
         </S.HeroTitle>
-        <S.HeroDescription>
-          The Thin Line é um projeto de fotografia documental, da autoria do
-          Colectivo Photo. A proposta é olhar, refletir e iniciar um diálogo
-          sobre as fronteiras e o que elas representam.{' '}
-        </S.HeroDescription>
+        <S.HeroDescription>{content.hero_description}</S.HeroDescription>
       </S.ContentHolder>
 
       <S.SmallMagazineTop
