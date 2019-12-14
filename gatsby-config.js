@@ -62,6 +62,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-154579352-1',
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: siteConfig.title,

@@ -19,6 +19,7 @@
     "framer-motion": "^1.6.6",
     "gatsby": "^2.6.0",
     "gatsby-image": "^2.1.0",
+    "gatsby-plugin-google-analytics": "^2.1.31",
     "gatsby-transformer-yaml": "^2.2.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

@@ -26,3 +26,7 @@ export const NewseletterContent = styled.div`
   width: 100%;
   max-width: 500px;
 `
+
+export const FormHolder = styled.form`
+  margin-top: 24px;
+`
