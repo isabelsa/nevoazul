@@ -1,0 +1,16 @@
+{
+  "Main": {
+    "hero_title": {
+      "type": "Text",
+      "config": {
+        "label": "hero title"
+      }
+    },
+    "hero_description": {
+      "type": "Text",
+      "config": {
+        "label": "hero description"
+      }
+    }
+  }
+}

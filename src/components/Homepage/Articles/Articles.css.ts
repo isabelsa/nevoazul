@@ -86,7 +86,7 @@ export const ArticlesGrid = styled.div`
 
   display: grid;
   grid-template-columns: repeat(4, minmax(auto, 280px));
-  grid-gap: 24px;
+  grid-gap: 40px 24px;
 
   @media only screen and (max-width: 1100px) {
     grid-template-columns: repeat(2, 1fr);

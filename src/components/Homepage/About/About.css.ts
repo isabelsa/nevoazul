@@ -15,7 +15,7 @@ export const About = styled.div`
 
   width: 100%;
 
-  padding: 14rem 10%;
+  padding: 14rem 10% 3rem 10%;
 
   @media only screen and (max-width: 1200px) {
     display: flex;
@@ -46,8 +46,8 @@ export const AboutInfo = styled.div`
 
 export const Magazine = styled.div`
   position: absolute;
-  top: -60px;
-  right: 0px;
+  top: 140px;
+  right: -40px;
 
   width: 580px;
   height: 450px;
