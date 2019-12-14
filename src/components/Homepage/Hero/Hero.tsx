@@ -80,7 +80,7 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
         variants={animationVariants}
       >
         <S.HeroTitle>
-          Nº3: Conversas <i>em prol</i> da humanidade
+          Conversas <i>em prol</i> da humanidade
         </S.HeroTitle>
         <S.HeroDescription>{content.hero_description}</S.HeroDescription>
       </S.ContentHolder>

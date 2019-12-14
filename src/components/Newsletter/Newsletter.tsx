@@ -7,6 +7,8 @@ type NewsletterProps = {
     newsletter_description: string
     newsletter_kicker: string
     newsletter_title: string
+    newsletter_input_label: string
+    newsletter_input_placeholder: string
   }
 }
 
@@ -23,12 +25,11 @@ const Newsletter: React.FC<NewsletterProps> = ({ content }) => {
           action="https://facebook.us8.list-manage.com/subscribe/post?u=09850e01d3a771ec59cdf162e&amp;id=270941e523"
           method="post"
           target="_blank"
-          novalidate
           rel="noopener"
         >
           <Input
-            label="Subscreve a newsletter"
-            placeholder="Subscreve a newsletter"
+            label={content.newsletter_input_label}
+            placeholder={content.newsletter_input_placeholder}
             value={email}
             onChange={(e: any) => setEmail(e.currentTarget.value)}
           />

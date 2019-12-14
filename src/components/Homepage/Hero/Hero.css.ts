@@ -31,7 +31,7 @@ export const HeroTitle = styled(UI.Display)`
   letter-spacing: -0.5px;
 
   width: 100%;
-  max-width: 32rem;
+  max-width: 28rem;
 `
 
 export const HeroDescription = styled(UI.Text)`
@@ -41,8 +41,6 @@ export const HeroDescription = styled(UI.Text)`
 `
 
 export const ContentHolder = styled(motion.div)`
-  cursor: pointer;
-
   display: flex;
   flex-direction: column;
   align-items: center;
