@@ -11,6 +11,7 @@ export default {
       lighter: '#FFFBF3',
     },
     blue: {
+      light: '#D5E1DF',
       default: '#B3C9C6',
     },
     brown: {

@@ -1,18 +1,25 @@
 import React from 'react'
-import { Detail } from '../index'
 
 import * as S from './Input.css'
 
 type InputProps = {
   label: string
   placeholder: string
+  value: string
+  onChange: any
 }
 
-const Input: React.FC<InputProps> = ({ label, placeholder }) => {
+const Input: React.FC<InputProps> = ({
+  value,
+  label,
+  placeholder,
+  onChange,
+  ...props
+}) => {
   return (
-    <S.InputHolder>
-      <Detail>{label}</Detail>
-      <S.Input placeholder={placeholder} />
+    <S.InputHolder {...props}>
+      <S.Detail>{label}</S.Detail>
+      <S.Input placeholder={placeholder} value={value} onChange={onChange} />
     </S.InputHolder>
   )
 }

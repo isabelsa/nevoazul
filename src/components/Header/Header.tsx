@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { motion } from 'framer-motion'
+import { motion, useViewportScroll, useTransform } from 'framer-motion'
 
 import Logo from '@/components/Logo/Logo'
 import { default as CartComponent } from '@/components/Cart/Cart'
@@ -11,46 +11,57 @@ import { ROUTES } from '../../constants/routes'
 import * as S from './Header.css'
 
 const Header = () => {
+  const [elTop, setelTop] = React.useState(0)
   const [isModalOpen, setIsModalOpen] = React.useState(false)
   const [isMobileOpen, setIsMobileOpen] = React.useState(false)
 
+  const navigation = React.useRef(null)
+
   const { navigationYaml } = useStaticQuery(query)
+  const { scrollY } = useViewportScroll()
+
+  const y = useTransform(scrollY, [elTop, elTop + 1], [0, -0.3], {
+    clamp: false,
+  })
+
+  React.useLayoutEffect(() => {
+    const elTop = navigation.current
+    setelTop(elTop.offsetTop)
+  }, [elTop.offsetTop])
 
   console.log(isMobileOpen)
   return (
     <React.Fragment>
-      <S.Wrapper as={motion.div}>
+      <S.Wrapper as={motion.div} ref={navigation} style={{ y }}>
         <S.DesktopNavLinks>
-          <HeaderLink to={ROUTES.magazine}>
+          {/* <HeaderLink to={ROUTES.magazine}>
             {navigationYaml.topbar.magazine}
           </HeaderLink>
           <HeaderLink to={ROUTES.blog}>
             {navigationYaml.topbar.articles}
-          </HeaderLink>
+          </HeaderLink> */}
         </S.DesktopNavLinks>
-
         <S.ContentLogo>
           <S.Link to="/" onClick={() => setIsMobileOpen(false)}>
             <Logo />
           </S.Link>
         </S.ContentLogo>
-
         <S.DesktopNavLinks style={{ justifyContent: 'flex-end' }}>
-          <HeaderLink to={ROUTES.resellers}>
+          {/* <HeaderLink to={ROUTES.resellers}>
             {navigationYaml.topbar.resellers}
           </HeaderLink>
           <HeaderLink to={ROUTES.about}>
             {' '}
             {navigationYaml.topbar.about}
-          </HeaderLink>
-          <Cart onClick={() => setIsModalOpen(!isModalOpen)} />
+        </HeaderLink>*/}
+          <a href="https://nevoazul.bigcartel.com">
+            <Cart />
+          </a>
         </S.DesktopNavLinks>
-
-        <S.Hamburger
-          onClick={() => setIsMobileOpen(!isMobileOpen)}
-          style={{ cursor: 'pointer' }}
-        >
-          <Hamburger />
+        <S.Hamburger>
+          <a href="https://nevoazul.bigcartel.com">
+            <Cart />
+          </a>
         </S.Hamburger>
       </S.Wrapper>
 

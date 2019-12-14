@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import * as UI from '../../UI'
 
 import magazine from '../../../assets/images/magazine-small.png'
 import line from '../../../assets/images/line.png'
 
-export const Hero = styled.div`
+export const Hero = styled(motion.div)`
   position: relative;
 
   display: flex;
@@ -15,6 +16,11 @@ export const Hero = styled.div`
   height: 100vh;
 
   background-color: ${({ theme }) => theme.colors.blue.default};
+  overflow: hidden;
+
+  @media only screen and (max-width: 768px) {
+    padding: 1.5rem;
+  }
 `
 
 export const HeroTitle = styled(UI.Display)`
@@ -34,7 +40,7 @@ export const HeroDescription = styled(UI.Text)`
   margin-bottom: 1.5rem;
 `
 
-export const ContentHolder = styled.div`
+export const ContentHolder = styled(motion.div)`
   cursor: pointer;
 
   display: flex;
@@ -50,7 +56,7 @@ export const ContentHolder = styled.div`
 
 export const SmallMagazineBottom = styled.div`
   position: absolute;
-  bottom: -100px;
+  bottom: -150px;
   left: 400px;
 
   width: 400px;
@@ -60,8 +66,8 @@ export const SmallMagazineBottom = styled.div`
   background-position: center center;
 
   @media only screen and (max-width: 768px) {
-    bottom: -15%;
-    left: 5%;
+    bottom: -200px;
+    left: 50%;
   }
 `
 
@@ -80,6 +86,10 @@ export const SmallMagazineLeft = styled.div`
     bottom: 40%;
     left: -60%;
   }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const SmallMagazineTop = styled.div`
@@ -97,6 +107,10 @@ export const SmallMagazineTop = styled.div`
     top: -20%;
     right: 16%;
   }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const SmallMagazineRight = styled.div`
@@ -113,6 +127,10 @@ export const SmallMagazineRight = styled.div`
   @media only screen and (max-width: 768px) {
     top: 40%;
     left: 70%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
   }
 `
 
