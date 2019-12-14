@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Title as TitleStyled } from '../../UI'
 
-import magazine from '../../../assets/images/magazine-small.png'
+import magazine from '../../../assets/images/about_magazine.png'
 
 export const Title = styled(TitleStyled)`
   margin-bottom: 0.75rem;

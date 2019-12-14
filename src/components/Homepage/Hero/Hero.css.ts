@@ -2,7 +2,10 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import * as UI from '../../UI'
 
-import magazine from '../../../assets/images/magazine-small.png'
+import hero_one from '../../../assets/images/hero_magazine_1.png'
+import hero_two from '../../../assets/images/hero_magazine_2.png'
+import hero_three from '../../../assets/images/hero_magazine_3.png'
+import hero_four from '../../../assets/images/hero_magazine_4.png'
 import line from '../../../assets/images/line.png'
 
 export const Hero = styled(motion.div)`
@@ -52,53 +55,15 @@ export const ContentHolder = styled(motion.div)`
   margin-top: 3rem;
 `
 
-export const SmallMagazineBottom = styled.div`
-  position: absolute;
-  bottom: -150px;
-  left: 400px;
-
-  width: 400px;
-  height: 300px;
-  background-image: url(${magazine});
-  background-size: cover;
-  background-position: center center;
-
-  @media only screen and (max-width: 768px) {
-    bottom: -200px;
-    left: 50%;
-  }
-`
-
-export const SmallMagazineLeft = styled.div`
-  position: absolute;
-  bottom: 270px;
-  left: -100px;
-
-  width: 400px;
-  height: 300px;
-  background-image: url(${magazine});
-  background-size: cover;
-  background-position: center center;
-
-  @media only screen and (max-width: 768px) {
-    bottom: 40%;
-    left: -60%;
-  }
-
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
-`
-
 export const SmallMagazineTop = styled.div`
   position: absolute;
   top: -100px;
   right: 200px;
 
-  width: 400px;
+  width: 500px;
   height: 300px;
-  background-image: url(${magazine});
-  background-size: cover;
+  background-image: url(${hero_one});
+  background-size: contain;
   background-position: center center;
 
   @media only screen and (max-width: 768px) {
@@ -118,13 +83,51 @@ export const SmallMagazineRight = styled.div`
 
   width: 400px;
   height: 300px;
-  background-image: url(${magazine});
+  background-image: url(${hero_two});
   background-size: cover;
   background-position: center center;
 
   @media only screen and (max-width: 768px) {
     top: 40%;
     left: 70%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`
+
+export const SmallMagazineBottom = styled.div`
+  position: absolute;
+  bottom: -150px;
+  left: 400px;
+
+  width: 400px;
+  height: 300px;
+  background-image: url(${hero_three});
+  background-size: cover;
+  background-position: center center;
+
+  @media only screen and (max-width: 768px) {
+    bottom: -200px;
+    left: 50%;
+  }
+`
+
+export const SmallMagazineLeft = styled.div`
+  position: absolute;
+  bottom: 270px;
+  left: -100px;
+
+  width: 400px;
+  height: 300px;
+  background-image: url(${hero_four});
+  background-size: cover;
+  background-position: center center;
+
+  @media only screen and (max-width: 768px) {
+    bottom: 40%;
+    left: -60%;
   }
 
   @media only screen and (max-width: 768px) {
