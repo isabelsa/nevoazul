@@ -5,7 +5,7 @@ import { NavLink } from '../../UI/index'
 
 import { motion } from 'framer-motion'
 
-import hero from '../../../assets/images/playtime.png'
+import hero from '../../../assets/images/playtime.jpg'
 
 const Hero = () => {
   const animationVariants = {

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import * as UI from '../../UI/index'
-import hero from '../../../assets/images/test.jpg'
+import hero from '../../../assets/images/playtime.jpg'
 
 export const Hero = styled.div`
   display: flex;

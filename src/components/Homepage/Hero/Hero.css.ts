@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import * as UI from '../../UI'
 
-import hero_one from '../../../assets/images/hero_magazine_1.png'
-import hero_two from '../../../assets/images/hero_magazine_2.png'
-import hero_three from '../../../assets/images/hero_magazine_3.png'
-import hero_four from '../../../assets/images/hero_magazine_4.png'
+import magazine_top from '../../../assets/images/magazine_top.png'
+import magazine_right from '../../../assets/images/magazine_right.png'
+import magazine_bottom from '../../../assets/images/magazine_bottom.png'
+import magazine_left from '../../../assets/images/magazine_left.png'
 import line from '../../../assets/images/line.png'
 
 export const Hero = styled(motion.div)`
@@ -62,7 +62,7 @@ export const SmallMagazineTop = styled.div`
 
   width: 500px;
   height: 300px;
-  background-image: url(${hero_one});
+  background-image: url(${magazine_top});
   background-size: contain;
   background-position: center center;
 
@@ -83,7 +83,7 @@ export const SmallMagazineRight = styled.div`
 
   width: 400px;
   height: 300px;
-  background-image: url(${hero_two});
+  background-image: url(${magazine_right});
   background-size: cover;
   background-position: center center;
 
@@ -104,7 +104,7 @@ export const SmallMagazineBottom = styled.div`
 
   width: 400px;
   height: 300px;
-  background-image: url(${hero_three});
+  background-image: url(${magazine_bottom});
   background-size: cover;
   background-position: center center;
 
@@ -121,7 +121,7 @@ export const SmallMagazineLeft = styled.div`
 
   width: 400px;
   height: 300px;
-  background-image: url(${hero_four});
+  background-image: url(${magazine_left});
   background-size: cover;
   background-position: center center;
 
