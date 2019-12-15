@@ -41,6 +41,16 @@ const Newsletter: React.FC<NewsletterProps> = ({ content }) => {
             />
           </S.FormHolder>
         </div>
+
+        <S.Flex>
+          <a href="https://www.instagram.com/nevoazul_magazine/">
+            <Text>Instagram</Text>
+          </a>
+
+          <a href="https://www.facebook.com/nevoazul/">
+            <Text>Facebook</Text>
+          </a>
+        </S.Flex>
       </S.NewseletterContent>
     </S.Newsletter>
   )

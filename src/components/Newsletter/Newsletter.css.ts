@@ -31,3 +31,11 @@ export const NewseletterContent = styled.div`
 export const FormHolder = styled.form`
   margin-top: 24px;
 `
+
+export const Flex = styled.div`
+  margin-top: 40px;
+
+  a:last-of-type {
+    margin-left: 20px;
+  }
+`
