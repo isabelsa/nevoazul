@@ -34,6 +34,8 @@ type IndexPageProps = {
         newsletter_description: string
         newsletter_kicker: string
         newsletter_title: string
+        newsletter_input_label: string
+        newsletter_input_placeholder: string
       }
     }
   }
@@ -45,8 +47,16 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   return (
     <>
       <SEO
-        title="Conversas em prol da humanidade"
-        keywords={[`nevoazul`, `revista`, `minimalismo`]}
+        title="Nevoazul: Conversas em prol da humanidade"
+        description="Numa sociedade movida a informação, em que tão depressa estamos no papel de produtores, como no de consumidores, a Nevoazul explora a relação que temos com os meios de comunicação e a tecnologia."
+        keywords={[
+          `nevoazul`,
+          `revista`,
+          `magazine`,
+          `humanity`,
+          `tehcnology`,
+          `work`,
+        ]}
       />
       <Hero content={content} />
       <About content={content} />
@@ -58,7 +68,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
 export const query = graphql`
   query Hero {
-    prismicHomepage {
+    prismicHomepage(lang: { in: "pt-pt" }) {
       data {
         hero_description
         hero_title
@@ -79,6 +89,8 @@ export const query = graphql`
         newsletter_description
         newsletter_kicker
         newsletter_title
+        newsletter_input_label
+        newsletter_input_placeholder
       }
     }
   }
