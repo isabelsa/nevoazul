@@ -7,7 +7,6 @@ import styled, {
   keyframes,
   StyledThemeProvider,
 } from './styled'
-import { media } from './breakpoints'
 import style from './style'
 import theme from './theme'
 import typography from './typography'
@@ -30,6 +29,6 @@ const ThemeProvider: React.FC = ({ children }) => {
   )
 }
 
-export { theme, ThemeProvider, keyframes, css, media }
+export { theme, ThemeProvider, keyframes, css }
 
 export default styled

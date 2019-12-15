@@ -20,6 +20,17 @@ export const Holder = styled(Link)`
   }
 `
 
+export const HolderA = styled.a`
+  display: inline-flex;
+  flex-direction: row;
+
+  &:hover {
+    ${Arrow} {
+      margin-left: 0.75rem;
+    }
+  }
+`
+
 export const ArrowLink = styled.p`
   cursor: pointer;
 `
