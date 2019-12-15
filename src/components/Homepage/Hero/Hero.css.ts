@@ -29,7 +29,7 @@ export const Hero = styled(motion.div)`
 export const HeroTitle = styled(UI.Display)`
   text-align: center;
 
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
   line-height: 1.2;
   letter-spacing: -0.5px;
 

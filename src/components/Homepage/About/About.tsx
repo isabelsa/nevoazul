@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Label, Text } from '../../UI'
+import { Label, ArrowLink } from '../../UI'
 import * as S from './About.css'
 
 type AboutProps = {
@@ -17,9 +17,13 @@ const About: React.FC<AboutProps> = ({ content }) => {
       <S.AboutInfo>
         <Label>{content.about_kicker}</Label>
         <S.Title>
-          Conversas <i>em prol</i> da humanidade.
+          O <i>futuro</i> do trabalho
         </S.Title>
-        <Text>{content.about_text}</Text>
+        <S.Text>{content.about_text}</S.Text>
+
+        <ArrowLink to="https://nevoazul.bigcartel.com/" isExternal="true">
+          Pré-venda
+        </ArrowLink>
       </S.AboutInfo>
       <S.Magazine />
     </S.About>

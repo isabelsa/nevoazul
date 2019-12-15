@@ -105,8 +105,6 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
         ref={leftMagazine}
         style={{ y: left }}
       />
-
-      <S.Line />
     </S.Hero>
   )
 }

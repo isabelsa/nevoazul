@@ -34,6 +34,8 @@ type IndexPageProps = {
         newsletter_description: string
         newsletter_kicker: string
         newsletter_title: string
+        newsletter_input_label: string
+        newsletter_input_placeholder: string
       }
     }
   }
@@ -66,7 +68,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
 export const query = graphql`
   query Hero {
-    prismicHomepage {
+    prismicHomepage(lang: { in: "pt-pt" }) {
       data {
         hero_description
         hero_title

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Title as TitleStyled } from '../../UI'
+import { Title as TitleStyled, Text as TextStyled } from '../../UI'
 
 import magazine from '../../../assets/images/about_magazine.png'
 
@@ -30,6 +30,10 @@ export const About = styled.div`
 
     padding: 3rem 1.5rem;
   }
+`
+
+export const Text = styled(TextStyled)`
+  margin-bottom: 24px;
 `
 
 export const AboutInfo = styled.div`

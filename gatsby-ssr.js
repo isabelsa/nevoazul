@@ -1,8 +1,7 @@
+import React from 'react'
 
-import React from "react"
-
-import Layout from "./src/layout"
-import { AppProvider } from "./src/store"
+import Layout from './src/layout'
+import { AppProvider } from './src/store'
 
 export const wrapPageElement = ({ element, props }) => {
   return (
