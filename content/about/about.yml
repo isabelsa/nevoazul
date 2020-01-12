@@ -18,19 +18,22 @@ conversation:
     fifth: Irás encontrar postais da Nevoazul, na tua caixa de correio, com memorandos para conversas melhores.
 
 team:
-  title: A equipa
+  title: 'Queremos ajudar-te a compreenderes e a usares de forma mais significativa os meios de comunicação que tens ao teu alcance. Através da revista impressa, da newsletter da Nevoazul e dos eventos que organizamos, queremos questionar como a comunicação pode ser usada em prol da humanidade. O que nos move'
   ines:
     name: Inês Santos Silva
-    description: Editora na Nevoazul, coordenadora do Manifesto, apologista de novos futuros.
+    description: Directora Criativa e Designer
   isabel:
     name: Isabel Sá
-    description: Editora na Nevoazul, coordenadora do Manifesto, apologista de novos futuros.
+    description: Directora Criativa e Designer
   miguel:
     name: Muigel Barbot
-    description: Editor de fotografia da Nevoazul, consultor no Ofício, apologista de uma melhor mobilidade.
+    description: Directora Criativa e Designer
   pedrocodeco:
     name: Pedro Codeço
-    description: Editor de ilustração na Nevoazul, ilustrador por si mesmo, apologista de (…).
+    description: Directora Criativa e Designer
   pedrooliveira:
     name: Pedro Oliveira
-    description: Designer na Nevoazul, arquitecto itinerante, apologista de (...).
+    description: Directora Criativa e Designer
+  barbaranogueira:
+    name: Pedro Oliveira
+    description: Directora Criativa e Designer

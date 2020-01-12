@@ -6,6 +6,9 @@ export { default as Cart } from '../UI/Icons/Cart'
 export { default as Close } from '../UI/Icons/Close'
 
 export {
+  Body,
+  CaptionNumber,
+  Caption,
   Detail,
   Display,
   DisplayItalic,
@@ -15,6 +18,8 @@ export {
   TextSmall,
   Title,
   Subtitle,
+  Kicker,
+  Heading,
 } from '../UI/Typography/Typography'
 export { Button } from '../UI/Button/Button.css'
 export { default as ArrowLink } from '../UI/Links/ArrowLink/ArrowLink'
@@ -24,3 +29,7 @@ export { default as NavLink } from '../UI/Links/NavLink/NavLink'
 export { default as TitleLink } from '../UI/Links/TitleLink/TitleLink'
 export { default as Modal } from '../UI/Modal/Modal'
 export { default as MailchimpInput } from './Input/MailchimpInput'
+
+export { default as CaptionWithNumber } from '../UI/Caption/Caption'
+
+export { Flex, FlexCenter, Box } from '../UI/Layout/Layout.css'

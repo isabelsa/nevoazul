@@ -23,6 +23,7 @@ const Layout = ({ children }: ILayoutProps) => {
             {/* <Banner /> */}
             <Header siteTitle={data.site.siteMetadata.title} />
             <Content>{children}</Content>
+            <Footer />
           </CartProvider>
         </ThemeProvider>
       )}
