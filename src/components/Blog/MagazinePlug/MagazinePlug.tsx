@@ -21,13 +21,8 @@ const MagazineOrderNext = () => {
           temos com os meios e perceber como podemos transformar informação em
           conhecimento.
         </S.ContentTextMobile>
-        <div
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-        >
-          <S.AsteriskShape isHovered={isHovered} />
-          <ArrowLink to={ROUTES.root}>A nova revista</ArrowLink>
-        </div>
+
+        <ArrowLink to={ROUTES.root}>A nova revista</ArrowLink>
       </S.Content>
 
       <S.ContentDescription>
