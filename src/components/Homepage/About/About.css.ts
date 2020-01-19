@@ -1,5 +1,9 @@
 import styled from 'styled-components'
-import { Title as TitleStyled, Text as TextStyled } from '../../UI'
+import {
+  Title as TitleStyled,
+  Text as TextStyled,
+  Kicker as StyledKicker,
+} from '../../UI'
 
 import magazine from '../../../assets/images/about_magazine.png'
 
@@ -55,9 +59,6 @@ export const Magazine = styled.div`
 
   width: 580px;
   height: 450px;
-  background-image: url(${magazine});
-  background-size: cover;
-  background-position: center center;
 
   @media only screen and (max-width: 1200px) {
     position: relative;
@@ -83,3 +84,15 @@ export const Magazine = styled.div`
     max-height: 240px;
   }
 `
+
+export const MagazineImage = styled.div`
+  position: relative;
+  background-image: url(${magazine});
+  background-size: cover;
+  background-position: center center;
+
+  width: 100%;
+  height: 100%;
+`
+
+export const Kicker = styled(StyledKicker)``

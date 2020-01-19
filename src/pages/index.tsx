@@ -61,7 +61,6 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
       <Hero content={content} />
       <About content={content} />
       <Articles content={content} />
-      <Newsletter content={content} />
     </>
   )
 }

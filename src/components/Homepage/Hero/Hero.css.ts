@@ -27,7 +27,7 @@ export const Hero = styled(motion.div)`
 `
 
 export const HeroKicker = styled(UI.Kicker)`
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 `
 
 export const HeroTitle = styled(UI.Display)`

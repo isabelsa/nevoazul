@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TextSerif, Label } from '../../UI'
+import { Text, TextSerif, Label, Kicker } from '../../UI'
 import * as S from './Articles.css'
 
 type ArticlesHighlited = {
@@ -30,7 +30,7 @@ const Articles: React.FC<ArticlesProps> = ({ content }) => {
         {content.article_highlighted.slice(0, 2).map(art => {
           return (
             <S.Article>
-              <Label>{art.article_author}</Label>
+              <Kicker>{art.article_author}</Kicker>
               <S.Subtitle>{art.article_title}</S.Subtitle>
               <Text>{art.article_description}</Text>
             </S.Article>
