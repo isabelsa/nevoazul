@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { Box, Flex, Subtitle as SubtitleStyled } from '../UI/index'
 
+import decoration from '../../assets/images/decorative-dots.jpg'
+
 export const Footer = styled(Flex)`
   justify-content: space-between;
   padding: 70px;
@@ -13,8 +15,23 @@ export const Footer = styled(Flex)`
   }
 `
 
+export const SubtitleHolder = styled.div`
+  position: relative;
+`
+
+export const SubtitleDecoration = styled.div`
+  position: absolute;
+  top: -28px;
+
+  background-image: url(${decoration});
+  background-size: cover;
+
+  width: 70px;
+  height: 30px;
+`
+
 export const Subtitle = styled(SubtitleStyled)`
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 `
 
 export const FooterIntro = styled.div`

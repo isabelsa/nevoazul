@@ -6,7 +6,10 @@ const Footer = () => {
   return (
     <S.Footer>
       <S.FooterIntro>
-        <S.Subtitle>A internet num telegrama</S.Subtitle>
+        <S.SubtitleHolder>
+          <S.SubtitleDecoration />
+          <S.Subtitle>A internet num telegrama</S.Subtitle>
+        </S.SubtitleHolder>
         <Text>
           Uma newsletter mensal de poucas linhas sobre como a tecnologia, a
           cultura e o design nos podem tornar mais humanos numa era cada vez
