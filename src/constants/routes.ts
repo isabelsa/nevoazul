@@ -2,6 +2,6 @@ export const ROUTES = {
   root: '/',
   blog: '/blog',
   about: '/about',
-  resellers: '/reseller',
+  resellers: '/resellers',
   magazine: '/magazine',
 }

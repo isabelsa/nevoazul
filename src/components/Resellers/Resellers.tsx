@@ -4,7 +4,26 @@ import * as S from './Resellers.css'
 
 import { resellersMock, resellersDescriptionMock } from './data'
 
-const Resellers = () => {
+type Reseller = {
+  reseller_image: {
+    url: string
+  }
+  reseller_kicker: string
+  reseller_name: string
+  reseller_description: string
+}
+
+type ResellersProps = {
+  content: {
+    resellers: Reseller[]
+    reseller_where_to_find: string
+    reseller_where_description: string
+    reseller_inquiries: string
+    reseller_inquiries_description: string
+  }
+}
+
+const Resellers: React.FC<ResellersProps> = ({ content }) => {
   const [reseller, setReseller] = React.useState(0)
 
   return (
@@ -38,23 +57,13 @@ const Resellers = () => {
       </S.Column>
       <S.Column>
         <div>
-          <S.Heading>Onde encontrar</S.Heading>
-          <Text>
-            Na Nevoazul gostamos de estar em boa companhia. Para isso,
-            selecionamos algumas das nossas lojas preferidas, de norte a sul do
-            país, onde vais poder comprar a nossa revista. Aponta os nomes e as
-            moradas e prepara-te para te surpreenderes pelo conceito e produtos
-            que estes sítios têm para oferecer.
-          </Text>
+          <S.Heading>{content.reseller_where_to_find}</S.Heading>
+          <Text>{content.reseller_where_description}</Text>
         </div>
 
         <div>
-          <S.Heading>Interessado na nevoazul?</S.Heading>
-          <Text>
-            Na Nevoazul gostamos de estar em boa companhia. Para isso,
-            selecionamos algumas das nossas lojas preferidas, de norte a sul do
-            país, onde vais poder comprar a nossa revista.
-          </Text>
+          <S.Heading>{content.reseller_inquiries}</S.Heading>
+          <Text>{content.reseller_inquiries_description}</Text>
         </div>
       </S.Column>
     </S.Wrapper>
