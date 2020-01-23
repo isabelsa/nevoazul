@@ -28,21 +28,22 @@ const Resellers: React.FC<ResellersProps> = ({ content }) => {
 
   return (
     <S.Wrapper>
-      <div>
+      <S.GalleryHolder>
         <S.Gallery />
         <S.GalleryControls>
           <CaptionWithNumber
             number={resellersDescriptionMock[reseller].number}
             description={resellersDescriptionMock[reseller].description}
           />
-          <ArrowRight
-            onClick={() => setReseller((reseller + 1) % resellersMock.length)}
-          />
+          <S.Control>
+            <ArrowRight
+              onClick={() => setReseller((reseller + 1) % resellersMock.length)}
+            />
+          </S.Control>
         </S.GalleryControls>
-      </div>
+      </S.GalleryHolder>
       <S.Column>
         {resellersMock.map(res => {
-          console.log(res, Resellers)
           return (
             <S.Resellers
               key={res.id}

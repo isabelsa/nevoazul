@@ -27,7 +27,10 @@ const About: React.FC<AboutProps> = ({ content }) => {
       </S.AboutInfo>
       <S.Magazine>
         <S.MagazineImage />
-        <CaptionWithNumber number="01" description="Test" />
+        <CaptionWithNumber
+          number="01"
+          description="À conversa com João Bernardino."
+        />
       </S.Magazine>
     </S.About>
   )

@@ -5,7 +5,6 @@ import * as UI from '../../UI'
 import magazine_top from '../../../assets/images/magazine_top.png'
 import magazine_right from '../../../assets/images/magazine_right.png'
 import magazine_bottom from '../../../assets/images/magazine_bottom.png'
-import magazine_left from '../../../assets/images/magazine_left.png'
 import line from '../../../assets/images/line.png'
 
 export const Hero = styled(motion.div)`
@@ -39,6 +38,10 @@ export const HeroTitle = styled(UI.Display)`
 
   width: 100%;
   max-width: 28rem;
+
+  @media only screen and (max-width: 768px) {
+    padding: 1.5rem;
+  }
 `
 
 export const HeroDescription = styled(UI.Text)`
@@ -57,7 +60,11 @@ export const ContentHolder = styled(motion.div)`
   height: 100%;
 
   margin-top: 3rem;
-  margin-left: 16rem;
+  margin-left: 20%;
+
+  @media only screen and (max-width: 768px) {
+    margin-left: 0%;
+  }
 `
 
 export const SmallMagazineRight = styled.div`

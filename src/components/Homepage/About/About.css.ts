@@ -60,6 +60,10 @@ export const Magazine = styled.div`
   width: 580px;
   height: 450px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media only screen and (max-width: 1200px) {
     position: relative;
     top: 0px;
