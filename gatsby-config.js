@@ -58,6 +58,7 @@ module.exports = {
           'MC5YZkZJY1JFQUFDQUE4MHZq.QT_vv71kE2Dvv70p77-9bifvv73vv70HFAszZwnvv70l77-9fxHvv71bZu-_vXUSJnI',
         schemas: {
           homepage: require('./src/schemas/homepage.json'),
+          about: require('./src/schemas/about.json'),
         },
       },
     },

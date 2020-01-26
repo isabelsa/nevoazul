@@ -7,7 +7,6 @@ import * as S from './Arcticles.css'
 const Articles = () => {
   return (
     <div>
-      <p>Artigos Selecionados</p>
       <S.Holder>
         <S.Flex>
           <ArticleBig />

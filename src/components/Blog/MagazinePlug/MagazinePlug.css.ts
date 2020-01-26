@@ -9,18 +9,16 @@ export const MagazinePlug = styled.div`
   position: relative;
   display: flex;
 
-  padding-left: 10%;
-  padding-top: 4rem;
-  padding-bottom: 3rem;
+  padding: 130px 70px;
 `
 
 export const Content = styled.div`
   position: relative;
 
-  max-width: 23rem;
+  max-width: 380px;
 `
 
-export const ContentHighlight = styled(UI.Detail)`
+export const ContentHighlight = styled(UI.Kicker)`
   margin-bottom: 0.5rem;
 `
 

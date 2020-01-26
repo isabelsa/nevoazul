@@ -23,9 +23,6 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
 
   const { scrollY } = useViewportScroll()
 
-  const top = useTransform(scrollY, [topTop, topTop + 1], [0, 0.1], {
-    clamp: false,
-  })
   const right = useTransform(scrollY, [rightTop, rightTop + 1], [0, 0.1], {
     clamp: false,
   })
@@ -37,9 +34,6 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
   })
 
   React.useLayoutEffect(() => {
-    const topEl = topMagazine.current
-    setTopTop(topEl.offsetTop)
-
     const rightEl = rightMagazine.current
     setRightTop(rightEl.offsetTop)
 
@@ -79,17 +73,13 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
         animate="visible"
         variants={animationVariants}
       >
+        <S.HeroKicker>A nova edição</S.HeroKicker>
         <S.HeroTitle>
           Conversas <i>em prol</i> da humanidade
         </S.HeroTitle>
         <S.HeroDescription>{content.hero_description}</S.HeroDescription>
       </S.ContentHolder>
 
-      <S.SmallMagazineTop
-        as={motion.div}
-        ref={topMagazine}
-        style={{ y: top }}
-      />
       <S.SmallMagazineRight
         as={motion.div}
         ref={rightMagazine}

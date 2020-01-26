@@ -2,6 +2,10 @@ import styled from 'styled-components'
 
 import * as UI from '../../UI/index'
 
+export const GalleryHolder = styled.div`
+  position: relative;
+`
+
 export const Gallery = styled.div`
   position: absolute;
   top: 8rem;
@@ -24,6 +28,10 @@ export const Gallery = styled.div`
   width: 25rem;
 
   background-color: ${({ theme }) => theme.colors.greyscale.light};
+
+  @media only screen and (max-width: 768px) {
+    position: relative;
+  }
 `
 
 export const Image = styled.div`
@@ -33,6 +41,8 @@ export const Image = styled.div`
   max-width: 50vw;
 `
 
-export const Caption = styled(UI.Detail)`
-  margin-top: 1rem;
+export const GalleryCaption = styled(UI.Flex)`
+  position: absolute;
+  right: 0;
+  bottom: 0;
 `

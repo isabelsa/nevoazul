@@ -7,7 +7,6 @@ export default css`
   body {
     font-family: 'Untitled Sans', sans-serif;
     color: ${({ theme }) => theme.colors.foreground};
-    background-color: #f7f3f1;
     width: 100%;
     height: 100%;
 

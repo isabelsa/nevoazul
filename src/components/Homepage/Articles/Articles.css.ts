@@ -14,7 +14,7 @@ export const Display = styled(Title)`
 `
 
 export const Subtitle = styled(TitleStyled)`
-  margin-top: 20px;
+  margin-top: 8px;
   margin-bottom: 16px;
 `
 
