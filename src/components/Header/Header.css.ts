@@ -74,3 +74,10 @@ export const MobileNavLinks = styled.div`
     flex-direction: column;
   }
 `
+
+export const IconHolder = styled.div`
+  cursor: pointer;
+
+  margin-right: 24px;
+  margin-top: -2px;
+`

@@ -27,18 +27,10 @@ const Header = () => {
     setelTop(elTop.offsetTop)
   }, [elTop.offsetTop])
 
-  console.log(isMobileOpen)
   return (
     <React.Fragment>
       <S.Wrapper as={motion.div} ref={navigation} style={{ y }}>
-        <S.DesktopNavLinks>
-          <HeaderLink to={ROUTES.magazine}>
-            {navigationYaml.topbar.magazine}
-          </HeaderLink>
-          <HeaderLink to={ROUTES.blog}>
-            {navigationYaml.topbar.articles}
-          </HeaderLink>
-        </S.DesktopNavLinks>
+        <S.DesktopNavLinks></S.DesktopNavLinks>
         <S.ContentLogo>
           <S.Link to="/" onClick={() => setIsMobileOpen(false)}>
             <Logo />
@@ -57,6 +49,10 @@ const Header = () => {
           </a>
         </S.DesktopNavLinks>
         <S.Hamburger>
+          <S.IconHolder onClick={() => setIsMobileOpen(true)}>
+            <Hamburger />
+          </S.IconHolder>
+
           <a href="https://nevoazul.bigcartel.com">
             <Cart />
           </a>
@@ -67,21 +63,28 @@ const Header = () => {
         {isMobileOpen && (
           <S.MobileNavLinks>
             <HeaderLink
+              mobile
               to={ROUTES.magazine}
               onClick={() => setIsMobileOpen(false)}
             >
               {navigationYaml.topbar.magazine}
             </HeaderLink>
-            <HeaderLink to={ROUTES.blog} onClick={() => setIsMobileOpen(false)}>
+            <HeaderLink
+              mobile
+              to={ROUTES.blog}
+              onClick={() => setIsMobileOpen(false)}
+            >
               {navigationYaml.topbar.articles}
             </HeaderLink>
             <HeaderLink
+              mobile
               to={ROUTES.resellers}
               onClick={() => setIsMobileOpen(false)}
             >
               {navigationYaml.topbar.resellers}
             </HeaderLink>
             <HeaderLink
+              mobile
               to={ROUTES.about}
               onClick={() => setIsMobileOpen(false)}
             >
