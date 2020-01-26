@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import { Flex, Box, Text } from '../../UI/index'
 
 export const Wrapper = styled(Flex)`
-  padding: 160px 180px;
+  padding: 160px 10%;
+
+  flex-wrap: wrap;
 
   @media only screen and (max-width: 768px) {
     padding: 90px 20px;
@@ -32,8 +34,14 @@ export const TeamHolder = styled.div`
 
   padding: 134px 60px;
 
+  @media only screen and (max-width: 1160px) {
+    grid-template-columns: repeat(1, 1fr);
+
+    padding: 134px 20px 0px 40px;
+  }
+
   @media only screen and (max-width: 768px) {
-    padding: 20px;
+    padding: 0px;
   }
 `
 
