@@ -85,19 +85,14 @@ export const Column = styled(BoxStyled)`
   }
 `
 
-export const Resellers = styled(BoxStyled)<{ isSelected: boolean }>`
+export const Resellers = styled(BoxStyled)`
   cursor: pointer;
+  display: block;
   margin-bottom: 20px;
 
   &:last-of-type {
     margin-bottom: 0px;
   }
-
-  ${({ isSelected }) =>
-    isSelected &&
-    css`
-      text-decoration: underline;
-    `}
 `
 
 export const Heading = styled(HeadingStyled)`
@@ -106,4 +101,35 @@ export const Heading = styled(HeadingStyled)`
 
 export const Kicker = styled(KickerStyled)`
   margin-bottom: 4px;
+`
+
+export const ResellerHolder = styled.div`
+  display: inline-block;
+  position: relative;
+`
+
+export const ResellerName = styled(HeadingStyled)<{ isSelected: boolean }>`
+  cursor: pointer;
+
+  ${({ isSelected }) =>
+    isSelected &&
+    css`
+      &::before {
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-color: ${({ theme }) => theme.colors.foreground};
+        position: absolute;
+        bottom: -3px;
+        left: 0px;
+
+        transition: ${({ theme }) => theme.transitions.cubic()};
+      }
+
+      &:hover {
+        &::before {
+          width: 60%;
+        }
+      }
+    `}
 `

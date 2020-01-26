@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text, CaptionWithNumber, ArrowRight } from '../UI'
+import { Text, CaptionWithNumber, ArrowRight } from '../UI'
 import * as S from './Resellers.css'
 
 import { resellersMock, resellersDescriptionMock } from './data'
@@ -45,13 +45,13 @@ const Resellers: React.FC<ResellersProps> = ({ content }) => {
       <S.Column>
         {resellersMock.map(res => {
           return (
-            <S.Resellers
-              key={res.id}
-              onClick={() => setReseller(res.id)}
-              isSelected={res.id === reseller}
-            >
+            <S.Resellers key={res.id} onClick={() => setReseller(res.id)}>
               <S.Kicker>{res.location}</S.Kicker>
-              <Heading>{res.name}</Heading>
+              <S.ResellerHolder>
+                <S.ResellerName isSelected={res.id === reseller}>
+                  {res.name}
+                </S.ResellerName>
+              </S.ResellerHolder>
             </S.Resellers>
           )
         })}
