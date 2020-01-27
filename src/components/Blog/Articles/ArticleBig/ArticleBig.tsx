@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '../../../UI/index'
+import { Text, Kicker } from '../../../UI/index'
 
 import * as S from './ArticleBig.css'
 
@@ -7,7 +7,7 @@ const ArticleBig = () => {
   return (
     <S.Holder>
       <S.ArticleImage />
-      <S.Detail>Placeholder</S.Detail>
+      <Kicker>Design, Tecnologia</Kicker>
       <S.TitleHolder>
         <S.TitleLink>A framework for performing</S.TitleLink>
       </S.TitleHolder>

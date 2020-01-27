@@ -3,7 +3,8 @@ import * as UI from '../../../UI/index'
 
 export const ArticleImage = styled.div`
   width: 100%;
-  height: 36rem;
+  height: 565px;
+
   background-color: ${({ theme }) => theme.colors.blue.default};
   background-image: url('https://images.unsplash.com/photo-1492252719637-c7b68468489b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
   background-size: cover;
@@ -39,9 +40,12 @@ export const TitleLink = styled(UI.Title)`
 `
 
 export const Holder = styled.div`
-  width: 100%;
-  max-width: 34rem;
   cursor: pointer;
+
+  width: 100%;
+  max-width: 525px;
+
+  margin-top: 150px;
 
   &:last-child {
     margin-right: none;
