@@ -51,7 +51,7 @@ const Hero = () => {
             melhor, pelas utopias de Frank Lloyd Wright e dos seus carros
             voadores.
           </S.HeroDescription>
-          <NavLink to="/blog/daniel-santos">Ler mais</NavLink>
+          <NavLink to="/blog/jacques-tati">Ler mais</NavLink>
         </S.ContentHolder>
         <S.Arrow />
       </S.HeroContent>

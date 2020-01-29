@@ -1,22 +1,33 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { Kicker } from '../../../UI/index'
 
 import * as S from './ArticleSmall.css'
 
-const ArticleSmall = () => {
+type ArticleSmallProps = {
+  title: string
+  tags: Array<string>
+  description: string
+  link: string
+}
+
+const ArticleSmall: React.FC<ArticleSmallProps> = ({
+  title,
+  tags,
+  description,
+  link,
+}) => {
   return (
-    <S.Holder>
-      <S.ArticleImage />
-      <Kicker>Design, Tecnologia</Kicker>
-      <S.TitleHolder>
-        <S.TitleLink>Placeholder</S.TitleLink>
-      </S.TitleHolder>
-      <S.Text>
-        The Thin Line é um projeto de fotografia documental, da autoria do
-        Colectivo Photo. A proposta é olhar, refletir e iniciar um diálogo sobre
-        as fronteiras e o que elas representam.{' '}
-      </S.Text>
-    </S.Holder>
+    <Link to={link}>
+      <S.Holder>
+        <S.ArticleImage />
+        <Kicker>{tags.map(tag => tag)}</Kicker>
+        <S.TitleHolder>
+          <S.TitleLink>{title}</S.TitleLink>
+        </S.TitleHolder>
+        <S.Text>{description}</S.Text>
+      </S.Holder>
+    </Link>
   )
 }
 

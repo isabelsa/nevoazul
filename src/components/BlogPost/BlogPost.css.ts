@@ -79,3 +79,11 @@ export const PostBody = styled.div`
 
   margin-top: 120px;
 `
+
+export const Body = styled.div`
+  p {
+    font-family: ${({ theme }) => theme.fonts.serif};
+    font-size: 17px;
+    line-height: 1.65rem;
+  }
+`

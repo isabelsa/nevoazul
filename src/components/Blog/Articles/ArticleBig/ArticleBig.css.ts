@@ -9,6 +9,8 @@ export const ArticleImage = styled.div`
   background-image: url('https://images.unsplash.com/photo-1492252719637-c7b68468489b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
   background-size: cover;
 
+  opacity: 1;
+
   margin-bottom: 1.5rem;
 `
 
@@ -25,18 +27,6 @@ export const TitleHolder = styled.div`
 
 export const TitleLink = styled(UI.Title)`
   cursor: pointer;
-
-  &::before {
-    content: '';
-    height: 1px;
-    width: 0;
-    background-color: ${({ theme }) => theme.colors.blue.default};
-    position: absolute;
-    bottom: 6px;
-    left: 0px;
-
-    transition: all ${({ theme }) => theme.transitions.ease()};
-  }
 `
 
 export const Holder = styled.div`
@@ -45,23 +35,18 @@ export const Holder = styled.div`
   width: 100%;
   max-width: 525px;
 
-  margin-top: 150px;
+  margin-top: 250px;
+
+  &:last-of-type {
+    margin-top: 70px;
+    margin-bottom: 200px;
+  }
 
   &:last-child {
     margin-right: none;
   }
 
   &:hover {
-    ${ArticleImage} {
-      -webkit-box-shadow: 10px 4px 44px -9px rgba(0, 0, 0, 0.27);
-      -moz-box-shadow: 10px 4px 44px -9px rgba(0, 0, 0, 0.27);
-      box-shadow: 10px 4px 44px -9px rgba(0, 0, 0, 0.27);
-    }
-
-    ${TitleLink} {
-      &::before {
-        text-decoration: underline;
-      }
-    }
+    opacity: 0.8;
   }
 `

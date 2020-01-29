@@ -36,7 +36,7 @@ export const BlogPost = ({ data }) => {
         <S.PostImage />
 
         <S.PostBody>
-          <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+          <S.Body dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
         </S.PostBody>
       </S.Post>
     </S.Wrapper>
