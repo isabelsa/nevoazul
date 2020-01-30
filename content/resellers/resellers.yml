@@ -1,0 +1,35 @@
+---
+resellers:
+  - id: 0
+    number: '01'
+    name: Manifesto
+    location: Mercado Matosinhos
+    description: Um belo espaço
+    link: https://google.com
+    image: './manifesto.jpg'
+  - id: 1
+    number: '02'
+    name: Velo Culture
+    location: Mercado Matosinhos
+    description: Um fsdkljflsf
+    link: https://google.com
+    image: './velo.jpg'
+  - id: 2
+    number: '03'
+    name: Coração Alecrim
+    location: Mercado Matosinhos
+    description: JLAJDÇLLJDKJDLSDJ
+    link: https://google.com
+    image: './coracao.jpg'
+  - id: 3
+    number: '04'
+    name: Under the Cover
+    location: Mercado Matosinhos
+    description: '-----------'
+    link: https://google.com
+    image: './under.jpg'
+resellerInfo:
+  whereTitle: 'Onde encontrar'
+  whereDescription: 'Na Nevoazul gostamos de estar em boa companhia. Para isso, selecionamos algumas das nossas lojas preferidas, de norte a sul do país, onde vais poder comprar a nossa revista. Aponta os nomes e as moradas e prepara-te para te surpreenderes pelo conceito e produtos que estes sítios têm para oferecer.'
+  inspirationTitle: 'Interessado na nevoazul?'
+  inspirationDescription: 'Na Nevoazul gostamos de estar em boa companhia. Para isso, selecionamos algumas das nossas lojas preferidas, de norte a sul do país, onde vais poder comprar a nossa revista.'

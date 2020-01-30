@@ -3,34 +3,7 @@ import React from 'react'
 import SEO from '../components/SEO/SEO'
 import Resellers from '../components/Resellers/Resellers'
 
-import { graphql } from 'gatsby'
-
-type Reseller = {
-  reseller_image: {
-    url: string
-  }
-  reseller_kicker: string
-  reseller_name: string
-  reseller_description: string
-}
-
-type ResellersPageProps = {
-  data: {
-    prismicResellers: {
-      data: {
-        resellers: Reseller[]
-        reseller_where_to_find: string
-        reseller_where_description: string
-        reseller_inquiries: string
-        reseller_inquiries_description: string
-      }
-    }
-  }
-}
-
-const ResellersPage: React.FC<ResellersPageProps> = ({ data }) => {
-  const content = data.prismicResellers.data
-
+const ResellersPage: React.FC<ResellersPageProps> = () => {
   return (
     <>
       <SEO
@@ -45,32 +18,9 @@ const ResellersPage: React.FC<ResellersPageProps> = ({ data }) => {
           `work`,
         ]}
       />
-      <Resellers content={content} />
+      <Resellers />
     </>
   )
 }
 
 export default ResellersPage
-
-export const query = graphql`
-  query Resellers {
-    prismicResellers {
-      data {
-        resellers {
-          reseller_image {
-            alt
-            copyright
-            url
-          }
-          reseller_kicker
-          reseller_name
-          reseller_description
-        }
-        reseller_where_to_find
-        reseller_where_description
-        reseller_inquiries
-        reseller_inquiries_description
-      }
-    }
-  }
-`

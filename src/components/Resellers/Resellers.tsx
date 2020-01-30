@@ -1,49 +1,36 @@
 import React from 'react'
-import { Text, CaptionWithNumber, ArrowRight } from '../UI'
+import Img from 'gatsby-image'
+import { graphql, useStaticQuery } from 'gatsby'
+import { CaptionWithNumber, ArrowRight, Text } from '../UI'
 import * as S from './Resellers.css'
 
-import { resellersMock, resellersDescriptionMock } from './data'
-
-type Reseller = {
-  reseller_image: {
-    url: string
-  }
-  reseller_kicker: string
-  reseller_name: string
-  reseller_description: string
-}
-
-type ResellersProps = {
-  content: {
-    resellers: Reseller[]
-    reseller_where_to_find: string
-    reseller_where_description: string
-    reseller_inquiries: string
-    reseller_inquiries_description: string
-  }
-}
-
-const Resellers: React.FC<ResellersProps> = ({ content }) => {
+const Resellers = ({}) => {
   const [reseller, setReseller] = React.useState(0)
+
+  const data = useStaticQuery(query)
+  const resellersData = data.allResellersYaml.edges[0].node.resellers
+  const resellersGeneral = data.allResellersYaml.edges[0].node.resellerInfo
 
   return (
     <S.Wrapper>
       <S.GalleryHolder>
-        <S.Gallery />
+        <S.Gallery>
+          <Img fluid={resellersData[reseller].image.childImageSharp.fluid} />
+        </S.Gallery>
         <S.GalleryControls>
           <CaptionWithNumber
-            number={resellersDescriptionMock[reseller].number}
-            description={resellersDescriptionMock[reseller].description}
+            number={resellersData[reseller].number}
+            description={resellersData[reseller].description}
           />
           <S.Control>
             <ArrowRight
-              onClick={() => setReseller((reseller + 1) % resellersMock.length)}
+              onClick={() => setReseller((reseller + 1) % resellersData.length)}
             />
           </S.Control>
         </S.GalleryControls>
       </S.GalleryHolder>
       <S.Column>
-        {resellersMock.map(res => {
+        {resellersData.map(res => {
           return (
             <S.Resellers key={res.id} onClick={() => setReseller(res.id)}>
               <S.Kicker>{res.location}</S.Kicker>
@@ -58,17 +45,49 @@ const Resellers: React.FC<ResellersProps> = ({ content }) => {
       </S.Column>
       <S.Column>
         <div>
-          <S.Heading>{content.reseller_where_to_find}</S.Heading>
-          <Text>{content.reseller_where_description}</Text>
+          <S.Heading>{resellersGeneral.whereTitle}</S.Heading>
+          <Text>{resellersGeneral.whereDescription}</Text>
         </div>
 
         <div>
-          <S.Heading>{content.reseller_inquiries}</S.Heading>
-          <Text>{content.reseller_inquiries_description}</Text>
+          <S.Heading>{resellersGeneral.inspirationTitle}</S.Heading>
+          <Text>{resellersGeneral.inspirationDescription}</Text>
         </div>
       </S.Column>
     </S.Wrapper>
   )
 }
+
+const query = graphql`
+  query Resellers {
+    allResellersYaml {
+      edges {
+        node {
+          resellers {
+            description
+            id
+            link
+            location
+            name
+            number
+            image {
+              childImageSharp {
+                fluid(maxWidth: 700, quality: 75) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          resellerInfo {
+            whereTitle
+            whereDescription
+            inspirationTitle
+            inspirationDescription
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Resellers
