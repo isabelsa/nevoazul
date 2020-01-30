@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { motion, useViewportScroll, useTransform } from 'framer-motion'
 
 import Logo from '@/components/Logo/Logo'
-import { HeaderLink, Modal, Hamburger, Cart } from '../UI'
+import { HeaderLink, Hamburger, Cart } from '../UI'
 
 import { ROUTES } from '../../constants/routes'
 
@@ -27,17 +27,11 @@ const Header = () => {
     setelTop(elTop.offsetTop)
   }, [elTop.offsetTop])
 
-  console.log(isMobileOpen)
   return (
     <React.Fragment>
       <S.Wrapper as={motion.div} ref={navigation} style={{ y }}>
         <S.DesktopNavLinks>
-          <HeaderLink to={ROUTES.magazine}>
-            {navigationYaml.topbar.magazine}
-          </HeaderLink>
-          <HeaderLink to={ROUTES.blog}>
-            {navigationYaml.topbar.articles}
-          </HeaderLink>
+          <HeaderLink to={ROUTES.blog}>Blog</HeaderLink>
         </S.DesktopNavLinks>
         <S.ContentLogo>
           <S.Link to="/" onClick={() => setIsMobileOpen(false)}>
@@ -57,6 +51,10 @@ const Header = () => {
           </a>
         </S.DesktopNavLinks>
         <S.Hamburger>
+          <S.IconHolder onClick={() => setIsMobileOpen(true)}>
+            <Hamburger />
+          </S.IconHolder>
+
           <a href="https://nevoazul.bigcartel.com">
             <Cart />
           </a>
@@ -67,21 +65,21 @@ const Header = () => {
         {isMobileOpen && (
           <S.MobileNavLinks>
             <HeaderLink
-              to={ROUTES.magazine}
+              mobile
+              to={ROUTES.blog}
               onClick={() => setIsMobileOpen(false)}
             >
-              {navigationYaml.topbar.magazine}
-            </HeaderLink>
-            <HeaderLink to={ROUTES.blog} onClick={() => setIsMobileOpen(false)}>
               {navigationYaml.topbar.articles}
             </HeaderLink>
             <HeaderLink
+              mobile
               to={ROUTES.resellers}
               onClick={() => setIsMobileOpen(false)}
             >
               {navigationYaml.topbar.resellers}
             </HeaderLink>
             <HeaderLink
+              mobile
               to={ROUTES.about}
               onClick={() => setIsMobileOpen(false)}
             >

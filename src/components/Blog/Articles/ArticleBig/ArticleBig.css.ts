@@ -23,40 +23,21 @@ export const TitleHolder = styled.div`
 
 export const TitleLink = styled(UI.Title)`
   cursor: pointer;
-
-  &::before {
-    content: '';
-    height: 1px;
-    width: 0;
-    background-color: ${({ theme }) => theme.colors.blue.default};
-    position: absolute;
-    bottom: 6px;
-    left: 0px;
-
-    transition: all ${({ theme }) => theme.transitions.ease()};
-  }
 `
 
 export const Holder = styled.div`
-  width: 100%;
-  max-width: 34rem;
   cursor: pointer;
+
+  width: 100%;
+  max-width: 525px;
+
+  margin-top: 230px;
 
   &:last-child {
     margin-right: none;
   }
 
   &:hover {
-    ${ArticleImage} {
-      -webkit-box-shadow: 10px 4px 44px -9px rgba(0, 0, 0, 0.27);
-      -moz-box-shadow: 10px 4px 44px -9px rgba(0, 0, 0, 0.27);
-      box-shadow: 10px 4px 44px -9px rgba(0, 0, 0, 0.27);
-    }
-
-    ${TitleLink} {
-      &::before {
-        text-decoration: underline;
-      }
-    }
+    opacity: 0.8;
   }
 `

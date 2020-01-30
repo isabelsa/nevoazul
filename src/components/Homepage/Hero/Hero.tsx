@@ -1,4 +1,6 @@
 import React from 'react'
+import Img from 'gatsby-image'
+import { graphql, useStaticQuery } from 'gatsby'
 import { motion, useViewportScroll, useTransform } from 'framer-motion'
 
 import * as S from './Hero.css'
@@ -11,12 +13,12 @@ type HeroProps = {
 }
 
 const Hero: React.FC<HeroProps> = ({ content }) => {
-  const topMagazine = React.useRef(null)
+  const images = useStaticQuery(query)
+
   const rightMagazine = React.useRef(null)
   const bottomMagazine = React.useRef(null)
   const leftMagazine = React.useRef(null)
 
-  const [topTop, setTopTop] = React.useState(0)
   const [rightTop, setRightTop] = React.useState(0)
   const [bottomTop, setBottomTop] = React.useState(0)
   const [leftTop, setLeftTop] = React.useState(0)
@@ -84,19 +86,78 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
         as={motion.div}
         ref={rightMagazine}
         style={{ y: right }}
-      />
+      >
+        <Img
+          fluid={images.magazineRight.childImageSharp.fluid}
+          loading="eager"
+          alt="This is a picture of my face."
+        />
+      </S.SmallMagazineRight>
       <S.SmallMagazineBottom
         as={motion.div}
         ref={bottomMagazine}
         style={{ y: bottom }}
-      />
+      >
+        <Img
+          fluid={images.magazineBottom.childImageSharp.fluid}
+          loading="eager"
+          alt="This is a picture of my face."
+        />
+      </S.SmallMagazineBottom>
       <S.SmallMagazineLeft
         as={motion.div}
         ref={leftMagazine}
         style={{ y: left }}
-      />
+      >
+        <Img
+          fluid={images.magazineLeft.childImageSharp.fluid}
+          loading="eager"
+          alt="This is a picture of my face."
+        />
+      </S.SmallMagazineLeft>
     </S.Hero>
   )
 }
+
+export const query = graphql`
+  query {
+    magazineLeft: file(
+      relativePath: { regex: "/homepage_hero_magazine_left/" }
+    ) {
+      name
+      url
+      size
+      childImageSharp {
+        fluid(maxWidth: 700, quality: 75) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    magazineBottom: file(
+      relativePath: { regex: "/homepage_hero_magazine_bottom/" }
+    ) {
+      name
+      url
+      size
+      childImageSharp {
+        fluid(maxWidth: 400, quality: 75) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    magazineRight: file(
+      relativePath: { regex: "/homepage_hero_magazine_right/" }
+    ) {
+      name
+      url
+      size
+      childImageSharp {
+        fluid(maxWidth: 400, quality: 75) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default Hero

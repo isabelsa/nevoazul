@@ -2,14 +2,32 @@ import styled from 'styled-components'
 
 import * as UI from '../../UI/index'
 
+export const Wrapper = styled.div`
+  display: flex;
+  position: absolute;
+  top: 8rem;
+  right: 0rem;
+
+  @media only screen and (max-width: 1200px) {
+    position: relative;
+
+    top: 0;
+    right: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`
+
 export const GalleryHolder = styled.div`
   position: relative;
 `
 
 export const Gallery = styled.div`
   position: absolute;
-  top: 8rem;
-  right: 0rem;
+  top: 0;
+  right: 0;
 
   cursor: move; /* fallback if grab cursor is unsupported */
   cursor: grab;
@@ -29,7 +47,7 @@ export const Gallery = styled.div`
 
   background-color: ${({ theme }) => theme.colors.greyscale.light};
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) {
     position: relative;
   }
 `
@@ -43,6 +61,6 @@ export const Image = styled.div`
 
 export const GalleryCaption = styled(UI.Flex)`
   position: absolute;
+  top: 630px;
   right: 0;
-  bottom: 0;
 `

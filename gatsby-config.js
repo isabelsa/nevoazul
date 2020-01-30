@@ -17,7 +17,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./content/`,
+        path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'assets',
+        path: `${__dirname}/content/assets`,
       },
     },
     {
@@ -41,13 +48,6 @@ module.exports = {
         rule: {
           include: /images\/.*\.svg$/,
         },
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/assets/images`,
       },
     },
     {

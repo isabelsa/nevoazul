@@ -13,6 +13,13 @@ export const Footer = styled(Flex)`
 
     padding: 40px;
   }
+
+  @media only screen and (max-width: 425px) {
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px;
+  }
 `
 
 export const SubtitleHolder = styled.div`

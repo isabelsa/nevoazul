@@ -48,7 +48,7 @@ const Articles: React.FC<ArticlesProps> = ({ content }) => {
         {content.article_small.map(article => {
           return (
             <S.ArticleGrid key={article.article_title}>
-              <TextSerif>{article.article_page}</TextSerif>
+              <S.Number>{article.article_page}. </S.Number>
               <S.TextSerif>{article.article_title}</S.TextSerif>
               <Label>{article.article_author}</Label>
             </S.ArticleGrid>

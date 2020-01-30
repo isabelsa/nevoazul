@@ -21,14 +21,9 @@ const Footer = () => {
         <S.Section>
           <TextSerif>A revista</TextSerif>
           <Text>Comprar</Text>
-          <Text>Números</Text>
-          <Text>Ler online</Text>
-        </S.Section>
-        <S.Section>
-          <TextSerif>Sobre</TextSerif>
-          <Text>O projecto</Text>
+          <Text>Blog</Text>
+          <Text>Sobre</Text>
           <Text>Revendedores</Text>
-          <Text>Contactos</Text>
         </S.Section>
         <S.Section>
           <TextSerif>Comunidade</TextSerif>
