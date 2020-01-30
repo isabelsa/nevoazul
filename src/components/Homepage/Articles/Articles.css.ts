@@ -111,3 +111,8 @@ export const TextSerif = styled(TextStyled)`
   margin-top: 12px;
   margin-bottom: 8px;
 `
+
+export const Number = styled.span`
+  font-size: 17px;
+  line-height: 1.65rem;
+`

@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import Hero from '@/components/Homepage/Hero/Hero'
 import About from '@/components/Homepage/About/About'
 import Articles from '@/components/Homepage/Articles/Articles'
-import Newsletter from '@/components/Newsletter/Newsletter'
 import SEO from '@/components/SEO/SEO'
 
 type ArticlesHighlited = {

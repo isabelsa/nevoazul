@@ -1,5 +1,4 @@
 import React from 'react'
-import Gallery from '../Gallery/Gallery'
 
 import * as S from './Hero.css'
 
@@ -28,22 +27,25 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
 
   return (
     <S.Hero>
-      <S.Kicker>{content.about_hero_kicker}</S.Kicker>
-      <S.Title>{content.about_hero_title}</S.Title>
-      <S.Flex>
-        <S.Column>
-          <S.Text>{content.about__hero_section_one}</S.Text>
-        </S.Column>
-        <S.Column>
-          <S.Text>{content.about_hero_section_two}</S.Text>
-        </S.Column>
-      </S.Flex>
-      <Gallery
+      <S.Holder>
+        <S.Kicker>{content.about_hero_kicker}</S.Kicker>
+        <S.Title>{content.about_hero_title}</S.Title>
+        <S.Flex>
+          <S.Column>
+            <S.Text>{content.about__hero_section_one}</S.Text>
+          </S.Column>
+          <S.Column>
+            <S.Text>{content.about_hero_section_two}</S.Text>
+          </S.Column>
+        </S.Flex>
+      </S.Holder>
+      <S.Gallery
         paginate={paginate}
         direction={direction}
         page={page}
         setPage={setPage}
       />
+      <S.Image />
     </S.Hero>
   )
 }

@@ -17,6 +17,10 @@ export const Wrapper = styled(Flex)`
   }
 
   @media only screen and (max-width: 768px) {
+    padding: 40px;
+  }
+
+  @media only screen and (max-width: 425px) {
     padding: 20px;
   }
 `
@@ -33,6 +37,10 @@ export const Gallery = styled.div`
 
   @media only screen and (max-width: 1200px) {
     width: 100%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: 300px;
   }
 `
 
@@ -79,15 +87,25 @@ export const Column = styled(BoxStyled)`
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) {
+    margin-bottom: 56px;
+
     &:nth-child(2) {
+      margin-top: 0px;
+      padding: 0px;
     }
+  }
+
+  @media only screen and (max-width: 768px) {
   }
 `
 
 export const Resellers = styled(BoxStyled)`
   cursor: pointer;
+
   display: block;
+  width: max-content;
+
   margin-bottom: 20px;
 
   &:last-of-type {

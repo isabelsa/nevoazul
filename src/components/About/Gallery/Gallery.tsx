@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { wrap } from '@popmotion/popcorn'
 
 import pedro from '../../../assets/images/pedro.jpg'
-import { CaptionWithNumber } from '../../UI'
+import { ArrowRight, CaptionWithNumber } from '../../UI'
 
 export const images = [
   pedro,
@@ -39,42 +39,45 @@ const Gallery = ({ paginate, page, direction, setPage }) => {
   }
 
   return (
-    <>
-      <S.Gallery>
-        <AnimatePresence custom={direction}>
-          <S.Image
-            as={motion.img}
-            key={page}
-            src={images[imageIndex]}
-            custom={direction}
-            variants={variants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{
-              x: { type: 'spring', stiffness: 300, damping: 200 },
-              opacity: { duration: 0.2 },
-            }}
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={1}
-            onDragEnd={(e, { offset, velocity }) => {
-              const swipe = swipePower(offset.x, velocity.x)
+    <S.Wrapper>
+      <S.GalleryHolder>
+        <S.Gallery>
+          <AnimatePresence custom={direction}>
+            <S.Image
+              as={motion.img}
+              key={page}
+              src={images[imageIndex]}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: 'spring', stiffness: 300, damping: 200 },
+                opacity: { duration: 0.2 },
+              }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x)
 
-              if (swipe < -swipeConfidenceThreshold) {
-                paginate(1)
-              } else if (swipe > swipeConfidenceThreshold) {
-                paginate(-1)
-              }
-            }}
-          />
-        </AnimatePresence>
-      </S.Gallery>
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1)
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1)
+                }
+              }}
+            />
+          </AnimatePresence>
+        </S.Gallery>
 
-      <S.GalleryCaption>
-        <CaptionWithNumber number="01" description="Caption" />
-      </S.GalleryCaption>
-    </>
+        <S.GalleryCaption>
+          <CaptionWithNumber number="01" description="Caption" />
+          <ArrowRight />
+        </S.GalleryCaption>
+      </S.GalleryHolder>
+    </S.Wrapper>
   )
 }
 

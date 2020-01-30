@@ -2,9 +2,6 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import * as UI from '../../UI'
 
-import magazine_top from '../../../assets/images/magazine_top.png'
-import magazine_right from '../../../assets/images/magazine_right.png'
-import magazine_bottom from '../../../assets/images/magazine_bottom.png'
 import line from '../../../assets/images/line.png'
 
 export const Hero = styled(motion.div)`
@@ -38,10 +35,6 @@ export const HeroTitle = styled(UI.Display)`
 
   width: 100%;
   max-width: 28rem;
-
-  @media only screen and (max-width: 768px) {
-    padding: 1.5rem;
-  }
 `
 
 export const HeroDescription = styled(UI.Text)`
@@ -65,22 +58,27 @@ export const ContentHolder = styled(motion.div)`
   @media only screen and (max-width: 768px) {
     margin-left: 0%;
   }
+
+  @media only screen and (max-width: 768px) {
+    margin-top: -24px;
+  }
 `
 
 export const SmallMagazineRight = styled.div`
   position: absolute;
   bottom: 80px;
-  right: -100px;
+  right: -140px;
 
   width: 400px;
   height: 300px;
-  background-image: url(${magazine_right});
-  background-size: cover;
-  background-position: center center;
 
-  @media only screen and (max-width: 768px) {
-    top: 40%;
-    left: 70%;
+  @media only screen and (max-width: 1200px) {
+    bottom: 80px;
+    right: -260px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    right: -300px;
   }
 
   @media only screen and (max-width: 768px) {
@@ -95,13 +93,10 @@ export const SmallMagazineBottom = styled.div`
 
   width: 400px;
   height: 300px;
-  background-image: url(${magazine_top});
-  background-size: cover;
-  background-position: center center;
 
-  @media only screen and (max-width: 768px) {
-    bottom: -200px;
-    left: 50%;
+  @media only screen and (max-width: 1000px) {
+    bottom: -220px;
+    right: 200px;
   }
 `
 
@@ -112,13 +107,15 @@ export const SmallMagazineLeft = styled.div`
 
   width: 800px;
   height: 600px;
-  background-image: url(${magazine_bottom});
-  background-size: cover;
-  background-position: center center;
 
-  @media only screen and (max-width: 768px) {
-    bottom: 40%;
-    left: -60%;
+  @media only screen and (max-width: 1200px) {
+    top: 120px;
+    left: -400px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    top: 120px;
+    left: -500px;
   }
 
   @media only screen and (max-width: 768px) {
