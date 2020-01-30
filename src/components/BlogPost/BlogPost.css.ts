@@ -56,7 +56,8 @@ export const PostImage = styled.div`
   flex-direction: column;
   align-items: center;
 
-  background-color: ${({ theme }) => theme.colors.blue.default};
+  position: relative;
+  display: block;
 
   width: 100%;
   max-width: 980px;
@@ -84,6 +85,8 @@ export const Body = styled.div`
   p {
     font-family: ${({ theme }) => theme.fonts.serif};
     font-size: 17px;
-    line-height: 1.65rem;
+    line-height: 28px;
+
+    margin-bottom: 32px;
   }
 `

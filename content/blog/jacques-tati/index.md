@@ -3,6 +3,7 @@ title: 'Peculiaridades da vida moderna: Com Jacques Tati.'
 date: 2019-01-21
 author: 'Inês Catarina Pinto'
 featured: true
+isInterview: false
 image: './my-image.jpg'
 interviewer: 'dsaçkç'
 photographer: 'dsaçkç'

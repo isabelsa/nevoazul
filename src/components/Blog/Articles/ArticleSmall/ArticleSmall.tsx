@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import { Link } from 'gatsby'
 import { Kicker } from '../../../UI/index'
 
@@ -9,6 +10,7 @@ type ArticleSmallProps = {
   tags: Array<string>
   description: string
   link: string
+  image: any
 }
 
 const ArticleSmall: React.FC<ArticleSmallProps> = ({
@@ -16,12 +18,15 @@ const ArticleSmall: React.FC<ArticleSmallProps> = ({
   tags,
   description,
   link,
+  image,
 }) => {
   return (
     <Link to={link}>
       <S.Holder>
-        <S.ArticleImage />
-        <Kicker>{tags.map(tag => tag)}</Kicker>
+        <S.ArticleImage>
+          <Img fluid={image} alt="Post" />
+        </S.ArticleImage>
+        <Kicker>{tags.join(', ')}</Kicker>
         <S.TitleHolder>
           <S.TitleLink>{title}</S.TitleLink>
         </S.TitleHolder>

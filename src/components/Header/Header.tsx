@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { motion, useViewportScroll, useTransform } from 'framer-motion'
 
 import Logo from '@/components/Logo/Logo'
-import { HeaderLink, Modal, Hamburger, Cart } from '../UI'
+import { HeaderLink, Hamburger, Cart } from '../UI'
 
 import { ROUTES } from '../../constants/routes'
 
@@ -64,13 +64,6 @@ const Header = () => {
       <div>
         {isMobileOpen && (
           <S.MobileNavLinks>
-            <HeaderLink
-              mobile
-              to={ROUTES.magazine}
-              onClick={() => setIsMobileOpen(false)}
-            >
-              {navigationYaml.topbar.magazine}
-            </HeaderLink>
             <HeaderLink
               mobile
               to={ROUTES.blog}

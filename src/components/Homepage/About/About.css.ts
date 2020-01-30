@@ -5,8 +5,6 @@ import {
   Kicker as StyledKicker,
 } from '../../UI'
 
-import magazine from '../../../assets/images/about_magazine.png'
-
 export const Title = styled(TitleStyled)`
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
@@ -91,9 +89,6 @@ export const Magazine = styled.div`
 
 export const MagazineImage = styled.div`
   position: relative;
-  background-image: url(${magazine});
-  background-size: cover;
-  background-position: center center;
 
   width: 100%;
   height: 100%;

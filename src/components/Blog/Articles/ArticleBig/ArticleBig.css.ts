@@ -11,7 +11,7 @@ export const ArticleImage = styled.div`
 
   opacity: 1;
 
-  margin-bottom: 1.5rem;
+  margin-bottom: 32px;
 `
 
 export const Detail = styled(UI.Detail)`
@@ -35,12 +35,7 @@ export const Holder = styled.div`
   width: 100%;
   max-width: 525px;
 
-  margin-top: 250px;
-
-  &:last-of-type {
-    margin-top: 70px;
-    margin-bottom: 200px;
-  }
+  margin-top: 230px;
 
   &:last-child {
     margin-right: none;

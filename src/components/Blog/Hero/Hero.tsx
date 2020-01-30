@@ -54,12 +54,7 @@ const Hero = () => {
           </S.HeroDescription>
           <NavLink to="/blog/jacques-tati">Ler mais</NavLink>
         </S.ContentHolder>
-        <S.Arrow />
       </S.HeroContent>
-      {/* <Img
-        fluid={data.file.childImageSharp.fluid}
-        alt="This is a picture of my face."
-      /> */}
     </S.Hero>
   )
 }
