@@ -2,9 +2,6 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import * as UI from '../../UI'
 
-import magazine_top from '../../../assets/images/magazine_top.png'
-import magazine_right from '../../../assets/images/magazine_right.png'
-import magazine_bottom from '../../../assets/images/magazine_bottom.png'
 import line from '../../../assets/images/line.png'
 
 export const Hero = styled(motion.div)`
@@ -75,10 +72,6 @@ export const SmallMagazineRight = styled.div`
   width: 400px;
   height: 300px;
 
-  background-image: url(${magazine_right});
-  background-size: cover;
-  background-position: center center;
-
   @media only screen and (max-width: 1200px) {
     bottom: 80px;
     right: -260px;
@@ -100,9 +93,6 @@ export const SmallMagazineBottom = styled.div`
 
   width: 400px;
   height: 300px;
-  background-image: url(${magazine_top});
-  background-size: cover;
-  background-position: center center;
 
   @media only screen and (max-width: 1000px) {
     bottom: -220px;
@@ -117,9 +107,6 @@ export const SmallMagazineLeft = styled.div`
 
   width: 800px;
   height: 600px;
-  background-image: url(${magazine_bottom});
-  background-size: cover;
-  background-position: center center;
 
   @media only screen and (max-width: 1200px) {
     top: 120px;

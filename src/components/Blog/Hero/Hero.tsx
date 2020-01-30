@@ -1,4 +1,5 @@
 import * as React from 'react'
+
 import * as S from './Hero.css'
 
 import { NavLink } from '../../UI/index'
@@ -55,6 +56,10 @@ const Hero = () => {
         </S.ContentHolder>
         <S.Arrow />
       </S.HeroContent>
+      {/* <Img
+        fluid={data.file.childImageSharp.fluid}
+        alt="This is a picture of my face."
+      /> */}
     </S.Hero>
   )
 }
