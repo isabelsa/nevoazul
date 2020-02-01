@@ -32,7 +32,7 @@ const About: React.FC<AboutPageProps> = ({ data }) => {
   return (
     <>
       <SEO
-        title="Nevoazul: Conversas em prol da humanidade"
+        title="Sobre o projecto"
         description="Numa sociedade movida a informação, em que tão depressa estamos no papel de produtores, como no de consumidores, a Nevoazul explora a relação que temos com os meios de comunicação e a tecnologia."
         keywords={[
           `nevoazul`,

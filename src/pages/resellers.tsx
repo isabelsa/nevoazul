@@ -7,7 +7,7 @@ const ResellersPage: React.FC<ResellersPageProps> = () => {
   return (
     <>
       <SEO
-        title="Nevoazul: Revendedores"
+        title="Revendedores"
         description="Numa sociedade movida a informação, em que tão depressa estamos no papel de produtores, como no de consumidores, a Nevoazul explora a relação que temos com os meios de comunicação e a tecnologia."
         keywords={[
           `nevoazul`,

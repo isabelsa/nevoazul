@@ -18,4 +18,5 @@ module.exports = {
   backgroundColor: '#fff',
   pathPrefix: null,
   logo: path.resolve(__dirname, '../src/assets/images/favicon.png'),
+  image: path.resolve(__dirname, '../src/assets/images/opengraph.png'),
 }
