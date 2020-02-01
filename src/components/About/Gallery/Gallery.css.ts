@@ -25,7 +25,7 @@ export const GalleryHolder = styled.div`
 `
 
 export const Gallery = styled.div`
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
 
@@ -46,10 +46,6 @@ export const Gallery = styled.div`
   width: 25rem;
 
   background-color: ${({ theme }) => theme.colors.greyscale.light};
-
-  @media only screen and (max-width: 1200px) {
-    position: relative;
-  }
 `
 
 export const Image = styled.div`
@@ -59,8 +55,17 @@ export const Image = styled.div`
   max-width: 50vw;
 `
 
-export const GalleryCaption = styled(UI.Flex)`
-  position: absolute;
+export const GalleryControls = styled(UI.Flex)`
+  align-items: center;
+  justify-content: space-between;
+
   top: 630px;
   right: 0;
+
+  margin-top: 16px;
+
+  svg {
+    cursor: pointer;
+    margin-right: 24px;
+  }
 `

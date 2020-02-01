@@ -14,7 +14,7 @@ const Articles = () => {
       <S.Flex>
         <ArticleSmall
           title="Inês Santos Silva: O Futuro tem futuro?"
-          description="An array is a special type of data type which can store multiple values of different data types sequentially using a special syntax."
+          description="O empreendedorismo tem estado no centro das atenções da Inês Santos Silva, diretora executiva da empresa de consultoria Aliados, mas sem o optimismo cego que muitas vezes encontramos entre os adeptos desta área. Pelo contrário, revela-se preocupada com um tema vital: o futuro do trabalho."
           tags={['Entrevista', 'Empreendedorismo']}
           link="/blog/ines-santos-silva"
           image={data.inesSantosSilva.childImageSharp.fluid}

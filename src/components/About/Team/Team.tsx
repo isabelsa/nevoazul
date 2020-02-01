@@ -13,7 +13,7 @@ const Team = () => {
         <S.Description>{aboutYaml.team.title}</S.Description>
 
         <TextSerif italic>Email</TextSerif>
-        <Heading>xxx</Heading>
+        <Heading>info@nevoazul.com</Heading>
       </S.DescriptionWrapper>
 
       <S.TeamHolder>

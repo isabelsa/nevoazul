@@ -83,9 +83,12 @@ export const ContentImage = styled.div`
 
   width: 400px;
   height: 400px;
-  background-image: url(${magazine});
-  background-size: cover;
-  background-position: left center;
+  margin-top: 80px;
+
+  .gatsby-image-wrapper {
+    width: 100%;
+    height: 80%;
+  }
 
   @media only screen and (max-width: 768px) {
     display: none;
