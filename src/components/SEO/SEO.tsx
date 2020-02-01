@@ -1,6 +1,6 @@
-import React from "react"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import Helmet from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
 type MetaProps =
   | { name: string; content: any; property?: undefined }
@@ -25,7 +25,7 @@ interface INodeImage {
 
 const SEO: React.FC<ISEOProps> = ({
   description,
-  lang = "en",
+  lang = 'en',
   meta = [],
   keywords = [],
   title,
@@ -62,11 +62,13 @@ const SEO: React.FC<ISEOProps> = ({
     `
   )
 
+  console.log(allImageSharp)
+
   const {
     twittercard: twittercardImage,
     opengraph: opengraphImage,
   } = allImageSharp.edges.reduce((prev: {}, { node }: INodeImage) => {
-    const name = node.resize.originalName.replace(".png", "")
+    const name = node.resize.originalName.replace('.png', '')
     const value = node.original.src
 
     return { ...prev, [name]: value }
@@ -78,6 +80,8 @@ const SEO: React.FC<ISEOProps> = ({
   const defaultTitleTemplate = title
     ? `${site.siteMetadata.title} %s`
     : site.siteMetadata.title
+
+  console.log(twittercardImage, opengraphImage)
 
   return (
     <Helmet
