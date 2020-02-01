@@ -28,6 +28,9 @@ export default {
       default: '#DC7D67',
     },
   },
+  fonts: {
+    serif: 'Copernicus',
+  },
   transitions: {
     ease: (time: string = '300ms') => `${time} ease`,
     cubic: (time: string = '500ms') => `${time} cubic-bezier(0.2, 1, 0.2, 1)`,

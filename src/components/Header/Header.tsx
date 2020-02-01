@@ -3,8 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { motion, useViewportScroll, useTransform } from 'framer-motion'
 
 import Logo from '@/components/Logo/Logo'
-import { default as CartComponent } from '@/components/Cart/Cart'
-import { Cart, HeaderLink, Modal, Hamburger } from '../UI'
+import { HeaderLink, Hamburger, Cart } from '../UI'
 
 import { ROUTES } from '../../constants/routes'
 
@@ -12,7 +11,6 @@ import * as S from './Header.css'
 
 const Header = () => {
   const [elTop, setelTop] = React.useState(0)
-  const [isModalOpen, setIsModalOpen] = React.useState(false)
   const [isMobileOpen, setIsMobileOpen] = React.useState(false)
 
   const navigation = React.useRef(null)
@@ -29,17 +27,11 @@ const Header = () => {
     setelTop(elTop.offsetTop)
   }, [elTop.offsetTop])
 
-  console.log(isMobileOpen)
   return (
     <React.Fragment>
       <S.Wrapper as={motion.div} ref={navigation} style={{ y }}>
         <S.DesktopNavLinks>
-          {/* <HeaderLink to={ROUTES.magazine}>
-            {navigationYaml.topbar.magazine}
-          </HeaderLink>
-          <HeaderLink to={ROUTES.blog}>
-            {navigationYaml.topbar.articles}
-          </HeaderLink> */}
+          <HeaderLink to={ROUTES.blog}>Artigos</HeaderLink>
         </S.DesktopNavLinks>
         <S.ContentLogo>
           <S.Link to="/" onClick={() => setIsMobileOpen(false)}>
@@ -47,18 +39,22 @@ const Header = () => {
           </S.Link>
         </S.ContentLogo>
         <S.DesktopNavLinks style={{ justifyContent: 'flex-end' }}>
-          {/* <HeaderLink to={ROUTES.resellers}>
+          <HeaderLink to={ROUTES.resellers}>
             {navigationYaml.topbar.resellers}
           </HeaderLink>
           <HeaderLink to={ROUTES.about}>
             {' '}
             {navigationYaml.topbar.about}
-        </HeaderLink>*/}
+          </HeaderLink>
           <a href="https://nevoazul.bigcartel.com">
             <Cart />
           </a>
         </S.DesktopNavLinks>
         <S.Hamburger>
+          <S.IconHolder onClick={() => setIsMobileOpen(true)}>
+            <Hamburger />
+          </S.IconHolder>
+
           <a href="https://nevoazul.bigcartel.com">
             <Cart />
           </a>
@@ -69,21 +65,21 @@ const Header = () => {
         {isMobileOpen && (
           <S.MobileNavLinks>
             <HeaderLink
-              to={ROUTES.magazine}
+              mobile
+              to={ROUTES.blog}
               onClick={() => setIsMobileOpen(false)}
             >
-              {navigationYaml.topbar.magazine}
-            </HeaderLink>
-            <HeaderLink to={ROUTES.blog} onClick={() => setIsMobileOpen(false)}>
               {navigationYaml.topbar.articles}
             </HeaderLink>
             <HeaderLink
+              mobile
               to={ROUTES.resellers}
               onClick={() => setIsMobileOpen(false)}
             >
               {navigationYaml.topbar.resellers}
             </HeaderLink>
             <HeaderLink
+              mobile
               to={ROUTES.about}
               onClick={() => setIsMobileOpen(false)}
             >
@@ -92,14 +88,6 @@ const Header = () => {
           </S.MobileNavLinks>
         )}
       </div>
-
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(!isModalOpen)}
-        position="top"
-      >
-        <CartComponent />
-      </Modal>
     </React.Fragment>
   )
 }

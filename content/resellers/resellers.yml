@@ -1,0 +1,35 @@
+---
+resellers:
+  - id: 0
+    number: '01'
+    name: Manifesto
+    location: Mercado Matosinhos
+    description: Quiosque de publicações independentes.
+    link: https://google.com
+    image: './manifesto.jpg'
+  - id: 1
+    number: '02'
+    name: Velo Culture
+    location: Mercado Matosinhos
+    description: Loja de bicicletas com foco no ciclismo urbano.
+    link: https://google.com
+    image: './velo.jpg'
+  - id: 2
+    number: '03'
+    name: Coração Alecrim
+    location: Travessa Cedofeita
+    description: Loja de louças, cerâmica, roupas e objectos vintage.
+    link: https://google.com
+    image: './coracao.jpg'
+  - id: 3
+    number: '04'
+    name: Under the Cover
+    location: Rua Marquês Sá da Bandeira
+    description: Livraria contemporânea de revistas e livros.
+    link: https://google.com
+    image: './under.jpg'
+resellerInfo:
+  whereTitle: 'Onde estamos'
+  whereDescription: 'Na Nevoazul gostamos de estar em boa companhia. Para isso, selecionámos algumas das nossas lojas preferidas, de norte a sul do país, onde vais poder comprar a nossa revista. Aponta os nomes e as moradas e prepara-te para te surpreenderes pelo conceito e produtos que estes sítios têm para oferecer.'
+  inspirationTitle: 'Interessado na Nevoazul?'
+  inspirationDescription: 'Se queres ter a nossa revistal à venda na tua loja, entra em contacto connosco através do email info@nevoazul.com.'

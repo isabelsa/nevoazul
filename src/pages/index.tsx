@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import Hero from '@/components/Homepage/Hero/Hero'
 import About from '@/components/Homepage/About/About'
 import Articles from '@/components/Homepage/Articles/Articles'
-import Newsletter from '@/components/Newsletter/Newsletter'
 import SEO from '@/components/SEO/SEO'
 
 type ArticlesHighlited = {
@@ -61,7 +60,6 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
       <Hero content={content} />
       <About content={content} />
       <Articles content={content} />
-      <Newsletter content={content} />
     </>
   )
 }

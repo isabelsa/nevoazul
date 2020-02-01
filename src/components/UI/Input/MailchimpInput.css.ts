@@ -12,6 +12,7 @@ export const InputHolder = styled.div`
 `
 
 export const Input = styled.input`
+  border-radius: 0;
   border-bottom: 1px solid ${({ theme }) => theme.colors.greyscale.background};
   padding: 0.6rem 0;
   font-size: 1rem;

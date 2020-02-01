@@ -1,24 +1,50 @@
-import * as React from 'react'
+import React from 'react'
 import Hero from '@/components/About/Hero/Hero'
-import Conversation from '@/components/About/Conversation/Conversation'
 import Team from '@/components/About/Team/Team'
 
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import SEO from '@/components/SEO/SEO'
 
-const About = () => {
-  const { aboutYaml } = useStaticQuery(query)
+type AboutTeam = {
+  team_member_role: string
+  team_member_name: string
+}
+
+type AboutPageProps = {
+  data: {
+    prismicAbout: {
+      data: {
+        about_hero_kicker: string
+        about_hero_title: string
+        about__hero_section_one: string
+        about_hero_section_two: string
+        about_team_description: string
+        about_team: AboutTeam[]
+      }
+    }
+  }
+}
+
+const About: React.FC<AboutPageProps> = ({ data }) => {
+  const content = data.prismicAbout.data
+
   return (
     <>
       <SEO
-        title={aboutYaml.seo.title}
-        description={aboutYaml.seo.description}
-        keywords={[`gatsby`, `application`, `react`]}
+        title="Nevoazul: Conversas em prol da humanidade"
+        description="Numa sociedade movida a informação, em que tão depressa estamos no papel de produtores, como no de consumidores, a Nevoazul explora a relação que temos com os meios de comunicação e a tecnologia."
+        keywords={[
+          `nevoazul`,
+          `revista`,
+          `magazine`,
+          `humanity`,
+          `tehcnology`,
+          `work`,
+        ]}
       />
-      <Hero />
-      <Conversation />
-      <Team />
+      <Hero content={content} />
+      <Team content={content} />
     </>
   )
 }
@@ -26,11 +52,18 @@ const About = () => {
 export default About
 
 export const query = graphql`
-  {
-    aboutYaml {
-      seo {
-        title
-        description
+  query About {
+    prismicAbout(lang: { in: "pt-pt" }) {
+      data {
+        about_hero_kicker
+        about_hero_title
+        about__hero_section_one
+        about_hero_section_two
+        about_team_description
+        about_team {
+          team_member_role
+          team_member_name
+        }
       }
     }
   }

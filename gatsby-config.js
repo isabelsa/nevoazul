@@ -17,7 +17,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./content/`,
+        path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'assets',
+        path: `${__dirname}/content/assets`,
       },
     },
     {
@@ -44,13 +51,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/assets/images`,
-      },
-    },
-    {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: 'nevoazul',
@@ -58,6 +58,7 @@ module.exports = {
           'MC5YZkZJY1JFQUFDQUE4MHZq.QT_vv71kE2Dvv70p77-9bifvv73vv70HFAszZwnvv70l77-9fxHvv71bZu-_vXUSJnI',
         schemas: {
           homepage: require('./src/schemas/homepage.json'),
+          about: require('./src/schemas/about.json'),
         },
       },
     },

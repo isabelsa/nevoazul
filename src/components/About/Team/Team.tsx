@@ -1,6 +1,6 @@
-import * as React from 'react'
-
-import { Title, Text } from '../../UI/index'
+import React from 'react'
+import { Heading, TextSerif } from '../../UI/index'
+import * as S from './Team.css'
 
 import { graphql, useStaticQuery } from 'gatsby'
 
@@ -8,19 +8,25 @@ const Team = () => {
   const { aboutYaml } = useStaticQuery(query)
 
   return (
-    <div>
-      <Title>{aboutYaml.team.title}</Title>
-      <Text>{aboutYaml.team.ines.name}</Text>
-      <Text>{aboutYaml.team.ines.description}</Text>
-      <Text>{aboutYaml.team.isabel.name}</Text>
-      <Text>{aboutYaml.team.isabel.description}</Text>
-      <Text>{aboutYaml.team.miguel.name}</Text>
-      <Text>{aboutYaml.team.miguel.description}</Text>
-      <Text>{aboutYaml.team.pedrocodeco.name}</Text>
-      <Text>{aboutYaml.team.pedrocodeco.description}</Text>
-      <Text> {aboutYaml.team.pedrooliveira.name}</Text>
-      <Text>{aboutYaml.team.pedrooliveira.description}</Text>
-    </div>
+    <S.Wrapper>
+      <S.DescriptionWrapper>
+        <S.Description>{aboutYaml.team.title}</S.Description>
+
+        <TextSerif italic>Email</TextSerif>
+        <Heading>info@nevoazul.com</Heading>
+      </S.DescriptionWrapper>
+
+      <S.TeamHolder>
+        {aboutYaml.team.members.map(member => {
+          return (
+            <S.TeamMember key={member.id}>
+              <TextSerif italic>{member.name}</TextSerif>
+              <Heading>{member.description}</Heading>
+            </S.TeamMember>
+          )
+        })}
+      </S.TeamHolder>
+    </S.Wrapper>
   )
 }
 
@@ -31,23 +37,8 @@ export const query = graphql`
     aboutYaml {
       team {
         title
-        ines {
-          name
-          description
-        }
-        isabel {
-          name
-          description
-        }
-        miguel {
-          name
-          description
-        }
-        pedrocodeco {
-          name
-          description
-        }
-        pedrooliveira {
+        members {
+          id
           name
           description
         }

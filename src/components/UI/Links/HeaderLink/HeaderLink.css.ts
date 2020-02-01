@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Link from 'gatsby-link'
 
 export const Holder = styled.div`
@@ -6,9 +6,16 @@ export const Holder = styled.div`
   position: relative;
 `
 
-export const HeaderLink = styled(Link)`
+export const HeaderLink = styled(Link)<{ mobile: boolean }>`
   cursor: pointer;
   font-size: 0.935rem;
+
+  ${({ mobile }) =>
+    mobile &&
+    css`
+      font-size: 24px;
+      margin-bottom: 12px;
+    `}
 
   &::before {
     content: '';

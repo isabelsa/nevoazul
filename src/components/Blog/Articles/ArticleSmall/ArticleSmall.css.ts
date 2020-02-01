@@ -2,42 +2,40 @@ import styled from 'styled-components'
 import * as UI from '../../../UI/index'
 
 export const ArticleImage = styled.div`
-  width: 17.15rem;
-  height: 13rem;
-  background-color: ${({ theme }) => theme.colors.blue.default};
-  background-image: url('https://images.unsplash.com/photo-1492252719637-c7b68468489b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
-  background-size: cover;
+  width: 100%;
+  height: 565px;
 
-  margin-bottom: 1.5rem;
+  margin-bottom: 32px;
+
+  opacity: 1;
+
+  @media only screen and (max-width: 768px) {
+    height: 100%;
+  }
 `
 
 export const TitleHolder = styled.div`
   display: inline-block;
   position: relative;
-  margin-top: 0.25rem;
-  margin-bottom: 0.8rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
 `
 
 export const TitleLink = styled(UI.Title)`
   cursor: pointer;
+`
 
-  &::before {
-    content: '';
-    height: 1px;
-    width: 0;
-    background-color: ${({ theme }) => theme.colors.blue.default};
-    position: absolute;
-    bottom: -2px;
-    left: 0px;
-
-    transition: ${({ theme }) => theme.transitions.cubic()};
-  }
+export const Text = styled(UI.Text)`
+  width: 100%;
 `
 
 export const Holder = styled.div`
-  width: 100%;
-  max-width: 16rem;
   cursor: pointer;
+
+  width: 100%;
+  max-width: 413px;
+
+  margin-bottom: 100px;
 
   &:last-child {
     margin-right: none;
@@ -45,9 +43,7 @@ export const Holder = styled.div`
 
   &:hover {
     ${ArticleImage} {
-      -webkit-box-shadow: 10px 4px 44px -9px rgba(0, 0, 0, 0.27);
-      -moz-box-shadow: 10px 4px 44px -9px rgba(0, 0, 0, 0.27);
-      box-shadow: 10px 4px 44px -9px rgba(0, 0, 0, 0.27);
+      opacity: 0.8;
     }
 
     ${TitleLink} {
@@ -55,5 +51,10 @@ export const Holder = styled.div`
         width: 100%;
       }
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 32px;
+    max-width: 525px;
   }
 `
