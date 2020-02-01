@@ -3,13 +3,12 @@ title: 'A comunicação de ciência chega a todos'
 date: 2019-01-21
 author: 'Bárbara Pinho'
 featured: true
+isInterview: false
 image: './cover.jpg'
-interviewer: 'dsaçkç'
-photographer: 'dsaçkç'
-space: 'dsaçkç'
 inNumber: 'Nevoazul 3'
 category:
   - Artigo
+  - Ciência
 tags:
   - Cinema
 ---

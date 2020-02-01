@@ -14,7 +14,7 @@ const Articles = () => {
       <S.Flex>
         <ArticleSmall
           title="Inês Santos Silva: O Futuro tem futuro?"
-          description="An array is a special type of data type which can store multiple values of different data types sequentially using a special syntax."
+          description="O empreendedorismo tem estado no centro das atenções da Inês Santos Silva, diretora executiva da empresa de consultoria Aliados, mas sem o optimismo cego que muitas vezes encontramos entre os adeptos desta área. Pelo contrário, revela-se preocupada com um tema vital: o futuro do trabalho."
           tags={['Entrevista', 'Empreendedorismo']}
           link="/blog/ines-santos-silva"
           image={data.inesSantosSilva.childImageSharp.fluid}
@@ -26,14 +26,14 @@ const Articles = () => {
           link="/blog/smart-contract"
           image={data.smartContracts.childImageSharp.fluid}
         />
-        <ArticleBig
-          title="A comunicação de ciência chega a todos"
-          description="A ciência é feita no secretismo de laboratórios e instituições académicas, mas os seus resultados pertencem à sociedade. No entanto, há um grande desafio neste transporte de informação - quando as investigações não são transmitidas de forma eficiente e adaptada, a mensagem fica comprometida."
-          tags={['Artigo', 'Ciência']}
-          link="/blog/science-communication"
-          image={data.scienceCommunication.childImageSharp.fluid}
-        />
-      </S.Flex>
+      </S.Flex>{' '}
+      <ArticleBig
+        title="A comunicação de ciência chega a todos"
+        description="A ciência é feita no secretismo de laboratórios e instituições académicas, mas os seus resultados pertencem à sociedade. No entanto, há um grande desafio neste transporte de informação - quando as investigações não são transmitidas de forma eficiente e adaptada, a mensagem fica comprometida."
+        tags={['Artigo', 'Ciência']}
+        link="/blog/science-communication"
+        image={data.scienceCommunication.childImageSharp.fluid}
+      />
     </S.Holder>
   )
 }

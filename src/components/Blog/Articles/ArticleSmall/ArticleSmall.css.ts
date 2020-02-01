@@ -8,6 +8,10 @@ export const ArticleImage = styled.div`
   margin-bottom: 32px;
 
   opacity: 1;
+
+  @media only screen and (max-width: 768px) {
+    height: 100%;
+  }
 `
 
 export const TitleHolder = styled.div`
@@ -47,5 +51,10 @@ export const Holder = styled.div`
         width: 100%;
       }
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 32px;
+    max-width: 525px;
   }
 `

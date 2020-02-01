@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-
 import * as UI from '../../UI/index'
-
 import { default as GalleryStyled } from '../Gallery/Gallery'
+
+import pedro from '../../../assets/images/pedro.jpg'
 
 export const Hero = styled.div`
   display: flex;
@@ -106,13 +106,12 @@ export const Image = styled.div`
     width: 500px;
     height: 300px;
 
-    background-color: red;
+    background-image: url(${pedro});
+    background-size: cover;
   }
 
   @media only screen and (max-width: 425px) {
     width: 300px;
     height: 240px;
-
-    background-color: red;
   }
 `

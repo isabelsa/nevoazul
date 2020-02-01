@@ -46,7 +46,7 @@ const Hero = () => {
             animate="visible"
             variants={animationVariants}
           >
-            <S.HeroCategory>Design</S.HeroCategory>
+            <S.HeroCategory>Artigo, Design</S.HeroCategory>
             <S.HeroTitle>
               Peculiaridades <i>da vida moderna</i>: Com <i>Jacques Tati</i>.
             </S.HeroTitle>

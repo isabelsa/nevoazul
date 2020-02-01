@@ -31,8 +31,14 @@ export const Gallery = styled.div`
   height: 600px;
   width: 476px;
 
+  margin-bottom: 32px;
+
   @media only screen and (max-width: 1200px) {
     width: 100%;
+
+    .gatsby-image-wrapper {
+      height: 100%;
+    }
   }
 
   @media only screen and (max-width: 768px) {

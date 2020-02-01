@@ -10,12 +10,26 @@ export const MagazinePlug = styled.div`
   display: flex;
 
   padding: 130px 70px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 60px 40px;
+  }
+
+  @media only screen and (max-width: 425px) {
+    padding: 40px 20px;
+  }
 `
 
 export const Content = styled.div`
   position: relative;
 
+  width: 100%;
   max-width: 380px;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+  }
 `
 
 export const ContentHighlight = styled(UI.Kicker)`
@@ -56,6 +70,10 @@ export const ContentTextMobile = styled(UI.Text)`
     height: 100%;
     margin-bottom: 2rem;
   }
+
+  @media only screen and (max-width: 768px) {
+    height: auto;
+  }
 `
 
 export const ContentImage = styled.div`
@@ -65,12 +83,15 @@ export const ContentImage = styled.div`
 
   width: 400px;
   height: 400px;
-  background-image: url(${magazine});
-  background-size: cover;
-  background-position: left center;
+  margin-top: 80px;
+
+  .gatsby-image-wrapper {
+    width: 100%;
+    height: 80%;
+  }
 
   @media only screen and (max-width: 768px) {
-    position: relative;
+    display: none;
   }
 `
 

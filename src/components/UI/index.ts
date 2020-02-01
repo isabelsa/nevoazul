@@ -27,6 +27,7 @@ export { default as AnchorLink } from '../UI/Links/AnchorLink/AnchorLink.css'
 export { default as HeaderLink } from '../UI/Links/HeaderLink/HeaderLink'
 export { default as NavLink } from '../UI/Links/NavLink/NavLink'
 export { default as TitleLink } from '../UI/Links/TitleLink/TitleLink'
+export { default as FooterLink } from '../UI/Links/FooterLink/FooterLink'
 export { default as Modal } from '../UI/Modal/Modal'
 export { default as MailchimpInput } from './Input/MailchimpInput'
 

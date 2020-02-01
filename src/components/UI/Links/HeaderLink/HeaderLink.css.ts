@@ -14,7 +14,7 @@ export const HeaderLink = styled(Link)<{ mobile: boolean }>`
     mobile &&
     css`
       font-size: 24px;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     `}
 
   &::before {

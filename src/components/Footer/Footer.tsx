@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TextSerif, MailchimpInput } from '../UI/index'
+import { Text, TextSerif, MailchimpInput, FooterLink } from '../UI/index'
 import * as S from './Footer.css'
 
 const Footer = () => {
@@ -19,17 +19,20 @@ const Footer = () => {
       </S.FooterIntro>
       <S.Sections>
         <S.Section>
-          <TextSerif>A revista</TextSerif>
-          <Text>Comprar</Text>
-          <Text>Blog</Text>
-          <Text>Sobre</Text>
-          <Text>Revendedores</Text>
+          <S.TextSerif>A revista</S.TextSerif>
+          <FooterLink to="https://nevoazul.bigcartel.com/">Comprar</FooterLink>
+          <FooterLink to="/blog">Blog</FooterLink>
+          <FooterLink to="/about">Sobre</FooterLink>
+          <FooterLink to="/resellers">Revendedores</FooterLink>
         </S.Section>
         <S.Section>
-          <TextSerif>Comunidade</TextSerif>
-          <Text>Instagram</Text>
-          <Text>Facebook</Text>
-          <Text>Telegrama</Text>
+          <S.TextSerif>Comunidade</S.TextSerif>
+          <FooterLink to="https://www.instagram.com/nevoazul_magazine/">
+            Instagram
+          </FooterLink>
+          <FooterLink to="https://www.facebook.com/nevoazul/">
+            Facebook
+          </FooterLink>
         </S.Section>
       </S.Sections>
     </S.Footer>

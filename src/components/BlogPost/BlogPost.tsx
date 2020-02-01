@@ -15,7 +15,9 @@ export const BlogPost = ({ data }) => {
     <S.Wrapper>
       <S.Post>
         <S.PostIntroduction>
-          <S.PostDetail>Entrevista</S.PostDetail>
+          <S.PostDetail>
+            {markdownRemark.frontmatter.category.join(', ')}
+          </S.PostDetail>
           <Display>{markdownRemark.frontmatter.title}</Display>
           <S.PostTags>
             {isInterview && (
@@ -33,6 +35,14 @@ export const BlogPost = ({ data }) => {
                 <S.Tags>
                   <S.PostDetail>Espaço</S.PostDetail>
                   <p>{markdownRemark.frontmatter.space}</p>
+                </S.Tags>
+              </>
+            )}
+            {!isInterview && (
+              <>
+                <S.Tags>
+                  <S.PostDetail>Autor</S.PostDetail>
+                  <p>{markdownRemark.frontmatter.author}</p>
                 </S.Tags>
               </>
             )}
@@ -72,6 +82,7 @@ export const query = graphql`
         photographer
         space
         inNumber
+        isInterview
         image {
           childImageSharp {
             fluid(maxWidth: 700, quality: 75) {
