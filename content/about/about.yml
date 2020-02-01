@@ -19,21 +19,22 @@ conversation:
 
 team:
   title: 'Queremos ajudar-te a compreenderes e a usares de forma mais significativa os meios de comunicação que tens ao teu alcance. Através da revista impressa, da newsletter da Nevoazul e dos eventos que organizamos, queremos questionar como a comunicação pode ser usada em prol da humanidade.'
-  ines:
-    name: Inês Santos Silva
-    description: Directora Criativa e Designer
-  isabel:
-    name: Isabel Sá
-    description: Directora Criativa e Designer
-  miguel:
-    name: Muigel Barbot
-    description: Directora Criativa e Designer
-  pedrocodeco:
-    name: Pedro Codeço
-    description: Directora Criativa e Designer
-  pedrooliveira:
-    name: Pedro Oliveira
-    description: Directora Criativa e Designer
-  barbaranogueira:
-    name: Pedro Oliveira
-    description: Directora Criativa e Designer
+  members:
+    - id: inescatarinapinto
+      name: Inês Catarina Pinto
+      description: Fundadora e Editora
+    - id: barbaranogueira
+      name: Bárbara Nogueira
+      description: Directora Criativa e Designer
+    - id: pedrooloveira
+      name: Pedro Oliveira
+      description: Designer Gráfico
+    - id: isabelsa
+      name: Isabel Sá
+      description: Web Designer
+    - id: pedrocodeco
+      name: Pedro Codeço
+      description: Ilustrador
+    - id: miguelbarbot
+      name: Miguel Barbot
+      description: Editor de Fotografia

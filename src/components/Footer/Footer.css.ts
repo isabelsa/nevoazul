@@ -1,11 +1,16 @@
 import styled from 'styled-components'
-import { Box, Flex, Subtitle as SubtitleStyled } from '../UI/index'
+import {
+  Box,
+  Flex,
+  Subtitle as SubtitleStyled,
+  TextSerif as TextSerifStyled,
+} from '../UI/index'
 
 import decoration from '../../assets/images/decorative-dots.jpg'
 
 export const Footer = styled(Flex)`
   justify-content: space-between;
-  padding: 70px;
+  padding: 90px 70px 70px 70px;
 
   @media only screen and (max-width: 768px) {
     display: flex;
@@ -49,9 +54,8 @@ export const FooterIntro = styled.div`
 
 export const Sections = styled(Flex)`
   width: 100%;
-  justify-content: space-between;
 
-  padding-top: 50px;
+  padding-top: 6px;
 
   @media only screen and (max-width: 768px) {
     flex-wrap: wrap;
@@ -59,14 +63,14 @@ export const Sections = styled(Flex)`
 `
 
 export const Section = styled(Box)`
-  p:first-of-type {
-    margin-bottom: 22px;
-  }
-
-  margin-right: 32px;
+  margin-right: 64px;
   margin-bottom: 32px;
 
   @media only screen and (max-width: 768px) {
     margin-right: 16px;
   }
+`
+
+export const TextSerif = styled(TextSerifStyled)`
+  margin-bottom: 8px;
 `
