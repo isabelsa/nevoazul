@@ -66,7 +66,7 @@ export const PostImage = styled.div`
   margin-top: -30px;
 `
 
-export const PostDetail = styled(UI.Detail)`
+export const PostDetail = styled(UI.Kicker)`
   margin-bottom: 4px;
 `
 
@@ -88,5 +88,25 @@ export const Body = styled.div`
     line-height: 28px;
 
     margin-bottom: 32px;
+  }
+
+  span {
+    font-family: 'Untitled Sans', sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+
+    margin-bottom: 20px;
+  }
+
+  sup {
+    font-size: 12px;
+  }
+
+  h3 {
+    font-family: ${({ theme }) => theme.fonts.serif};
+    font-size: 28px;
+    text-align: center;
+
+    margin-top: 40px;
   }
 `

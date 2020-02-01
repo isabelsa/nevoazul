@@ -38,7 +38,7 @@ const About: React.FC<AboutProps> = ({ content }) => {
         </S.MagazineImage>
         <CaptionWithNumber
           number="01"
-          description="À conversa com João Bernardino."
+          description="No interior da edição 3 da Nevoazul"
         />
       </S.Magazine>
     </S.About>

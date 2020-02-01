@@ -3,11 +3,9 @@ title: 'Um Smart Contract não se cansa, nem se engana'
 date: 2019-01-21
 author: 'Rodolfo Oliveira'
 featured: true
+isInterview: false
 image: './my-image.jpg'
-interviewer: 'dsaçkç'
-photographer: 'dsaçkç'
-space: 'dsaçkç'
-inNumber: 'Nevoazul 3'
+inNumber: 'Exclusivo online'
 category:
   - Artigo
 tags:

@@ -5,12 +5,10 @@ author: 'Inês Catarina Pinto'
 featured: true
 isInterview: false
 image: './my-image.jpg'
-interviewer: 'dsaçkç'
-photographer: 'dsaçkç'
-space: 'dsaçkç'
 inNumber: 'Nevoazul 1'
 category:
   - Artigo
+  - Design
 tags:
   - Cinema
 ---
