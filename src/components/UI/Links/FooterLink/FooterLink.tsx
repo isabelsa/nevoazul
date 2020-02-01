@@ -1,6 +1,6 @@
 import React from 'react'
 import { Body } from '../../index'
-import * as S from './FooterLink.css'
+import * as S from './FooterLinkStyle.css'
 
 type FooterLinkProps = {
   to: string
