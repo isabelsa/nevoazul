@@ -8,6 +8,7 @@ image: './cover.jpg'
 inNumber: 'Nevoazul 3'
 category:
   - Artigo
+  - Ciência
 tags:
   - Cinema
 ---

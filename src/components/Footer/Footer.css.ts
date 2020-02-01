@@ -58,6 +58,7 @@ export const Sections = styled(Flex)`
   padding-top: 6px;
 
   @media only screen and (max-width: 768px) {
+    margin-top: 32px;
     flex-wrap: wrap;
   }
 `

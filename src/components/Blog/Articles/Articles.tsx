@@ -26,14 +26,14 @@ const Articles = () => {
           link="/blog/smart-contract"
           image={data.smartContracts.childImageSharp.fluid}
         />
-        <ArticleBig
-          title="A comunicação de ciência chega a todos"
-          description="A ciência é feita no secretismo de laboratórios e instituições académicas, mas os seus resultados pertencem à sociedade. No entanto, há um grande desafio neste transporte de informação - quando as investigações não são transmitidas de forma eficiente e adaptada, a mensagem fica comprometida."
-          tags={['Artigo', 'Ciência']}
-          link="/blog/science-communication"
-          image={data.scienceCommunication.childImageSharp.fluid}
-        />
-      </S.Flex>
+      </S.Flex>{' '}
+      <ArticleBig
+        title="A comunicação de ciência chega a todos"
+        description="A ciência é feita no secretismo de laboratórios e instituições académicas, mas os seus resultados pertencem à sociedade. No entanto, há um grande desafio neste transporte de informação - quando as investigações não são transmitidas de forma eficiente e adaptada, a mensagem fica comprometida."
+        tags={['Artigo', 'Ciência']}
+        link="/blog/science-communication"
+        image={data.scienceCommunication.childImageSharp.fluid}
+      />
     </S.Holder>
   )
 }

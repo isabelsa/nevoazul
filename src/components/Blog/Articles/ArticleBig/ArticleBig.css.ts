@@ -8,6 +8,10 @@ export const ArticleImage = styled.div`
   opacity: 1;
 
   margin-bottom: 32px;
+
+  @media only screen and (max-width: 768px) {
+    height: 100%;
+  }
 `
 
 export const Detail = styled(UI.Detail)`
@@ -39,5 +43,10 @@ export const Holder = styled.div`
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
 `
