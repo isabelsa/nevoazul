@@ -81,6 +81,8 @@ const SEO: React.FC<ISEOProps> = ({
     ? `${site.siteMetadata.title} %s`
     : site.siteMetadata.title
 
+  console.log(twittercardImage, opengraphImage)
+
   return (
     <Helmet
       htmlAttributes={{

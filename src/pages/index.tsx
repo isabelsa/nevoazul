@@ -46,7 +46,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   return (
     <>
       <SEO
-        title="Nevoazul: Conversas em prol da humanidade"
+        title="Conversas em prol da humanidade"
         description="Numa sociedade movida a informação, em que tão depressa estamos no papel de produtores, como no de consumidores, a Nevoazul explora a relação que temos com os meios de comunicação e a tecnologia."
         keywords={[
           `nevoazul`,
