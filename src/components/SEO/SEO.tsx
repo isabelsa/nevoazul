@@ -81,8 +81,6 @@ const SEO: React.FC<ISEOProps> = ({
     ? `${site.siteMetadata.title} %s`
     : site.siteMetadata.title
 
-  console.log(twittercardImage, opengraphImage)
-
   return (
     <Helmet
       htmlAttributes={{
@@ -117,7 +115,7 @@ const SEO: React.FC<ISEOProps> = ({
         },
         {
           property: `og:image`,
-          content: `${siteUrl}${image || opengraphImage}`,
+          content: `${siteUrl}${opengraphImage}`,
         },
         {
           name: `twitter:card`,
@@ -125,7 +123,7 @@ const SEO: React.FC<ISEOProps> = ({
         },
         {
           name: `twitter:image`,
-          content: `${siteUrl}${image || twittercardImage}`,
+          content: `${siteUrl}${twittercardImage}`,
         },
         {
           name: `twitter:site`,
