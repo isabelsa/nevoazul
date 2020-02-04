@@ -2,6 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import { image } from '../../../content/opengraph.png'
+
 type MetaProps =
   | { name: string; content: any; property?: undefined }
   | { property: string; content: any; name?: undefined }
@@ -29,7 +31,6 @@ const SEO: React.FC<ISEOProps> = ({
   meta = [],
   keywords = [],
   title,
-  image,
   titleTemplate,
 }) => {
   const { site, allImageSharp } = useStaticQuery(
@@ -80,8 +81,6 @@ const SEO: React.FC<ISEOProps> = ({
   const defaultTitleTemplate = title
     ? `${site.siteMetadata.title} %s`
     : site.siteMetadata.title
-
-  console.log(twittercardImage, opengraphImage)
 
   return (
     <Helmet
