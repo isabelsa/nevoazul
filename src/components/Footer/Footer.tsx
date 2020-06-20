@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TextSerif, MailchimpInput, FooterLink } from '../UI/index'
+import { Text, TextSerif, FooterLink, ArrowLink } from '../UI/index'
 import * as S from './Footer.css'
 
 const Footer = () => {
@@ -10,12 +10,14 @@ const Footer = () => {
           <S.SubtitleDecoration />
           <S.Subtitle>A internet num telegrama</S.Subtitle>
         </S.SubtitleHolder>
-        <Text>
+        <Text style={{ marginBottom: '24px' }}>
           Uma newsletter mensal de poucas linhas sobre como a tecnologia, a
           cultura e o design nos podem tornar mais humanos numa era cada vez
           mais digital.
         </Text>
-        <MailchimpInput />
+        <ArrowLink isExternal to="https://telegrama.substack.com">
+          Subscreve a newsletter
+        </ArrowLink>
       </S.FooterIntro>
       <S.Sections>
         <S.Section>
