@@ -32,9 +32,6 @@ const Footer = () => {
           <FooterLink to="https://www.instagram.com/nevoazul_magazine/">
             Instagram
           </FooterLink>
-          <FooterLink to="https://www.facebook.com/nevoazul/">
-            Facebook
-          </FooterLink>
         </S.Section>
       </S.Sections>
     </S.Footer>

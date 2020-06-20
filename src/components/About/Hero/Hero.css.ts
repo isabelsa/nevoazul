@@ -35,12 +35,12 @@ export const Hero = styled.div`
 `
 
 export const Kicker = styled(UI.Kicker)`
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 `
 
 export const Title = styled(UI.Title)`
-  margin-bottom: 32px;
-  max-width: 525px;
+  margin-bottom: 40px;
+  max-width: 550px;
 
   @media only screen and (max-width: 900px) {
     font-size: 26px;
