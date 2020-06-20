@@ -9,13 +9,6 @@ const Team = () => {
 
   return (
     <S.Wrapper>
-      <S.DescriptionWrapper>
-        <S.Description>{aboutYaml.team.title}</S.Description>
-
-        <TextSerif italic>Email</TextSerif>
-        <Heading>info@nevoazul.com</Heading>
-      </S.DescriptionWrapper>
-
       <S.TeamHolder>
         {aboutYaml.team.members.map(member => {
           return (

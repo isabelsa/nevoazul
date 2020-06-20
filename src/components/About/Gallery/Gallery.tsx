@@ -12,7 +12,7 @@ import instituto from '../../../assets/images/about_instituto.jpg'
 import sergio from '../../../assets/images/about_sergio.jpg'
 import processo from '../../../assets/images/about_processo.jpg'
 
-export const images = [processo, instituto, pedro, bernardino, sergio]
+export const images = [instituto, processo, pedro, bernardino, sergio]
 
 const Gallery = ({ paginate, page, direction, setPage }) => {
   const imageIndex = wrap(0, images.length, page)

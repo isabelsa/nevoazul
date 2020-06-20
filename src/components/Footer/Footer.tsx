@@ -11,9 +11,8 @@ const Footer = () => {
           <S.Subtitle>A internet num telegrama</S.Subtitle>
         </S.SubtitleHolder>
         <Text style={{ marginBottom: '24px' }}>
-          Uma newsletter mensal de poucas linhas sobre como a tecnologia, a
-          cultura e o design nos podem tornar mais humanos numa era cada vez
-          mais digital.
+          Duas vezes por mês, enviamos a Internet num Telegrama - uma newsletter
+          sobre meios,<br></br> mensagens e humanos.
         </Text>
         <ArrowLink isExternal to="https://telegrama.substack.com">
           Subscreve a newsletter
@@ -30,8 +29,10 @@ const Footer = () => {
         <S.Section>
           <S.TextSerif>Comunidade</S.TextSerif>
           <FooterLink to="https://www.instagram.com/nevoazul_magazine/">
-            Instagram
+            @nevoazul_magazine
           </FooterLink>
+
+          <a href="mailto:name@email.com">info@nevoazul.com</a>
         </S.Section>
       </S.Sections>
     </S.Footer>
