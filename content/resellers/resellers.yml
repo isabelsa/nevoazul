@@ -2,27 +2,20 @@
 resellers:
   - id: 0
     number: '01'
-    name: Manifesto
-    location: Mercado Matosinhos
-    description: Quiosque de publicações independentes.
-    link: https://google.com
-    image: './manifesto.jpg'
-  - id: 1
-    number: '02'
     name: Velo Culture
     location: Mercado Matosinhos
     description: Loja de bicicletas com foco no ciclismo urbano.
     link: https://google.com
     image: './velo.jpg'
-  - id: 2
-    number: '03'
+  - id: 1
+    number: '02'
     name: Coração Alecrim
     location: Travessa Cedofeita
     description: Loja de louças, cerâmica, roupas e objectos vintage.
     link: https://google.com
     image: './coracao.jpg'
-  - id: 3
-    number: '04'
+  - id: 2
+    number: '03'
     name: Under the Cover
     location: Rua Marquês Sá da Bandeira
     description: Livraria contemporânea de revistas e livros.
