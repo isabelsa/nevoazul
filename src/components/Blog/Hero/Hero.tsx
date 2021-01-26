@@ -68,7 +68,6 @@ export const query = graphql`
   query {
     jacquesTati: file(relativePath: { regex: "/blog_jacques_tati/" }) {
       name
-      url
       size
       childImageSharp {
         fluid(quality: 75) {

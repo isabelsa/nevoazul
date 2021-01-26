@@ -125,7 +125,6 @@ export const query = graphql`
       relativePath: { regex: "/homepage_hero_magazine_left/" }
     ) {
       name
-      url
       size
       childImageSharp {
         fluid(maxWidth: 700, quality: 75) {
@@ -137,7 +136,6 @@ export const query = graphql`
       relativePath: { regex: "/homepage_hero_magazine_bottom/" }
     ) {
       name
-      url
       size
       childImageSharp {
         fluid(maxWidth: 400, quality: 75) {
@@ -149,7 +147,6 @@ export const query = graphql`
       relativePath: { regex: "/homepage_hero_magazine_right/" }
     ) {
       name
-      url
       size
       childImageSharp {
         fluid(maxWidth: 400, quality: 75) {

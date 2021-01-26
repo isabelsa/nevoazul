@@ -48,7 +48,6 @@ export const query = graphql`
   query {
     magazine: file(relativePath: { regex: "/homepage_about_magazine/" }) {
       name
-      url
       size
       childImageSharp {
         fluid(maxWidth: 700, quality: 75) {

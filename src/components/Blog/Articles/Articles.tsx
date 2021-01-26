@@ -42,7 +42,6 @@ const query = graphql`
   query {
     smartContracts: file(relativePath: { regex: "/blog_smart_contracts/" }) {
       name
-      url
       size
       childImageSharp {
         fluid(quality: 75) {
@@ -54,7 +53,6 @@ const query = graphql`
       relativePath: { regex: "/blog_science_communication/" }
     ) {
       name
-      url
       size
       childImageSharp {
         fluid(quality: 75) {
@@ -64,7 +62,6 @@ const query = graphql`
     }
     inesSantosSilva: file(relativePath: { regex: "/blog_ines_santos_silva/" }) {
       name
-      url
       size
       childImageSharp {
         fluid(quality: 75) {
