@@ -19,21 +19,28 @@ const Articles = () => {
           link="/blog/ines-santos-silva"
           image={data.inesSantosSilva.childImageSharp.fluid}
         />
-        <ArticleBig
+        <ArticleSmall
           title="Um Smart Contract não se cansa, nem se engana"
           description="Em breve podemos viver num futuro no qual as organizações já não têm funcionários ou gestores, mas sim um conjunto de rotinas de software que determina as suas acções. Com grupos em que todos os seus intervenientes podem propor, votar, desenvolver e implementar novas medidas."
           tags={['Artigo', 'Economia']}
           link="/blog/smart-contract"
           image={data.smartContracts.childImageSharp.fluid}
         />
-      </S.Flex>{' '}
-      <ArticleBig
+         <ArticleSmall
         title="A comunicação de ciência chega a todos"
         description="A ciência é feita no secretismo de laboratórios e instituições académicas, mas os seus resultados pertencem à sociedade. No entanto, há um grande desafio neste transporte de informação - quando as investigações não são transmitidas de forma eficiente e adaptada, a mensagem fica comprometida."
         tags={['Artigo', 'Ciência']}
         link="/blog/science-communication"
         image={data.scienceCommunication.childImageSharp.fluid}
       />
+        <ArticleSmall
+        title="Daniel Santos: Design no Sector Público"
+        description="A ciência é feita no secretismo de laboratórios e instituições académicas, mas os seus resultados pertencem à sociedade. No entanto, há um grande desafio neste transporte de informação - quando as investigações não são transmitidas de forma eficiente e adaptada, a mensagem fica comprometida."
+        tags={['Artigo', 'Ciência']}
+        link="/blog/daniel-santos"
+        image={data.danielSantos.childImageSharp.fluid}
+      />
+      </S.Flex>
     </S.Holder>
   )
 }
@@ -61,6 +68,15 @@ const query = graphql`
       }
     }
     inesSantosSilva: file(relativePath: { regex: "/blog_ines_santos_silva/" }) {
+      name
+      size
+      childImageSharp {
+        fluid(quality: 75) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    danielSantos: file(relativePath: { regex: "/blog_daniel_santos/" }) {
       name
       size
       childImageSharp {

@@ -27,7 +27,7 @@ const MagazineOrderNext = () => {
 
       <S.ContentDescription>
         <S.ContentText>
-          A nova edição da Nevoazul está a chegar. Através de entrevistas em
+          Através de entrevistas em
           profundidade e artigos de reflexão, queremos questionar a relação que
           temos com os meios e perceber como podemos transformar informação em
           conhecimento.

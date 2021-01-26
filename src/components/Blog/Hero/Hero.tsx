@@ -46,9 +46,9 @@ const Hero = () => {
             animate="visible"
             variants={animationVariants}
           >
-            <S.HeroCategory>Artigo, Design</S.HeroCategory>
+            <S.HeroCategory>Artigo, Informação</S.HeroCategory>
             <S.HeroTitle>
-              Peculiaridades <i>da vida moderna</i>: Com <i>Jacques Tati</i>.
+            Como criar uma <i>comunidade digital</i> como se fosse um jardim
             </S.HeroTitle>
             <S.HeroDescription>
               A distância até à realização dos nossos sonhos e ambições
