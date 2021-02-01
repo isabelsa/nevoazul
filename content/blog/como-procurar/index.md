@@ -1,5 +1,5 @@
 ---
-title: 'Como procurar informação no vasto mundo da internet'
+title: 'Como encontrar conhecimento, quando tudo é informação?'
 date: 2019-01-21
 author: 'Inês Catarina Pinto'
 featured: true

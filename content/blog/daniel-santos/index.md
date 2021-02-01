@@ -1,14 +1,14 @@
 ---
-title: 'À conversa com Daniel Santos: Design no sector público'
+title: 'Daniel Santos: Para humanos, por humanos'
 date: 2019-01-21
 author: 'Inês Catarina Pinto'
+description: 'O Daniel é designer de serviços no sector público. Se o nome é auto-explicativo, a concretização é um jogo de complexidades. Entusiasta da inovação centrada em pessoas, o seu trabalho mostra-nos a importância de transformar a burocracia em usabilidade.'
 featured: true
 isInterview: false
 image: './my-image.jpg'
 inNumber: 'Nevoazul Nº3'
 category:
   - Entrevista
-  - Design
 tags:
   - Entrevista
 ---

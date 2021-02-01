@@ -103,7 +103,7 @@ export const HeroTitle = styled(UI.Display)`
   line-height: 1.2;
 
   width: 100%;
-  max-width: 30rem;
+  max-width: 34rem;
 `
 
 export const HeroDescription = styled(UI.Text)`
