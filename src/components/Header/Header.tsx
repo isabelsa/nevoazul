@@ -31,7 +31,7 @@ const Header = () => {
     <React.Fragment>
       <S.Wrapper as={motion.div} ref={navigation} style={{ y }}>
         <S.DesktopNavLinks>
-          <HeaderLink to={ROUTES.blog}>Blog</HeaderLink>
+          <HeaderLink to={ROUTES.blog}>Conversas</HeaderLink>
         </S.DesktopNavLinks>
         <S.ContentLogo>
           <S.Link to="/" onClick={() => setIsMobileOpen(false)}>

@@ -22,15 +22,14 @@ const MagazineOrderNext = () => {
           transformar informação em conhecimento.
         </S.ContentTextMobile>
 
-        <ArrowLink to={ROUTES.root}>A nova revista</ArrowLink>
+        <ArrowLink to={ROUTES.root}>Comprar a revista</ArrowLink>
       </S.Content>
 
       <S.ContentDescription>
         <S.ContentText>
-          Através de entrevistas em
-          profundidade e artigos de reflexão, queremos questionar a relação que
-          temos com os meios e perceber como podemos transformar informação em
-          conhecimento.
+          Através de entrevistas em profundidade e artigos de reflexão, queremos
+          questionar a relação que temos com os meios e perceber como podemos
+          transformar informação em conhecimento.
         </S.ContentText>
       </S.ContentDescription>
 

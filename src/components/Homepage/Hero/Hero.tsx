@@ -75,9 +75,9 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
         animate="visible"
         variants={animationVariants}
       >
-        <S.HeroKicker>A nova edição</S.HeroKicker>
+        <S.HeroKicker>Edição nº3</S.HeroKicker>
         <S.HeroTitle>
-          Conversas <i>em prol</i> da humanidade
+          Revista <i>Nevoazul</i>
         </S.HeroTitle>
         <S.HeroDescription>{content.hero_description}</S.HeroDescription>
       </S.ContentHolder>

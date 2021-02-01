@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TextSerif, MailchimpInput, FooterLink } from '../UI/index'
+import { Text, TextSerif, FooterLink, ArrowLink } from '../UI/index'
 import * as S from './Footer.css'
 
 const Footer = () => {
@@ -10,12 +10,13 @@ const Footer = () => {
           <S.SubtitleDecoration />
           <S.Subtitle>A internet num telegrama</S.Subtitle>
         </S.SubtitleHolder>
-        <Text>
-          Uma newsletter mensal de poucas linhas sobre como a tecnologia, a
-          cultura e o design nos podem tornar mais humanos numa era cada vez
-          mais digital.
+        <Text style={{ marginBottom: '24px' }}>
+          Duas vezes por mês, enviamos a Internet num Telegrama - uma newsletter
+          sobre meios,<br></br> mensagens e humanos.
         </Text>
-        <MailchimpInput />
+        <ArrowLink isExternal to="https://telegrama.substack.com">
+          Subscreve a newsletter
+        </ArrowLink>
       </S.FooterIntro>
       <S.Sections>
         <S.Section>
@@ -28,11 +29,10 @@ const Footer = () => {
         <S.Section>
           <S.TextSerif>Comunidade</S.TextSerif>
           <FooterLink to="https://www.instagram.com/nevoazul_magazine/">
-            Instagram
+            @nevoazul_magazine
           </FooterLink>
-          <FooterLink to="https://www.facebook.com/nevoazul/">
-            Facebook
-          </FooterLink>
+
+          <a href="mailto:name@email.com">info@nevoazul.com</a>
         </S.Section>
       </S.Sections>
     </S.Footer>
