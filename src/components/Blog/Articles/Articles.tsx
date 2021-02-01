@@ -13,6 +13,13 @@ const Articles = () => {
     <S.Holder>
       <S.Flex>
       <ArticleSmall
+        title="Entre o meio e a mensagem: A cama"
+        description="O sono ultrapassa as categorias dos direitos e dos deveres, uma vez que é uma necessidade insuprimível do animal humano. No entanto, o direito a uma noite tranquila parece cada vez mais ameaçado, e o dever orgânico do sono cada vez mais negligenciado."
+        tags={['Artigo']}
+        link="/blog/entre-o-meio-e-a-mensagem-a-cama"
+        image={data.entreoMeio.childImageSharp.fluid}
+      />
+      <ArticleSmall
         title="Daniel Santos: Para humanos, por humanos"
         description="O Daniel é designer de serviços no sector público. Se o nome é auto-explicativo, a concretização é um jogo de complexidades. Entusiasta da inovação centrada em pessoas, o seu trabalho mostra-nos a importância de transformar a burocracia em usabilidade."
         tags={['Entrevista']}
@@ -48,6 +55,15 @@ const Articles = () => {
 
 const query = graphql`
   query {
+    entreoMeio: file(relativePath: { regex: "/blog_entre_o_meio/" }) {
+      name
+      size
+      childImageSharp {
+        fluid(quality: 75) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     danielSantos: file(relativePath: { regex: "/blog_daniel/" }) {
       name
       size
