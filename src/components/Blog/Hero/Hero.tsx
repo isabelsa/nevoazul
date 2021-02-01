@@ -46,17 +46,14 @@ const Hero = () => {
             animate="visible"
             variants={animationVariants}
           >
-            <S.HeroCategory>Artigo, Design</S.HeroCategory>
+            <S.HeroCategory>Artigo</S.HeroCategory>
             <S.HeroTitle>
-              Peculiaridades <i>da vida moderna</i>: Com <i>Jacques Tati</i>.
+            Como encontrar <i>conhecimento</i>, quando tudo é informação?
             </S.HeroTitle>
             <S.HeroDescription>
-              A distância até à realização dos nossos sonhos e ambições
-              tecnológicas é imensa. Deslumbrados por esta fantasia de um mundo
-              melhor, pelas utopias de Frank Lloyd Wright e dos seus carros
-              voadores.
+            A era da informação trouxe consigo a ideia de que o progresso de uma sociedade se faz pela quantidade de informação que é criada e consumida, mas será possível continuar a expandir o cérebro, sem o sobrecarregar?
             </S.HeroDescription>
-            <NavLink to="/blog/jacques-tati">Ler mais</NavLink>
+            <NavLink to="/blog/como-procurar">Ler mais</NavLink>
           </S.ContentHolder>
         </Link>
       </S.HeroContent>
@@ -68,7 +65,6 @@ export const query = graphql`
   query {
     jacquesTati: file(relativePath: { regex: "/blog_jacques_tati/" }) {
       name
-      url
       size
       childImageSharp {
         fluid(quality: 75) {

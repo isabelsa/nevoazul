@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Holder = styled.div`
-  padding: 10% 10% 0% 10%;
+  padding: 0% 10% 0% 10%;
 
   @media only screen and (max-width: 768px) {
     padding: 40px;

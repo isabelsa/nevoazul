@@ -125,7 +125,7 @@ export const Body = styled.div`
   p {
     font-family: ${({ theme }) => theme.fonts.serif};
     font-size: 17px;
-    line-height: 28px;
+    line-height: 30px;
 
     margin-bottom: 32px;
   }
@@ -142,12 +142,31 @@ export const Body = styled.div`
     font-size: 12px;
   }
 
-  h3 {
+  h2 {
     font-family: ${({ theme }) => theme.fonts.serif};
     font-size: 28px;
-    text-align: center;
 
-    margin-top: 40px;
+    margin-top: 80px;
+    margin-bottom: 32px;
+  }
+
+  h3 {
+    font-family: ${({ theme }) => theme.fonts.sans};
+    font-weight: 800;
+    font-size: 20px;
+
+    margin-top: 80px;
+    margin-bottom: 32px;
+  }
+
+  a{
+    display: inline;
+    text-decoration: underline;
+    opacity: 60%;
+
+    &:hover {
+      opacity: 100%;
+    }
   }
 
   @media only screen and (max-width: 768px) {
